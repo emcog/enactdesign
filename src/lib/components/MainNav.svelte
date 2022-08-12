@@ -14,15 +14,13 @@
     </NavItem>
     {/each}
   </ul>
-  <HamburgerMenuButton closeOnly="true" />
+<!--  <HamburgerMenuButton closeOnly="true" />-->
 </nav>
 
 <style lang="scss">
   .main-nav {
-    //position: fixed;
     z-index: 2;
-    top: 0;
-    left: 0;
+    margin-left:auto;
     transform: translateX(-100vw);
     visibility: hidden;
     width: 100%;
@@ -32,17 +30,9 @@
     display: flex;
     //justify-content: center;
     //align-items: center;
-    background: var(--darker);
+    background: vars.$blue-600;
     color: var(--paper);
     transition: all .25s cubic-bezier(0.785, 0.135, 0.15, 0.86);
-
-    ul {
-      display: flex;
-      float: right;
-      margin-left: auto;
-    }
-
-
 
     &.open {
       transform: translateX(0);
@@ -94,9 +84,8 @@
       color: inherit;
 
       ul {
-        margin: 1rem auto 0;
-        padding-top: 0.5rem;
-        border-top: 1px solid var(--dark);
+        //margin: 1rem auto 0;
+        //padding-top: 0.5rem;
         width: max-content;
 
         li {
