@@ -1,0 +1,14 @@
+---
+title: "No drop down checkout"
+date: "2021-10-26"
+updated: "2021-11-01"
+categories:
+- "ui"
+- "useability"
+coverImage: "/images/jefferson-santos-fCEJGBzAkrU-unsplash.jpg"
+coverWidth: 16
+coverHeight: 9
+excerpt: Check out how heading links work with this starter in this post.
+---
+
+All about no drop down checkout
