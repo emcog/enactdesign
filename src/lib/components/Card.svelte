@@ -32,11 +32,15 @@
 
 
 
-	 article {
-      max-width: 291px;
+	 .card {
+     transition: all .125s;
+     transition-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);
+
+		 max-width: 291px;
       margin: 0 vars.$xs6;
       border-radius: vars.$xs;
       background: white;
+		  filter: drop-shadow(0 vars.$xs6 vars.$xs vars.$slate-100);
 
      a { text-decoration: none; }
      a:hover {text-decoration: underline; }
@@ -61,5 +65,7 @@
 
 		 	span {font-size: vars.$sm;}
     }
+
+	 .card:hover { filter:drop-shadow(0 vars.$xs6 vars.$xs vars.$slate-200);}
 
 </style>

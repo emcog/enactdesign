@@ -11,3 +11,5 @@ categories:
   coverHeight: 9
   excerpt: Grid design and font selection for useability
 ---
+
+Sema

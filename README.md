@@ -46,7 +46,7 @@ Adding new posts is as simple as dropping a new `.md` file into `src/lib/posts`.
 
 A few demo Markdown posts are included, and highlight some of the features of this starter. These posts can be updated or removed, but it may be best to use one as a starting point, just for the frontmatter properties.
 
-If you want to use other frontmatter properties in the template (or just modify the layout), make changes in `src/routes/blog/[post].svelte`.
+If you want to use other frontmatter properties in the template (or just modify the layout), make changes in `src/routes/work/[post].svelte`.
 
 **Note: posts should have a `date` frontmatter property.** This is how they're sorted by default. There are also other frontmatter properties used to enhance the site experience (like the `coverWidth` and `coverHeight`, which are used in the template to reserve space for the image, minimizing cumulative layout shift).
 

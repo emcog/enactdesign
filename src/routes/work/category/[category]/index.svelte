@@ -1,4 +1,4 @@
-<!-- This dynamic page renders any page at /blog/category/* -->
+<!-- This dynamic page renders any page at /work/category/* -->
 <!-- TODO: add pagination to this route -->
 <script context="module">
   import fetchPosts from '$lib/assets/js/fetchPosts'
@@ -39,9 +39,9 @@
 
 {#if posts.length}
   <PostsList {posts} />
-  <Pagination currentPage="1" totalPosts={total} path="/blog/category/{category}/page" />
+  <Pagination currentPage="1" totalPosts={total} path="/work/category/{category}/page" />
 {:else}
   <p><strong>Ope!</strong> Sorry, couldn't find any posts in the category "{category}".</p>
 
-  <p><a href="/blog">Back to blog</a></p>
+  <p><a href="/work">Back to blog</a></p>
 {/if}

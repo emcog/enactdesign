@@ -1,4 +1,4 @@
-<!-- This file handles any /blog/page/x route for pagination -->
+<!-- This file handles any /work/page/x route for pagination -->
 
 <script context="module">
   import { postsPerPage, siteDescription } from '$lib/config'
@@ -12,7 +12,7 @@
       if (page <= 1) {
         return {
           status: 301,
-          redirect: '/blog'
+          redirect: '/work'
         }
       }
       

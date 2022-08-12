@@ -74,7 +74,7 @@
       <ul>
         {#each categories as category}
           <li>
-            <a href="/blog/category/{category}/">
+            <a href="/work/category/{category}/">
               { category }
             </a>
           </li>

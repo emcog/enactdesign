@@ -9,7 +9,7 @@
 <nav class="main-nav" class:open={$isMenuOpen}>
   <ul>
     {#each navItems as page}
-    <NavItem href={page.route}>
+    <NavItem class="nav-item" href={page.route}>
       {page.title}
     </NavItem>
     {/each}
@@ -19,7 +19,7 @@
 
 <style lang="scss">
   .main-nav {
-    position: fixed;
+    //position: fixed;
     z-index: 2;
     top: 0;
     left: 0;
@@ -30,11 +30,19 @@
     pointer-events: none;
     opacity: 0;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    //justify-content: center;
+    //align-items: center;
     background: var(--darker);
     color: var(--paper);
     transition: all .25s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+
+    ul {
+      display: flex;
+      float: right;
+      margin-left: auto;
+    }
+
+
 
     &.open {
       transform: translateX(0);
@@ -64,6 +72,7 @@
       top: 2rem;
       right: 2rem;
     }
+
 
     ul li {
       font-size: 1.2rem;

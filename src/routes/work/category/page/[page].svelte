@@ -12,7 +12,7 @@
       if (page <= 1) {
         return {
           status: 301,
-          redirect: '/blog'
+          redirect: '/work'
         }
       }
       
@@ -73,5 +73,5 @@
 
   <p>Sorry, no posts to show here.</p>
 
-  <a href="/blog">Back to blog</a>
+  <a href="/work">Back to blog</a>
 {/if}

@@ -17,7 +17,7 @@ footer {
     list-style-type: none;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    //justify-content: center;
     gap: 0rem 1.5rem;
     padding: 0;
     margin: 0;
@@ -36,11 +36,11 @@ header {
   background: var(--lightAccent);
   color: var(--darker);
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  //justify-content: space-between;
+  //align-items: center;
 
   @media (min-width: vars.$smMin) {
-    justify-content: center;
+    //justify-content: center;
     flex-wrap: wrap;
     height: auto;
   }
