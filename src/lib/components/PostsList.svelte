@@ -16,9 +16,11 @@
           height={post.coverHeight}
           style="ratio: {post.coverWidth} / {post.coverHeight}"
           />
-          <h2>{post.title}</h2>
-          <p>{post.excerpt}</p>
-          <span>{post.categories}</span>
+          <div class="card__copy">
+            <h2>{post.title}</h2>
+            <p>{post.excerpt}</p>
+            <span>{post.categories}</span>
+          </div>
         </a>
       </article>
 
@@ -36,19 +38,48 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: flex-start;
-}
+  list-style-type: none;
+  padding: 0;
+
 
   .card {
-    article{
+    a {text-decoration: none;}
+    a:hover {text-decoration: underline; }
+
+    article {
       max-width: 291px;
+      margin: 0 vars.$xs6;
       border-radius: vars.$xs;
       background: white;
-    image{}
-      h2 { font-size: vars.$lg;}
-      p{
+
+      img {
+        border-top-left-radius: vars.$xs5;
+        border-top-right-radius: vars.$xs5;
+        margin-bottom: 0;
+        padding-bottom: 0;
+      }
+
+      h2 {
         font-size: vars.$lg;
       }
-      span{ font-size: vars.$sm;}
+
+      p {
+        font-size: vars.$base;
+      }
+
+      span {
+        font-size: vars.$sm;
+      }
+
+      .card__copy {
+        margin: 0 vars.$sm;
+        padding-bottom: vars.$base;
+
+        h2 {
+          margin-top: vars.$xs2;
+        }
+      }
     }
   }
+}
 </style>

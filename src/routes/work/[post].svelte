@@ -28,6 +28,8 @@
   const { title, excerpt, date, updated, coverImage, coverWidth, coverHeight, categories } = meta
 </script>
 
+<!--todo this is a bit hacky and may impact accessability, should be main which requires refactor  of  primary __layout and all other pages-->
+
 
 <svelte:head>
   <!-- Be sure to add your image files and un-comment the lines below -->
@@ -81,3 +83,10 @@
     </aside>
   {/if}
 </article>
+
+<style lang="scss">
+  article {
+    max-width: 48rem;
+  }
+
+</style>
