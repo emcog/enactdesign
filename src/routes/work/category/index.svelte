@@ -47,7 +47,7 @@
   <ul>
     {#each uniqueCategories as category}
     <li>
-      <a href="/blog/category/{category.title}">
+      <a href="/work/category/{category.title}">
         { category.title }
       </a>
       ({category.count})

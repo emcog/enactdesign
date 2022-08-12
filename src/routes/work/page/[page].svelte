@@ -71,6 +71,6 @@
   <h1>Oops!</h1>
 
   <p>Sorry, no posts to show here.</p>
-
-  <a href="/blog">Back to blog</a>
+<!--todo refactor hard code to link to config-->
+  <a href="/work">Back to blog</a>
 {/if}

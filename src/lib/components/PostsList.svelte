@@ -7,7 +7,8 @@
   {#each posts as post}
     <li>
       <article>
-        <a href="/blog/{post.slug}">
+<!--        todo refactor so not hard coded-->
+        <a href="/work/{post.slug}">
           <img
           src={post.coverImage}
           alt=""
