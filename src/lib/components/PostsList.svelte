@@ -11,28 +11,36 @@
         <a href="/work/{post.slug}">
           <img
           src={post.coverImage}
-          alt=""
+          alt="{post.alt}"
           width={post.coverWidth}
           height={post.coverHeight}
           style="ratio: {post.coverWidth} / {post.coverHeight}"
           />
-          <h2>
-            {post.title}
-          </h2>
+          <h2>{post.title}</h2>
+          <p>{post.excerpt}</p>
+          <span>{post.categories}</span>
         </a>
       </article>
 
-      <p>{post.excerpt}</p>
+
     </li>
   {/each}
 </ul>
 
 <style lang="scss">
 
+// todo add _layout.svelte for work update config to match
 
-  //@use 'src/lib/assets/scss/vars';
+.posts-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
   .card {
     article{
+      max-width: 291px;
       border-radius: vars.$xs;
       background: white;
     image{}
@@ -40,7 +48,7 @@
       p{
         font-size: vars.$lg;
       }
-      span{ font-size: vars.$xs2;}
+      span{ font-size: vars.$sm;}
     }
   }
 </style>
