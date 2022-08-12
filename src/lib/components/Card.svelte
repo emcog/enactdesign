@@ -48,26 +48,18 @@
         padding-bottom: 0;
       }
 
-      h2 {
-        font-size: vars.$lg;
-      }
-
-      p {
-        font-size: vars.$base;
-      }
-
-      span {
-        font-size: vars.$sm;
-      }
-
       .card__copy {
         margin: 0 vars.$sm;
         padding-bottom: vars.$base;
 
         h2 {
-          margin-top: vars.$xs2;
-        }
+          font-size: vars.$lg;
+					margin-top: vars.$xs2; }
       }
+
+		 	p {font-size: vars.$base;}
+
+		 	span {font-size: vars.$sm;}
     }
 
 </style>
