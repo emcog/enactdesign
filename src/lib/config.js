@@ -1,4 +1,4 @@
-export const siteTitle = 'My Awesome Blog'
+export const siteTitle = 'Enact design'
 export const siteDescription = 'Built with the SvelteKit Static Blog Starter'
 export const siteURL = 'example.com'
 export const siteLink = 'https://github.com/josh-collinsworth/sveltekit-blog-starter'
