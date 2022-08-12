@@ -17,7 +17,7 @@
 
 
 <svelte:head>
-	<title>SvelteKit Static Blog Starter</title>
+	<title>Relatable story</title>
 </svelte:head>
 
 
