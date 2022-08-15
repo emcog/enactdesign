@@ -14,14 +14,12 @@ excerpt: Check out how heading links work with this starter in this post.
 <script>
 import FigforMd from "../components/FigforMd.svelte"
 </script>
-<FigforMd images={'[
-    "/images/artdirectionxpersona/imagine1.jpg", 
-    "/images/artdirectionxpersona/imagine2.jpg",
-    "/images/artdirectionxpersona/imagine3.jpg"]'} />
 
-![imagine](/images/artdirectionxpersona/imagine1.jpg)
-![imagine](/images/artdirectionxpersona/imagine2.jpg)
-![imagine](/images/artdirectionxpersona/imagine3.jpg)
+
+<FigforMd caption={"Hiya here's some pics"} images={[
+    { source: "/images/artdirectionxpersona/imagine1.jpg", alt:"imagine" }, 
+    { source: "/images/artdirectionxpersona/imagine2.jpg", alt: "imagine"},
+    { source: "/images/artdirectionxpersona/imagine3.jpg", alt: "imagine"}]} />
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Rhoncus dolor purus non enim. Natoque penatibus et magnis dis parturient montes nascetur. Enim praesent elementum facilisis leo vel. Tellus in metus vulputate eu. Viverra vitae congue eu consequat ac felis. Egestas tellus rutrum tellus pellentesque eu tincidunt. Nulla porttitor massa id neque aliquam vestibulum morbi. Massa tempor nec feugiat nisl pretium fusce id. Sed risus ultricies tristique nulla aliquet enim. Pretium quam vulputate dignissim suspendisse in. Dolor sit amet consectetur adipiscing elit duis tristique sollicitudin.
 

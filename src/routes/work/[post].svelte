@@ -116,11 +116,6 @@
   grid-column: 1/-2;
 }
 
-:global .post img {
-  grid-column: 1/-1;
-  max-height: 300px;
-}
-
   .post {
       @media (min-width: vars.$for-tablet-portrait-up) {
         display: grid;
