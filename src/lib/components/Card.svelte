@@ -9,7 +9,7 @@
 						 categories;
 </script>
 <a href="/work/{slug}">
-<article class="card">
+	<article class="card">
 
 	<!--todo refactor /work/ so not hard coded, i.e. linked to config.js-->
 	<div class="card__copy">
@@ -30,7 +30,7 @@
 
 <style lang="scss">
 
-  a { text-decoration: none; }
+  a { text-decoration: none;}
 
   a:hover { text-decoration: underline;}
 
@@ -42,24 +42,23 @@
      @media (min-width: vars.$for-tablet-landscape-up) {
        display: grid;
        grid-template-columns: 1fr 2fr;
+       margin: vars.$xs6 0;
+			 border-top-left-radius: vars.$xs;
+			 height: 485px;
      }
 
-		 display: flex;
-		 flex-direction: column-reverse;
+		display: flex;
+		flex-direction: column-reverse;
 
-     max-width: 100%;
-     height: 485px;
-     margin: vars.$xs6 0;
-     border-top-left-radius: vars.$xs;
+		 max-width: 100%;
+     margin: vars.$xs 0;
      border-bottom-left-radius: vars.$xs;
      background: vars.$slate-100;
-
-
 
      img {
 			 grid-column: 2/-1;
 			 width: 100%;
-			 height: 100%;
+			 height: 485px;
        margin-bottom: 0;
        padding-bottom: 0;
      }
@@ -67,12 +66,18 @@
 
 	.card__copy {
 		grid-column: 1/-2;
-		margin: auto vars.$base;
+    @media (min-width: vars.$for-tablet-landscape-up) { margin: auto vars.$base; }
+		margin: 0 vars.$base;
 		padding-bottom: vars.$base;
 
 		h2 {
-			font-size: vars.$xl2;
-			//margin-top: vars.$xs2;
+      @media (min-width: vars.$for-desktop-up) {
+				font-size: vars.$xl2;
+        margin-top: vars.$xs2;
+			}
+			font-size: vars.$xl;
+			margin-top: vars.$xs4;
+
 		}
 
 		p {font-size: vars.$lg;}

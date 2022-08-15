@@ -40,6 +40,8 @@ $xl2: 2.441rem;
 $xl3: 3.052rem;
 
 
+
+
 //tailiwnd colours
 $slate-50: #f8fafc;
 $slate-100: #f1f5f9;
@@ -129,13 +131,15 @@ $violet-900: #4c1d95;
   line-height: 1.6;
 
 
-  //font size / hand size
+  //font size
 
   --font-xxs: .512rem;
   --font-xs: .64rem;
   --font-sm: 0.8rem;
   --font-base: 1rem;
-  --font-lg: 1.25rem;
+  --font-lg: @media (min-width: $for-tablet-landscape-up) {
+    1.25rem;
+  }
   --font-xl: 1.563rem;
   --font-2xl: 1.953rem;
   --font-3xl: 2.441rem;

@@ -24,10 +24,10 @@
 <style lang="scss">
 
 .posts-list {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: flex-start;
+  //display: flex;
+  //flex-direction: row;
+  //flex-wrap: wrap;
+  //justify-content: flex-start;
   list-style-type: none;
   padding: 0;
 }
