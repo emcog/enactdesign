@@ -89,4 +89,43 @@
     max-width: 48rem;
   }
 
+  .post-footer {
+    ul {
+      padding: 0;
+    }
+
+    li {
+      display: inline-block;
+      font-size: 0.8rem;
+
+      a {
+        background-color: var(--lightAccent);
+        padding: .5rem 0.75rem;
+        text-transform: uppercase;
+        font-family: var(--primaryFont);
+        font-weight: bold;
+      }
+
+      + li {
+        margin-left: 0.5rem;
+      }
+    }
+  }
+
+  .post {
+    h1 {
+      margin-bottom: 1rem;
+    }
+
+    .meta {
+      font-size: 0.8rem;
+      margin-bottom: 4rem;
+    }
+
+    img + h1 {
+      margin-top: 1rem;
+    }
+  }
+
+
 </style>

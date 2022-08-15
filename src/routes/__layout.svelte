@@ -24,7 +24,8 @@
 	import { prefetch } from '$app/navigation'
   import { onMount } from 'svelte'
   import { fade } from 'svelte/transition'
-import Callout from '$lib/components/Callout.svelte';
+  import LeftNav from '$lib/components/LeftNav.svelte';
+  import Callout from '$lib/components/Callout.svelte';
 
   const transitionIn = { delay: 150, duration: 150 }
   const transitionOut = { duration: 100 }
@@ -56,6 +57,7 @@ import Callout from '$lib/components/Callout.svelte';
 -->
 <div class="layout" class:open={$isMenuOpen}>
   <Header />
+  <LeftNav />
   {#key path}
     <!-- as-->
     <main
@@ -69,3 +71,73 @@ import Callout from '$lib/components/Callout.svelte';
   {/key}
   <Footer />
 </div>
+
+
+<style lang="scss">
+
+  *,
+  *:before,
+  *:after {
+    box-sizing: border-box;
+    font-family: inherit;
+    max-width: 100%;
+  }
+
+  main {
+    width: 100%;
+    grid-column: 2/-1;
+    //max-width: 68rem;
+    //margin: 6rem auto;
+    //padding: 0 1rem;
+  }
+
+  .layout {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+  }
+
+
+
+  img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+
+
+
+  li {
+    margin-bottom: 0.25rem;
+  }
+
+
+
+
+  :where(h2, h3, h4, h5, h6) {
+    .icon-link {
+      position: relative;
+
+      &::before {
+        content: url('/link.svg');
+        fill: currentColor;
+        position: absolute;
+        left: -1rem;
+        width: 1rem;
+        height: 1rem;
+        top: 0;
+        opacity: 0.2;
+        transition: opacity .2s;
+
+        @media (min-width: vars.$smMin) {
+          left: -1.5rem;
+        }
+      }
+
+      &:hover::before {
+        opacity: 1;
+      }
+    }
+  }
+</style>

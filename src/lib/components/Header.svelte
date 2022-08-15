@@ -23,6 +23,7 @@
 </header>
 
 <style lang="scss">
+
   header {
     display: flex;
     //flex-direction: row;
@@ -35,7 +36,7 @@
     }
 
     .site-title {
-      font-family: var(--accentFont);
+      font-family: var(--bodyFont);
       font-size: 2.1rem;
       //line-height: 1;
       color: inherit;

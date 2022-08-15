@@ -3,11 +3,11 @@
   import Card from './Card.svelte';
 </script>
 
-
+<!--todo LeftNav shouldn't be inside main, its poor accessability-->
 <ul class="posts-list">
   {#each posts as post}
 
-    <li>
+    <li class="posts-list__post">
       <Card slug="{post.slug}"
             coverImage="{post.coverImage}"
             alt="{post.alt}"
@@ -30,5 +30,9 @@
   justify-content: flex-start;
   list-style-type: none;
   padding: 0;
+}
+
+.posts-list__post {
+  width: 100%;
 }
 </style>
