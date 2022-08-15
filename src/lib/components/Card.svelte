@@ -8,16 +8,16 @@
 						 excerpt,
 						 categories;
 </script>
-
+<a href="/work/{slug}">
 <article class="card">
+
+	<!--todo refactor /work/ so not hard coded, i.e. linked to config.js-->
 	<div class="card__copy">
 		<h2>{title}</h2>
 		<p>{excerpt}</p>
 		<span>{categories}</span>
 	</div>
 
-	<!--        todo refactor /work/ so not hard coded, i.e. linked to config.js-->
-	<a href="/work/{slug}">
 		<img
 			src={coverImage}
 			alt="{alt}"
@@ -25,17 +25,27 @@
 			height={coverHeight}
 			style="ratio: {coverWidth} / {coverHeight}"
 		/>
-	</a>
 </article>
+</a>
 
 <style lang="scss">
 
-	 .card {
+  a { text-decoration: none; }
+
+  a:hover { text-decoration: underline;}
+
+	.card {
      transition: all .25s;
      //transition-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);
 
-     display: grid;
-     grid-template-columns: 1fr 2fr;
+
+     @media (min-width: vars.$for-tablet-landscape-up) {
+       display: grid;
+       grid-template-columns: 1fr 2fr;
+     }
+
+		 display: flex;
+		 flex-direction: column-reverse;
 
      max-width: 100%;
      height: 485px;
@@ -44,14 +54,10 @@
      border-bottom-left-radius: vars.$xs;
      background: vars.$slate-100;
 
-     a { text-decoration: none; }
 
-     a:hover {
-       text-decoration: underline;
-     }
 
      img {
-       grid-column: 2/-1;
+			 grid-column: 2/-1;
 			 width: 100%;
 			 height: 100%;
        margin-bottom: 0;
@@ -60,6 +66,7 @@
    }
 
 	.card__copy {
+		grid-column: 1/-2;
 		margin: auto vars.$base;
 		padding-bottom: vars.$base;
 
