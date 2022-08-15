@@ -1,7 +1,27 @@
 // Breakpoints
-$xsMin: 37.5rem;
-$xsMax: 47.9375rem;
-$smMin: 48rem;
+//Thanks https://www.freecodecamp.org/news/the-100-correct-way-to-do-css-breakpoints-88d6a5ba1862/
+
+@mixin for-phone-only {
+  @media (max-width: 599px) { @content; }
+}
+@mixin for-tablet-portrait-up {
+  @media (min-width: 600px) { @content; }
+}
+@mixin for-tablet-landscape-up {
+  @media (min-width: 900px) { @content; }
+}
+@mixin for-desktop-up {
+  @media (min-width: 1200px) { @content; }
+}
+@mixin for-big-desktop-up {
+  @media (min-width: 1800px) { @content; }
+}
+
+
+
+
+
+//$smMin: 48rem;
 $smMax: 63.9375rem;
 $mdMin: 64rem;
 $mdMax: 79.9375rem;
@@ -12,6 +32,8 @@ $xlMax: 104.9375rem;
 $xxlMin: 105rem;
 $xxlMax: 122.4375rem;
 $xxxlMin: 122.5rem;
+
+
 
 
 //sizes major third
@@ -133,7 +155,7 @@ $violet-900: #4c1d95;
 }
 
 body {
-  @media (min-width: $smMin) {
+  @include for-tablet-portrait-up{
     font-size: 1.125rem;
   }
 
