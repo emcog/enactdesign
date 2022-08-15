@@ -1,3 +1,5 @@
+
+
 <!-- This file renders each individual blog post for reading. Be sure to update the svelte:head below -->
 
 <script context="module">
@@ -28,8 +30,6 @@
   const { title, excerpt, date, updated, coverImage, coverWidth, coverHeight, categories } = meta
 </script>
 
-<!--todo this is a bit hacky and may impact accessability, should be main which requires refactor  of  primary __layout and all other pages-->
-
 
 <svelte:head>
   <!-- Be sure to add your image files and un-comment the lines below -->
@@ -40,10 +40,10 @@
   <meta name="twitter:title" content={title} />
   <meta property="og:description" content={excerpt} />
   <meta name="twitter:description" content={excerpt} />
-  <!-- <meta property="og:image" content="https://yourdomain.com/image_path" /> -->
+<!--   <meta property="og:image" content="https://enact.design/image_path" /> -->
   <meta property="og:image:width" content={coverWidth} />
   <meta property="og:image:height" content={coverHeight} />
-  <!-- <meta name="twitter:image" content="https://yourdomain.com/image_path" /> -->
+  <!-- <meta name="twitter:image" content="https://enact.design/image_path" /> -->
 </svelte:head>
 
 
@@ -86,7 +86,7 @@
 
 <style lang="scss">
   article {
-    max-width: 48rem;
+    //max-width: 48rem;
   }
 
   .post-footer {
@@ -112,10 +112,20 @@
     }
   }
 
+:global .post p {
+  grid-column: 1/-2;
+}
+
+:global .post img {
+  grid-column: 1/-1;
+  max-height: 300px;
+}
+
   .post {
-    h1 {
-      margin-bottom: 1rem;
-    }
+      @media (min-width: vars.$for-tablet-portrait-up) {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+      }
 
     .meta {
       font-size: 0.8rem;

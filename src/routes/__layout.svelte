@@ -24,8 +24,9 @@
 	import { prefetch } from '$app/navigation'
   import { onMount } from 'svelte'
   import { fade } from 'svelte/transition'
-  import LeftNav from '$lib/components/LeftNav.svelte';
+  import SecondaryNav from '$lib/components/SecondaryNav.svelte';
   import Callout from '$lib/components/Callout.svelte';
+
 
   const transitionIn = { delay: 150, duration: 150 }
   const transitionOut = { duration: 100 }
@@ -57,7 +58,7 @@
 -->
 <div class="layout" class:open={$isMenuOpen}>
   <Header />
-  <LeftNav />
+  <SecondaryNav />
   {#key path}
     <!-- as-->
     <main
@@ -83,19 +84,27 @@
     max-width: 100%;
   }
 
-  main {
-    width: 100%;
-    grid-column: 2/-1;
-    //max-width: 68rem;
-    //margin: 6rem auto;
-    //padding: 0 1rem;
-  }
 
   .layout {
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-    grid-template-rows: auto 1fr auto;
+    @media (min-width: vars.$for-tablet-portrait-up) {
+      display: grid;
+      grid-template-columns: 1fr 3fr;
+      //grid-template-rows: auto 1fr auto;
+    }
+    display: flex;
+    flex-direction: column;
     min-height: 100vh;
+  }
+
+
+  main {
+    @media (min-width: vars.$for-tablet-portrait-up) {
+      grid-column: 2/-1;
+    }
+    margin: auto;
+    width: 100%;
+
+
   }
 
 
@@ -105,7 +114,6 @@
     max-width: 100%;
     height: auto;
   }
-
 
 
   li {
