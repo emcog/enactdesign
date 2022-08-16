@@ -17,11 +17,11 @@
   import PostsList from '$lib/components/PostsList.svelte'
   import Pagination from '$lib/components/Pagination.svelte'
 	import { siteDescription } from '$lib/config'
-	import { articles } from '$lib/assets/js/store';
+	import { storePosts } from '$lib/assets/js/store';
 	export let posts;
   export let total;
-	articles.set(posts)
-	console.log('articles', $articles)
+	storePosts.set(posts)
+	console.log('storePosts', $storePosts)
 </script>
 
 

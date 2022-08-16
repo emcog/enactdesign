@@ -1,18 +1,25 @@
 <script>
-	// import { articles } from "$lib/assets/js/store";
+	import { storePosts } from "$lib/assets/js/store";
+	import { onMount } from 'svelte'
+		let navPosts;
 	// import posts from "./PostsList.svelte"
+	console.log('2ndnav',$storePosts)
+	onMount(()=>{console.log('2ndnav Mount',$storePosts)})
+	onMount(navPosts = storePosts)
+	setTimeout(
+		()=>{console.log('2ndnav Timeout',$storePosts)}, 2000);
 </script>
 
 <nav class="secondary-nav">
 	<ul>
-	<!--{#each posts as post}-->
-	<!--	<li>post</li>-->
-	<!--	{/each}-->
+
 		<li>Category 2</li>
 		<li>Category 3</li>
 	</ul>
 	<ul>
-		<li>Project 1</li>
+		{#each $navPosts as post}
+			<li>{post.title}</li>
+		{/each}
 		<li>Project 2</li>
 		<li>Project 3</li>
 	</ul>
