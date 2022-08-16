@@ -3,7 +3,6 @@
   import Card from './Card.svelte';
 </script>
 
-<!--todo LeftNav shouldn't be inside main, its poor accessability-->
 <ul class="posts-list">
   {#each posts as post}
 
@@ -26,9 +25,6 @@
 .posts-list {
   display: grid;
   grid-template-columns: vars.$primary-grid;
-  //flex-direction: row;
-  //flex-wrap: wrap;
-  //justify-content: flex-start;
   list-style-type: none;
   padding: 0;
 }

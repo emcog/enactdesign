@@ -3,13 +3,13 @@
 <script context="module">
 
   export const load = async ({ params }) => {
-    try {  
+    try {
       const post = await import(`../../lib/posts/${params.post}.md`)
 
       return {
         props: {
           PostContent: post.default,
-          meta: { ...post.metadata, slug: params.post } 
+          meta: { ...post.metadata, slug: params.post }
         }
       }
     } catch(error) {

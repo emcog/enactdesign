@@ -1,6 +1,13 @@
+<script>
+	// import { articles } from "$lib/assets/js/store";
+	// import posts from "./PostsList.svelte"
+</script>
+
 <nav class="secondary-nav">
 	<ul>
-		<li>Category 1</li>
+	<!--{#each posts as post}-->
+	<!--	<li>post</li>-->
+	<!--	{/each}-->
 		<li>Category 2</li>
 		<li>Category 3</li>
 	</ul>
