@@ -84,8 +84,6 @@
       color: inherit;
 
       ul {
-        //margin: 1rem auto 0;
-        //padding-top: 0.5rem;
         width: max-content;
 
         li {

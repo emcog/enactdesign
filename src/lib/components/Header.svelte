@@ -27,8 +27,9 @@
   header {
     grid-column: 1/-1;
     display: flex;
-    //flex-direction: row;
+    margin: vars.$base vars.$xl;
     border-bottom: 4px vars.$blue-600;
+    padding: 0 vars.$xs;
 
     @media (min-width: vars.$smMin) {
       justify-content: center;
