@@ -13,16 +13,18 @@
 
 <style lang="scss">
 	nav {
-		grid-column: 1/4;
+		grid-column: 1/-1;
 		grid-row: 3/-1;
 		display: grid;
-		//todo fix hard coded values
-		grid-template-columns: repeat(2, vars.$xl9);
+		grid-template-columns: repeat(8, 1fr);
 		margin: 0;
 		padding: 0;
 	}
 
-	ul:first-child {grid-column: 1/2;}
+	ul:first-child {
+		grid-column: 1/2;
+		margin: 0 vars.$xl;
+	}
 	ul:nth-child(2) {grid-column: 2/-1}
 
 	ul { list-style: none;
@@ -30,12 +32,8 @@
 			padding: 0;
 		display: flex;
 		flex-direction: column;
-
 	}
 
-	li {
-		display: inline;
-	}
 
 	a { text-decoration: none }
 </style>
