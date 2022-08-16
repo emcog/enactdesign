@@ -1,13 +1,17 @@
 <script>
 	import { storePosts } from "$lib/assets/js/store";
 	import { onMount } from 'svelte'
-		let navPosts;
-	// import posts from "./PostsList.svelte"
-	console.log('2ndnav',$storePosts)
-	onMount(()=>{console.log('2ndnav Mount',$storePosts)})
-	onMount(navPosts = storePosts)
-	setTimeout(
-		()=>{console.log('2ndnav Timeout',$storePosts)}, 2000);
+	let navPosts;
+	onMount(navPosts = storePosts);
+	console.log(navPosts);
+//	create an array of categories without repeats
+// 	let duplicateCats = []
+	// navPosts.forEach
+	// console.log(duplicateCats);
+	//	append navPosts.categories into array
+	//	flatten above array
+// 	let categories = [...new Set(navPosts)]
+// 	console.log(categories);
 </script>
 
 <nav class="secondary-nav">
@@ -18,7 +22,8 @@
 	</ul>
 	<ul>
 		{#each $navPosts as post}
-			<li>{post.title}</li>
+			<!--todo replace hard coded with ref to settings-->
+			<li><a href="work/{post.slug}">{post.title}</a></li>
 		{/each}
 		<li>Project 2</li>
 		<li>Project 3</li>
@@ -51,18 +56,22 @@
 		flex-direction: column;
 	}
 
- .secondary-nav li {
+ li {
    padding: vars.$xs6 vars.$xs;
-	 	color: black;
+	 color: black;
+	 line-height: 1.25;
+	border-radius: vars.$xs6;
   }
 
-  .secondary-nav li:hover {
-	 	border-radius: vars.$xs6;
+   nav li:hover, a:hover {
 		color: white;
     background: black;
-
   }
 
+	a {
+		text-decoration: none;
+		display: block;
+	}
 
-	a { text-decoration: none }
+
 </style>
