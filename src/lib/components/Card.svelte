@@ -34,15 +34,13 @@
 
   a:hover { text-decoration: underline;}
 
-	.card {
+	article {
      transition: all .25s;
-     //transition-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);
-
 
      @media (min-width: vars.$for-tablet-landscape-up) {
        display: grid;
-       grid-template-columns: 1fr 2fr;
-       margin: vars.$xs6 0;
+       grid-template-columns: repeat(6, 1fr);
+       margin: 0 0 vars.$xs2 0;
 			 border-top-left-radius: vars.$xs5;
 			 height: 485px;
      }
@@ -52,11 +50,11 @@
 
 		 max-width: 100%;
      margin: vars.$xs 0;
-     border-bottom-left-radius: vars.$xs5;
+     border-bottom-left-radius: vars.$xs3;
      background: vars.$slate-100;
 
      img {
-			 grid-column: 2/-1;
+			 grid-column: 3/-1;
 			 width: 100%;
 			 height: 485px;
        margin-bottom: 0;
@@ -65,8 +63,9 @@
    }
 
 	.card__copy {
-		grid-column: 1/-2;
+		grid-column: 1/3;
     @media (min-width: vars.$for-tablet-landscape-up) { margin: auto vars.$base; }
+
 		margin: 0 vars.$base;
 		padding-bottom: vars.$base;
 

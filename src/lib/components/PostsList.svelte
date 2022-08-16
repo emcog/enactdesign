@@ -24,7 +24,8 @@
 <style lang="scss">
 
 .posts-list {
-  //display: flex;
+  display: grid;
+  grid-template-columns: vars.$primary-grid;
   //flex-direction: row;
   //flex-wrap: wrap;
   //justify-content: flex-start;
@@ -32,7 +33,8 @@
   padding: 0;
 }
 
-.posts-list__post {
+li {
+  grid-column: 3/-1;
   width: 100%;
 }
 </style>

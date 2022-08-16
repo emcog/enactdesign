@@ -27,8 +27,8 @@
 	<meta data-key="description" name="description" content={siteDescription}>
 </svelte:head>
 
-
-<h1>Work</h1>
+<!--todo use h1 for seo-->
+<!--<h1>Work</h1>-->
 
 <PostsList {posts} />
 
