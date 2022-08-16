@@ -4,15 +4,19 @@
   margin: 4.5rem 0 1rem;
   line-height: 1.1;
   font-family: var(--bodyFont);
-  font-weight: bold;
+  font-weight: 500;
   color: black;
 }
 
 
 a {
-  color: var(--darker);
+  color: black;
   text-decoration-thickness: 1px;
   text-decoration-color: var(--dark);
+}
+
+li {
+  font-weight: 500;
 }
 
 //ul {
