@@ -70,7 +70,7 @@
       <slot />
     </main>
   {/key}
-  <Footer />
+<!--  <Footer />-->
 </div>
 
 
@@ -88,8 +88,8 @@
   .layout {
     @media (min-width: vars.$for-tablet-portrait-up) {
       display: grid;
-      grid-template-columns: 1fr 3fr;
-      //grid-template-rows: auto 1fr auto;
+      grid-template-columns: repeat(8, 1fr);
+      grid-template-rows: minmax(min-content, max-content) vars.$xl6 auto;
     }
     display: flex;
     flex-direction: column;
@@ -99,7 +99,8 @@
 
   main {
     @media (min-width: vars.$for-tablet-portrait-up) {
-      grid-column: 2/-1;
+      grid-column: 1/-1;
+      grid-row: 2/-1
     }
     margin: auto;
     width: 100%;

@@ -25,6 +25,7 @@
 <style lang="scss">
 
   header {
+    grid-column: 1/-1;
     display: flex;
     //flex-direction: row;
     border-bottom: 4px vars.$blue-600;

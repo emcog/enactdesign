@@ -1,8 +1,7 @@
-
-
 <!-- This file renders each individual blog post for reading. Be sure to update the svelte:head below -->
 
 <script context="module">
+
   export const load = async ({ params }) => {
     try {  
       const post = await import(`../../lib/posts/${params.post}.md`)
@@ -60,11 +59,11 @@
 
   <h1>{ title }</h1>
   
-  <div class="meta">
-    <b>Published:</b> {date}
-    <br>
-    <b>Updated:</b> {updated}
-  </div>
+<!--  <div class="meta">-->
+<!--    <b>Published:</b> {date}-->
+<!--    <br>-->
+<!--    <b>Updated:</b> {updated}-->
+<!--  </div>-->
   
   <svelte:component this={PostContent} />
 
@@ -85,8 +84,34 @@
 </article>
 
 <style lang="scss">
-  article {
-    //max-width: 48rem;
+
+
+  :global article.post {
+      grid-template-rows: vars.$xl6 auto;
+      @media (min-width: vars.$for-tablet-portrait-up) {
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+
+        p {
+          grid-column: 3/-3;
+          font-size: vars.$lg;
+        }
+      }
+
+    .meta {
+      font-size: 0.8rem;
+      margin-bottom: 4rem;
+    }
+
+  h1 {
+    font-size: vars.$xl4;
+    grid-column: 2/9;
+    align-self: end;
+  }
+
+    img + h1 {
+      margin-top: 1rem;
+    }
   }
 
   .post-footer {
@@ -109,26 +134,6 @@
       + li {
         margin-left: 0.5rem;
       }
-    }
-  }
-
-:global .post p {
-  grid-column: 1/-2;
-}
-
-  .post {
-      @media (min-width: vars.$for-tablet-portrait-up) {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-      }
-
-    .meta {
-      font-size: 0.8rem;
-      margin-bottom: 4rem;
-    }
-
-    img + h1 {
-      margin-top: 1rem;
     }
   }
 

@@ -19,3 +19,9 @@
 
   <p>&copy;{new Date().getFullYear()} {siteAuthor}</p>
 </footer>
+
+<style lang="scss">
+  footer{
+    grid-column: 1/-1''
+}
+</style>

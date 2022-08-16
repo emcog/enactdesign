@@ -43,7 +43,7 @@
        display: grid;
        grid-template-columns: 1fr 2fr;
        margin: vars.$xs6 0;
-			 border-top-left-radius: vars.$xs;
+			 border-top-left-radius: vars.$xs5;
 			 height: 485px;
      }
 
@@ -52,7 +52,7 @@
 
 		 max-width: 100%;
      margin: vars.$xs 0;
-     border-bottom-left-radius: vars.$xs;
+     border-bottom-left-radius: vars.$xs5;
      background: vars.$slate-100;
 
      img {

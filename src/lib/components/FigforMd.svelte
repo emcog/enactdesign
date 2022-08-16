@@ -13,10 +13,9 @@
 <style lang="scss">
 	figure {
 		display: grid;
-		grid-column: 1/-1;
+		grid-column: 3/-1;
 		grid-gap: vars.$xs4;
 		margin: 0;
-
 	}
 
 	img {
