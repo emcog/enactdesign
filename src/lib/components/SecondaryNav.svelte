@@ -7,21 +7,18 @@
 	let navUniqueCats;
 	onMount(navUniqueCats = storeUniqueCategories);
 
-	setTimeout(() => console.log('navCats',$navUniqueCats), 2000)
-
-
 </script>
 
 <nav class="secondary-nav">
 	<ul>
 		{#each $navUniqueCats as navCat}
-			<li>{navCat}</li>
+			<li><a href="/work/category/{navCat}">{navCat}</a></li>
 		{/each}
 	</ul>
 	<ul>
 		{#each $navPosts as post}
 			<!--todo replace hard coded with ref to settings-->
-			<li><a href="work/{post.slug}">{post.title}</a></li>
+			<li><a href="/work/{post.slug}">{post.title}</a></li>
 		{/each}
 		<li>Project 2</li>
 		<li>Project 3</li>
