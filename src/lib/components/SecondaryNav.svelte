@@ -9,24 +9,30 @@
 
 </script>
 
-<nav class="secondary-nav">
-	<ul>
-		{#each $navUniqueCats as navCat}
-			<li><a href="/work/category/{navCat}">{navCat}</a></li>
-		{/each}
-	</ul>
-	<ul>
-		{#each $navPosts as post}
-			<!--todo replace hard coded with ref to settings-->
-			<li><a href="/work/{post.slug}">{post.title}</a></li>
-		{/each}
-		<li>Project 2</li>
-		<li>Project 3</li>
+<nav>
+	<ul class="secondary-nav">
+		<li class="categories-nav">
+			<p>Categories</p>
+			<ul>
+				{#each $navUniqueCats as navCat}
+					<li><a href="/work/category/{navCat}">{navCat}</a></li>
+			{/each}
+			</ul>
+		</li>
+		<li class="case-studies-nav">
+			<p>Case studies</p>
+				<ul>
+					{#each $navPosts as post}
+					<!--todo replace hard coded with ref to settings-->
+					<li><a href="/work/{post.slug}">{post.title}</a></li>
+				{/each}
+			</ul>
+		</li>
 	</ul>
 </nav>
 
 <style lang="scss">
-	nav {
+	.secondary-nav {
 		z-index: 1;
 		grid-column: 1/3;
 		grid-row: 3/-1;
@@ -36,39 +42,49 @@
 		padding: 0;
 	}
 
-  ul { list-style: none;
-    	 padding: 0;
-    	 display: flex;
-    	 flex-direction: column;
-			font-size: vars.$sm;
+  ul {
+    list-style: none;
+    padding: 0;
+    font-size: vars.$sm;
   }
 
-	ul:first-child {
+	.categories-nav {
 		grid-column: 1/2;
 		margin: 0 vars.$xl;
 	}
-	ul:nth-child(2) {
+
+	.case-studies-nav {
 		margin: 0 vars.$xl2 0 vars.$xs*-1 ;
 		grid-column: 2/3;
 	}
 
- li {
-	margin: vars.$xs6 0;
-	 border-radius: vars.$xs6;
-   padding: vars.$xs6 vars.$xs4;
-	 color: black;
-	 line-height: 1.25;
 
-  }
+ .case-studies-nav,
+ .categories-nav {
+   ul li a:hover {
+       background: black;
+			 color: white;
+		 }
 
-   nav li:hover, a:hover {
-		color: white;
-    background: black;
-  }
+	 ul li a:visited {
+       background: white;
+			 color: gray;
+		 }
+	 ul li a:visited:hover {
+       background: black;
+			 color: white;
+		 }
+   }
+
+ li > p { padding: vars.$xs6 vars.$xs4; }
 
 	a {
 		text-decoration: none;
 		display: block;
+    border-radius: vars.$xs6;
+    line-height: 1.25;
+    margin: vars.$xs6 0;
+    padding: vars.$xs6 vars.$xs4;
 	}
 
 
