@@ -4,19 +4,11 @@
 	let navPosts;
 	onMount(navPosts = storePosts);
 	console.log(navPosts);
-//	create an array of categories without repeats
-// 	let duplicateCats = []
-	// navPosts.forEach
-	// console.log(duplicateCats);
-	//	append navPosts.categories into array
-	//	flatten above array
-// 	let categories = [...new Set(navPosts)]
-// 	console.log(categories);
+
 </script>
 
 <nav class="secondary-nav">
 	<ul>
-
 		<li>Category 2</li>
 		<li>Category 3</li>
 	</ul>
@@ -41,6 +33,13 @@
 		padding: 0;
 	}
 
+  ul { list-style: none;
+    	 padding: 0;
+    	 display: flex;
+    	 flex-direction: column;
+			font-size: vars.$sm;
+  }
+
 	ul:first-child {
 		grid-column: 1/2;
 		margin: 0 vars.$xl;
@@ -50,17 +49,13 @@
 		grid-column: 2/3;
 	}
 
-	ul { list-style: none;
-			padding: 0;
-		display: flex;
-		flex-direction: column;
-	}
-
  li {
-   padding: vars.$xs6 vars.$xs;
+	margin: vars.$xs6 0;
+	 border-radius: vars.$xs6;
+   padding: vars.$xs6 vars.$xs4;
 	 color: black;
 	 line-height: 1.25;
-	border-radius: vars.$xs6;
+
   }
 
    nav li:hover, a:hover {
