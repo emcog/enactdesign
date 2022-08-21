@@ -20,13 +20,14 @@
 	import { storePosts } from '$lib/assets/js/store';
 	export let posts;
   export let total;
-	// storePosts.set(posts)
-	// storePosts.set(posts)
-	// console.log('storePosts', $storePosts)
-	// let categories = [];
-	// posts.map(e => console.log(e.categories));
+
+	//save posts to a store
+	storePosts.set(posts)
+	console.log('storePosts', $storePosts)
 
 
+
+	//arrange data for single entries of categories
 	let arraysOfCategories = [];
 	let duplicateCategories = []
 	let categories = new Set()
@@ -38,7 +39,6 @@
 	setTimeout(function() {
 		console.log('single', categories)}, 1000);
 
-	// posts.forEach(post => duplicateCategories.concat(post.categories))
 
 
 
