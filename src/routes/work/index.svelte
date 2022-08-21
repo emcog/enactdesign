@@ -27,17 +27,17 @@
 
 
 
-	//arrange data for single entries of categories
+	//save unique categories to store
 	let arraysOfCategories = [];
 	let duplicateCategories = []
-	let categories = new Set()
+	let uniqueCategories = new Set()
 	posts.map(e => arraysOfCategories.push(e.categories))
 	duplicateCategories = arraysOfCategories.flat(2);
-	duplicateCategories.forEach(e => categories.add(e));
+	duplicateCategories.forEach(e => uniqueCategories.add(e));
 
 
 	setTimeout(function() {
-		console.log('single', categories)}, 1000);
+		console.log('single', uniqueCategories)}, 1000);
 
 
 
