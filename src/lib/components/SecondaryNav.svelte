@@ -1,16 +1,22 @@
 <script>
-	import { storePosts } from "$lib/assets/js/store";
+	import { storePosts, storeUniqueCategories } from "$lib/assets/js/store";
 	import { onMount } from 'svelte'
 	let navPosts;
 	onMount(navPosts = storePosts);
-	console.log(navPosts);
+
+	let navUniqueCats;
+	onMount(navUniqueCats = storeUniqueCategories);
+
+	setTimeout(() => console.log('navCats',$navUniqueCats), 2000)
+
 
 </script>
 
 <nav class="secondary-nav">
 	<ul>
-		<li>Category 2</li>
-		<li>Category 3</li>
+		{#each $navUniqueCats as navCat}
+			<li>{navCat}</li>
+		{/each}
 	</ul>
 	<ul>
 		{#each $navPosts as post}

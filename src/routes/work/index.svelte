@@ -28,19 +28,22 @@
 
 
 	//save unique categories to store
-	let arraysOfCategories = [];
+	let arraysOfCategories = []
 	let duplicateCategories = []
-	let uniqueCategories = new Set()
+	let setCategories = new Set()
+	let uniqueCategories = []
 	posts.map(e => arraysOfCategories.push(e.categories))
 	duplicateCategories = arraysOfCategories.flat(2);
-	duplicateCategories.forEach(e => uniqueCategories.add(e));
-	storeUniqueCategories.set(uniqueCategories);
+	duplicateCategories.forEach(e => setCategories.add(e));
+	setCategories.forEach(e => console.log('set entry',e))
+	uniqueCategories = [...setCategories]
+	storeUniqueCategories.set(uniqueCategories)
 
-	// console.log('store uniques', $storeUniqueCategories);
+	console.log('store uniques', $storeUniqueCategories);
 
 	// setTimeout(function() {
-	// 	console.log('single', uniqueCategories)}, 1000);
-	//
+	// 	console.log('unique', uniqueCategories)}, 1000);
+
 
 </script>
 
