@@ -17,7 +17,7 @@
   import PostsList from '$lib/components/PostsList.svelte'
   import Pagination from '$lib/components/Pagination.svelte'
 	import { siteDescription } from '$lib/config'
-	import { storePosts } from '$lib/assets/js/store';
+	import { storePosts, storeUniqueCategories } from '$lib/assets/js/store';
 	export let posts;
   export let total;
 
@@ -34,13 +34,13 @@
 	posts.map(e => arraysOfCategories.push(e.categories))
 	duplicateCategories = arraysOfCategories.flat(2);
 	duplicateCategories.forEach(e => uniqueCategories.add(e));
+	storeUniqueCategories.set(uniqueCategories);
 
+	// console.log('store uniques', $storeUniqueCategories);
 
-	setTimeout(function() {
-		console.log('single', uniqueCategories)}, 1000);
-
-
-
+	// setTimeout(function() {
+	// 	console.log('single', uniqueCategories)}, 1000);
+	//
 
 </script>
 
