@@ -72,7 +72,7 @@
 
   {#if categories}
     <aside class="post-footer">
-      <h2>Posted in: </h2>
+      <h2>Posted in</h2>
       <ul>
         {#each categories as category}
           <li>
@@ -118,8 +118,13 @@
   }
 
   .post-footer {
+
+    grid-column: 3/7;
+    margin: vars.$xs2 0 vars.$xl4 0 ;
+
     ul {
       padding: 0;
+      margin: vars.$xs3 0 0 vars.$xs4*-1;
     }
 
     li {
@@ -127,11 +132,29 @@
       font-size: 0.8rem;
 
       a {
-        background-color: var(--lightAccent);
-        padding: .5rem 0.75rem;
-        text-transform: uppercase;
         font-family: var(--primaryFont);
-        font-weight: bold;
+        font-size: vars.$base;
+        font-weight: 500;
+        text-decoration: none;
+        display: block;
+        border-radius: vars.$xs6;
+        line-height: 1.25;
+        margin: vars.$xs6 0;
+        padding: vars.$xs6 vars.$xs4;
+      }
+
+      a:hover {
+          background: black;
+          color: white;
+
+         a:visited {
+          background: white;
+          color: gray;
+        }
+        a:visited:hover {
+          background: black;
+          color: white;
+        }
       }
 
       + li {

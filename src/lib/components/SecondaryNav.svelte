@@ -15,21 +15,23 @@
 	<ul class="secondary-nav">
 		<li class="categories-nav">
 			<p>Categories</p>
-			<ul>
 				{#if $navUniqueCats}
-					{#each $navUniqueCats as navCat}
-						<li><a href="/work/category/{navCat}">{navCat}</a></li>
+					<ul>
+						{#each $navUniqueCats as navCat}
+							<li><a href="/work/category/{navCat}">{navCat}</a></li>
 					{/each}
-				{/if}
-			</ul>
+				</ul>
+			{/if}
 		</li>
 		<li class="case-studies-nav">
 			<p>Case studies</p>
 				<ul>
+					{#if $navPosts }
 					{#each $navPosts as post}
 					<!--todo replace hard coded with ref to settings-->
 					<li><a href="/work/{post.slug}">{post.title}</a></li>
 				{/each}
+						{/if}
 			</ul>
 		</li>
 	</ul>

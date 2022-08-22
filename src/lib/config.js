@@ -1,8 +1,8 @@
 export const siteTitle = 'Enact design'
 export const siteDescription = 'Built with the SvelteKit Static Blog Starter'
-export const siteURL = 'example.com'
+export const siteURL = 'enact.design'
 export const siteLink = 'https://github.com/josh-collinsworth/sveltekit-blog-starter'
-export const siteAuthor = 'Josh Collinsworth - find and change this text in src/lib/config.js'
+export const siteAuthor = 'Robin Leonard'
 
 // Controls how many posts are shown per page on the main blog index pages
 export const postsPerPage = 21
@@ -18,5 +18,24 @@ export const navItems = [
   }, {
     title: 'Contact',
     route: '/contact' 
+  },
+]
+
+export const socials = [
+  {
+    display: true,
+    title: 'Instagram',
+    icon: false,
+    link: '',
+  }, {
+    display: true,
+    title: 'Linkedin',
+    icon: false,
+    link: '',
+  }, {
+    display: true,
+    title: 'Github',
+    icon: false,
+    link: '',
   },
 ]

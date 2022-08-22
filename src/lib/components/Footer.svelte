@@ -1,27 +1,57 @@
 <script>
   import MainNav from './MainNav.svelte'
-  import { siteAuthor } from '$lib/config'
+  import { siteAuthor, socials } from '$lib/config'
 </script>
 
 <footer>
-  <MainNav />
-
+<!--  <MainNav />-->
+  <p>&copy;{new Date().getFullYear()} {siteAuthor}</p>
   <nav>
     <ul>
-      <li>
-        <a href="/api/rss.xml" rel="external">RSS</a>
-      </li>
-      <li>
-        <a href="/">Home</a>
-      </li>
+      {#each socials as social}
+        {#if social.display}
+        <li><a href="{social.link}">
+          {#if social.icon}
+            <img src="{social.icon}" alt="{social.title}">
+          {:else}
+            <p>{social.title}</p>
+          {/if}
+        </a></li>
+          {/if}
+      {/each}
+        <!--        <a href="/api/rss.xml" rel="external">RSS</a>-->
+        <!--      </li>-->
+        <!--      <li>-->
+        <!--        <a href="/">Home</a>-->
     </ul>
   </nav>
 
-  <p>&copy;{new Date().getFullYear()} {siteAuthor}</p>
+
 </footer>
 
 <style lang="scss">
-  footer{
-    grid-column: 1/-1''
-}
+  footer{ grid-column: 1/-1; }
+
+  footer {
+    display: flex;
+    margin: vars.$base vars.$xl;
+    justify-items: center;
+
+    nav {
+      margin: 0 vars.$xs 0 auto;
+
+      ul {
+        gap: 0 vars.$base;
+      }
+    }
+
+    p {
+      margin: 0;
+      font-size: vars.$sm;
+    }
+
+    a { color: inherit; }
+
+  }
+
 </style>

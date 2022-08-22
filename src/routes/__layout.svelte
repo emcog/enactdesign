@@ -70,7 +70,7 @@
       <slot />
     </main>
   {/key}
-<!--  <Footer />-->
+  <Footer />
 </div>
 
 

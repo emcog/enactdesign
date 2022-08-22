@@ -1,5 +1,11 @@
 @use './vars';
 
+header {
+  nav ul {
+    gap: 0 vars.$xl;
+  }
+}
+
 header,
 footer {
   font-family: var(--primaryFont);
@@ -18,7 +24,7 @@ footer {
     display: flex;
     flex-wrap: wrap;
     //justify-content: center;
-    gap: 0rem 1.5rem;
+
     padding: 0;
     margin: 0;
 
@@ -33,48 +39,6 @@ footer {
 }
 
 
-
-footer {
-  background: var(--darker);
-  color: var(--paper);
-  display: grid;
-  grid-template-columns: 100%;
-  align-items: stretch;
-  gap: 2rem;
-
-  @media (min-width: vars.$smMin) {
-    grid-template-columns: 1fr 1fr 2fr;
-  }
-
-  .menu-button {
-    display: none;
-  }
-
-  p {
-    margin: 0;
-    font-size: 0.8rem;
-  }
-
-  a {
-    color: inherit;
-  }
-
-  nav {
-    display: initial;
-
-    @media (min-width: vars.$smMin) {
-      border-right: 1px solid var(--dark);
-    }
-
-    ul {
-      display: initial;
-
-      li + li {
-        margin-top: 0.5rem;
-      }
-    }
-  }
-}
 
 .skip-to-content-link {
   position: absolute;
