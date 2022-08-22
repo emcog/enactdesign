@@ -51,6 +51,7 @@
 
   $: lowerBound = (page * postsPerPage) - (postsPerPage - 1) || 1
   $: upperBound = Math.min(page * postsPerPage, totalPosts)
+
 </script>
 
 

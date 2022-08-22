@@ -1,11 +1,13 @@
 <script>
 	import { storePosts, storeUniqueCategories } from "$lib/assets/js/store";
-	import { onMount } from 'svelte'
-	let navPosts;
-	onMount(navPosts = storePosts);
+	import { onMount} from 'svelte';
 
+	let navPosts;
 	let navUniqueCats;
-	onMount(navUniqueCats = storeUniqueCategories);
+	onMount(navUniqueCats = storeUniqueCategories)
+	onMount(navPosts = storePosts)
+
+	onMount(() => console.log("mounted"))
 
 </script>
 
@@ -14,9 +16,11 @@
 		<li class="categories-nav">
 			<p>Categories</p>
 			<ul>
-				{#each $navUniqueCats as navCat}
-					<li><a href="/work/category/{navCat}">{navCat}</a></li>
-			{/each}
+				{#if $navUniqueCats}
+					{#each $navUniqueCats as navCat}
+						<li><a href="/work/category/{navCat}">{navCat}</a></li>
+					{/each}
+				{/if}
 			</ul>
 		</li>
 		<li class="case-studies-nav">
@@ -32,10 +36,13 @@
 </nav>
 
 <style lang="scss">
+	nav {
+    z-index: 1;
+    grid-column: 1/3;
+    grid-row: 3/-1;
+	}
+
 	.secondary-nav {
-		z-index: 1;
-		grid-column: 1/3;
-		grid-row: 3/-1;
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		margin: 0;

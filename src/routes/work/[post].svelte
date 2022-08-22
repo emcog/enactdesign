@@ -19,6 +19,8 @@
       }
     }
   }
+
+
 </script>
 
 
@@ -27,6 +29,7 @@
   export let meta
 
   const { title, excerpt, date, updated, coverImage, coverWidth, coverHeight, categories } = meta
+
 </script>
 
 
