@@ -34,7 +34,7 @@
 
   footer {
     display: flex;
-    margin: vars.$base vars.$xl;
+    margin: vars.$base vars.$xl vars.$xl vars.$xl;
     justify-items: center;
 
     nav {

@@ -95,8 +95,9 @@
         display: grid;
         grid-template-columns: repeat(8, 1fr);
 
+        h2, h3, h4, h5, h6, p, span, section, div, img { grid-column: 3/-3;}
+
         p {
-          grid-column: 3/-3;
           font-size: vars.$lg;
         }
       }
