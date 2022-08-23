@@ -25,6 +25,7 @@
     display: flex;
     transition: all .25s cubic-bezier(0.785, 0.135, 0.15, 0.86);
 
+
     &.open {
       transform: translateX(0);
       opacity: 1;
@@ -35,8 +36,7 @@
         opacity: 0;
         animation: slide_in_left .2s cubic-bezier(0.215, 0.610, 0.355, 1) forwards;
 
-        a {
-          color: inherit;
+        a {color: inherit;
         }
 
         // Probably shouldn't have more than 8 main nav menu items, but if you do, you can adjust this

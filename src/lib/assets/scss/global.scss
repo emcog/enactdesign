@@ -9,13 +9,14 @@
 @use './prism';
 
 *:focus {
-  outline: 2px solid var(--accent);
+  outline: 2px solid #004D32;
   outline-offset: 2px;
 }
 
 main:focus {
   outline: none;
 }
+
 
 body {
   margin: 0;

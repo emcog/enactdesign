@@ -40,15 +40,13 @@
 <style lang="scss">
 
 	.secondary-nav {
-    //display: flex;
-    //flex-direction: row;
     grid-column: 1/-1;
     grid-row: 2/3;
 
     @media (min-width: vars.$for-tablet-landscape-up) {
       z-index: 1;
       grid-column: 1/3;
-      grid-row: 3/-1;
+      grid-row: 2/-1;
       margin: 0;
       padding: 0;
     }
@@ -64,6 +62,7 @@
     > ul {
       display: flex;
       flex-direction: column;
+			margin: 0;
 
 			@media(min-width: vars.$for-tablet-landscape-up)  {
         top: 0;
@@ -88,28 +87,30 @@
         display: flex;
         flex-direction: row;
 				overflow: scroll;
+        scroll-snap-type: both proximity;
 				@media(min-width: vars.$for-tablet-landscape-up) { flex-direction: column; }
       }
 
       li {
-				min-width: vars.$xl7;
+				min-width: vars.$xl6;
 				@media(min-width: vars.$for-tablet-landscape-up) { min-width: auto; }
 
 			}
 
       ul li a:hover {
-        background: black;
-        color: white;
+        background: #00E596;
+        //color: white;
+				//text-decoration: underline;
       }
 
       ul li a:visited {
-        background: white;
-        color: gray;
+        //background: white;
+        //color: gray;
       }
 
       ul li a:visited:hover {
-        background: black;
-        color: white;
+        //background: black;
+        //color: white;
       }
     }
 
@@ -122,7 +123,7 @@
     &__case-studies {
         margin: 0 vars.$xl;
 
-			//@media(max-width: vars.$for-phone-only) {margin: 0 vars.$xl;}
+
       @media(min-width: vars.$for-tablet-landscape-up) {
 				grid-column: 2/3;
       	margin: 0 vars.$xl2 0 vars.$xs*-1 ;
@@ -136,7 +137,7 @@
     a {
       text-decoration: none;
       display: block;
-      border-radius: vars.$xs6;
+      //border-radius: vars.$xs6;
       line-height: 1.25;
       margin: vars.$xs6 0;
       padding: vars.$xs6 vars.$xs4;

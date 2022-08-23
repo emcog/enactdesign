@@ -23,3 +23,15 @@
     <slot />
   </a>
 </li>
+
+<style lang="scss">
+  a {
+    margin: 0 vars.$base;
+    padding: vars.$xs4 vars.$xs2;
+
+    &:hover {
+      background: #00E596;
+      text-decoration: none;
+    }
+  }
+</style>
