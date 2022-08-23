@@ -14,15 +14,15 @@
 <nav class="secondary-nav">
 	<ul>
 		<li class="secondary-nav__categories">
-			<p>Categories</p>
-				{#if $navUniqueCats}
-					<ul>
-						{#each $navUniqueCats as navCat}
-							<li><a href="/work/category/{navCat}">{navCat}</a></li>
-					{/each}
-				</ul>
-			{/if}
-		</li>
+<!--			<p>Categories</p>-->
+<!--				{#if $navUniqueCats}-->
+<!--					<ul>-->
+<!--						{#each $navUniqueCats as navCat}-->
+<!--							<li><a href="/work/category/{navCat}">{navCat}</a></li>-->
+<!--					{/each}-->
+<!--				</ul>-->
+<!--			{/if}-->
+<!--		</li>-->
 		<li class="secondary-nav__case-studies">
 			<p>Case studies</p>
 				<ul>
