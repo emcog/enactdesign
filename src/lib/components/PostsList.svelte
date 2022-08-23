@@ -30,7 +30,10 @@
 }
 
 li {
+    grid-column: 1/-1;
+    width: 100%;
+  @media(min-width: vars.$for-tablet-landscape-up) {
   grid-column: 3/-1;
-  width: 100%;
+  }
 }
 </style>

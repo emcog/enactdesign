@@ -20,18 +20,9 @@
 <style lang="scss">
   .main-nav {
     z-index: 2;
-    margin-left:auto;
-    transform: translateX(-100vw);
-    visibility: hidden;
-    width: 100%;
-    height: 100vh;
+    margin:6px 0 0 auto;
     pointer-events: none;
-    opacity: 0;
     display: flex;
-    //justify-content: center;
-    //align-items: center;
-    background: vars.$blue-600;
-    color: var(--paper);
     transition: all .25s cubic-bezier(0.785, 0.135, 0.15, 0.86);
 
     &.open {

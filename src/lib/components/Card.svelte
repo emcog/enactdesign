@@ -10,8 +10,6 @@
 </script>
 <a href="/work/{slug}">
 	<article class="card">
-
-	<!--todo refactor /work/ so not hard coded, i.e. linked to config.js-->
 	<div class="card__copy">
 		<h2>{title}</h2>
 		<p>{excerpt}</p>
@@ -47,11 +45,11 @@
 
 		display: flex;
 		flex-direction: column-reverse;
-
-		 max-width: 100%;
-     margin: vars.$xs 0;
-     border-bottom-left-radius: vars.$xs3;
-     background: vars.$slate-100;
+		max-width: 100%;
+		margin: vars.$xs 0;
+		border-bottom-left-radius: vars.$xs3;
+		color: white;
+		background: black;
 
      img {
 			 grid-column: 3/-1;
@@ -74,6 +72,7 @@
 				font-size: vars.$xl2;
         margin-top: vars.$xs2;
 			}
+			color: white;
 			font-size: vars.$xl;
 			margin-top: vars.$xs4;
 
@@ -87,8 +86,7 @@
 
 
 	 .card:hover {
-		 background: vars.$slate-300;
-		 //filter:drop-shadow(0 vars.$xs6 vars.$xs vars.$slate-200);
+		 filter:drop-shadow(0 vars.$xs6 vars.$xs vars.$slate-200);
 	 }
 
 </style>

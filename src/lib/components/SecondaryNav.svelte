@@ -11,9 +11,9 @@
 
 </script>
 
-<nav>
-	<ul class="secondary-nav">
-		<li class="categories-nav">
+<nav class="secondary-nav">
+	<ul>
+		<li class="secondary-nav__categories">
 			<p>Categories</p>
 				{#if $navUniqueCats}
 					<ul>
@@ -23,7 +23,7 @@
 				</ul>
 			{/if}
 		</li>
-		<li class="case-studies-nav">
+		<li class="secondary-nav__case-studies">
 			<p>Case studies</p>
 				<ul>
 					{#if $navPosts }
@@ -38,63 +38,108 @@
 </nav>
 
 <style lang="scss">
-	nav {
-    z-index: 1;
-    grid-column: 1/3;
-    grid-row: 3/-1;
-	}
 
 	.secondary-nav {
-		display: grid;
-		grid-template-columns: repeat(2, 1fr);
-		margin: 0;
-		padding: 0;
-	}
+    //display: flex;
+    //flex-direction: row;
+    grid-column: 1/-1;
+    grid-row: 2/3;
 
-  ul {
-    list-style: none;
-    padding: 0;
-    font-size: vars.$sm;
+    @media (min-width: vars.$for-tablet-landscape-up) {
+      z-index: 1;
+      grid-column: 1/3;
+      grid-row: 3/-1;
+      margin: 0;
+      padding: 0;
+    }
+
+
+    ul {
+      list-style: none;
+      padding: 0;
+      font-size: vars.$sm;
+    }
+
+
+    > ul {
+      display: flex;
+      flex-direction: column;
+
+			@media(min-width: vars.$for-tablet-landscape-up)  {
+        top: 0;
+        display: grid;
+        height: 100vh;
+        grid-template-columns: repeat(2, 1fr);
+        position: sticky;
+			}
+    }
+
+
+    li > p {
+      margin: vars.$sm 0 0 0;
+      line-height: 1.25;
+    }
+
+
+		&__categories,
+    &__case-studies {
+
+      ul {
+        display: flex;
+        flex-direction: row;
+				overflow: scroll;
+				@media(min-width: vars.$for-tablet-landscape-up) { flex-direction: column; }
+      }
+
+      li {
+				min-width: vars.$xl7;
+				@media(min-width: vars.$for-tablet-landscape-up) { min-width: auto; }
+
+			}
+
+      ul li a:hover {
+        background: black;
+        color: white;
+      }
+
+      ul li a:visited {
+        background: white;
+        color: gray;
+      }
+
+      ul li a:visited:hover {
+        background: black;
+        color: white;
+      }
+    }
+
+    &__categories {
+      margin: 0 vars.$xl;
+      @media(min-width: vars.$for-tablet-landscape-up) { grid-column: 1/2; }
+    }
+
+
+    &__case-studies {
+        margin: 0 vars.$xl;
+
+			//@media(max-width: vars.$for-phone-only) {margin: 0 vars.$xl;}
+      @media(min-width: vars.$for-tablet-landscape-up) {
+				grid-column: 2/3;
+      	margin: 0 vars.$xl2 0 vars.$xs*-1 ;
+			}
+    }
+
+
+    li > p { padding: vars.$xs6 vars.$xs4; }
+
+
+    a {
+      text-decoration: none;
+      display: block;
+      border-radius: vars.$xs6;
+      line-height: 1.25;
+      margin: vars.$xs6 0;
+      padding: vars.$xs6 vars.$xs4;
+    }
   }
-
-	.categories-nav {
-		grid-column: 1/2;
-		margin: 0 vars.$xl;
-	}
-
-	.case-studies-nav {
-		margin: 0 vars.$xl2 0 vars.$xs*-1 ;
-		grid-column: 2/3;
-	}
-
-
- .case-studies-nav,
- .categories-nav {
-   ul li a:hover {
-       background: black;
-			 color: white;
-		 }
-
-	 ul li a:visited {
-       background: white;
-			 color: gray;
-		 }
-	 ul li a:visited:hover {
-       background: black;
-			 color: white;
-		 }
-   }
-
- li > p { padding: vars.$xs6 vars.$xs4; }
-
-	a {
-		text-decoration: none;
-		display: block;
-    border-radius: vars.$xs6;
-    line-height: 1.25;
-    margin: vars.$xs6 0;
-    padding: vars.$xs6 vars.$xs4;
-	}
-
-
 </style>

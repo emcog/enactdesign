@@ -95,7 +95,7 @@
         display: grid;
         grid-template-columns: repeat(8, 1fr);
 
-        h2, h3, h4, h5, h6, p, span, section, div, img { grid-column: 3/-3;}
+        h2, h3, h4, h5, h6, p, span, section, div, img, pre { grid-column: 3/-3;}
 
         p {
           font-size: vars.$lg;
@@ -108,8 +108,8 @@
     }
 
   h1 {
-    font-size: vars.$xl4;
-    grid-column: 2/9;
+    font-size: vars.$xl3;
+    grid-column: 2  /7;
     align-self: end;
   }
 

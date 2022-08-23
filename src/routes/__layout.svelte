@@ -86,11 +86,12 @@
 
 
   .layout {
-    @media (min-width: vars.$for-tablet-portrait-up) {
+    @media (min-width: vars.$for-tablet-landscape-up) {
       display: grid;
       grid-template-columns: repeat(8, 1fr);
       grid-template-rows: minmax(min-content, max-content) vars.$xl6 auto;
     }
+
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -98,16 +99,16 @@
 
 
   main {
-    @media (min-width: vars.$for-tablet-portrait-up) {
-      grid-column: 1/-1;
-      grid-row: 2/-1
-    }
+
+    grid-column: 1/-1;
+    grid-row: 3/-2;
     margin: auto;
     width: 100%;
 
-
+    @media (min-width: vars.$for-tablet-landscape-up) {
+      grid-row: 2/-1
+    }
   }
-
 
 
   img {
@@ -117,11 +118,8 @@
   }
 
 
-  li {
-    margin-bottom: 0.25rem;
-  }
 
-
+  li { margin-bottom: 0.25rem;}
 
 
   :where(h2, h3, h4, h5, h6) {
@@ -139,14 +137,12 @@
         opacity: 0.2;
         transition: opacity .2s;
 
-        @media (min-width: vars.$smMin) {
-          left: -1.5rem;
-        }
+
+        @media (min-width: vars.$smMin) { left: -1.5rem; }
       }
 
-      &:hover::before {
-        opacity: 1;
-      }
+
+      &:hover::before { opacity: 1; }
     }
   }
 </style>

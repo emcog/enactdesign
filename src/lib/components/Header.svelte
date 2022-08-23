@@ -25,11 +25,16 @@
 <style lang="scss">
 
   header {
-    grid-column: 1/-1;
+
+    margin: vars.$base;
     display: flex;
-    margin: vars.$base vars.$xl;
+    grid-column: 1/-1;
     border-bottom: 4px vars.$blue-600;
     padding: 0 vars.$xs;
+
+    @media(max-width: vars.$for-tablet-portrait-up) {
+      margin: vars.$base vars.$xl;
+    }
 
     @media (min-width: vars.$smMin) {
       justify-content: center;
