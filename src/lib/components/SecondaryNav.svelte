@@ -1,11 +1,11 @@
 <script>
 	import { storePosts, storeUniqueCategories } from "$lib/assets/js/store";
-	import { onMount} from 'svelte';
+	// import { onMount} from 'svelte';
 
 
-// let navPosts;
-// let navUniqueCats;
-	//	onMount(navUniqueCats = storeUniqueCategories)-->
+let navPosts;
+let navUniqueCats;
+	$:
 //	onMount(navUniqueCats = storeUniqueCategories)-->
 //	onMount(navPosts = storePosts)-->
 
