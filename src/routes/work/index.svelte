@@ -18,6 +18,8 @@
   import Pagination from '$lib/components/Pagination.svelte'
 	import { siteDescription } from '$lib/config'
 	import { storePosts, storeUniqueCategories } from '$lib/assets/js/store';
+	import SecondaryNav from '$lib/components/SecondaryNav.svelte';
+
 	export let posts;
   export let total;
 
@@ -51,7 +53,7 @@
 
 <!--todo use h1 for seo-->
 <!--<h1>Work</h1>-->
-
+<SecondaryNav/>
 <PostsList {posts} />
 
 <Pagination currentPage={1} totalPosts={total} />

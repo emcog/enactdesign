@@ -24,7 +24,7 @@
 	import { prefetch } from '$app/navigation'
   import { onMount } from 'svelte'
   import { fade } from 'svelte/transition'
-  import SecondaryNav from '$lib/components/SecondaryNav.svelte';
+  // import SecondaryNav from '$lib/components/SecondaryNav.svelte';
 
 
 
@@ -60,7 +60,7 @@
 -->
 <div class="layout" class:open={$isMenuOpen}>
   <Header />
-  <SecondaryNav />
+<!--  <SecondaryNav />-->
   {#key path}
     <!-- as-->
     <main
