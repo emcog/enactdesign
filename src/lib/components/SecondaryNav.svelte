@@ -5,7 +5,7 @@
 
 let navPosts;
 let navUniqueCats;
-	$:
+	$: console.log('store unique', $storeUniqueCategories)
 //	onMount(navUniqueCats = storeUniqueCategories)-->
 //	onMount(navPosts = storePosts)-->
 
@@ -18,10 +18,10 @@ let navUniqueCats;
 			<p>Categories</p>
 					<ul>
 						<!--{#if $navUniqueCats	}-->
-<!--					&lt;!&ndash;		{#each $navUniqueCats as navCat}&ndash;&gt;-->
-<!--					&lt;!&ndash;			<li><a href="/work/category/{navCat}">{navCat}</a></li>&ndash;&gt;-->
-<!--					&lt;!&ndash;	{/each}&ndash;&gt;-->
-<!--					{/if}-->
+							{#each $storeUniqueCategories as category}
+								<li><a href="/work/category/{category}">{category}</a></li>
+						{/each}
+					<!--{/if}-->
 				</ul>
 		</li>
 		<li class="secondary-nav__case-studies">
