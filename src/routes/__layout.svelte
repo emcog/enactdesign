@@ -38,16 +38,11 @@
    * Updates the global store with the current path. (Used for highlighting 
    * the current page in the nav, but could be useful for other purposes.)
    **/
+
   $: currentPage.set(path)
-  // console.log('__layout path', path);
+
   let displaySecondaryNav = false;
   $: displaySecondaryNav = path === '/work';
-
-  // $: {
-  //   console.log(`the path is ${path}`,
-  //     `the categories are ${$storeUniqueCategories}`,
-  //       `and the posts are ${$storePosts}`)
-  // }
 
 
 function autoUpdate(value) {
