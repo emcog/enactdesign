@@ -25,7 +25,7 @@
   import { onMount } from 'svelte'
   import { fade } from 'svelte/transition'
   import SecondaryNav from '$lib/components/SecondaryNav.svelte';
-  import Callout from '$lib/components/Callout.svelte';
+
 
 
   const transitionIn = { delay: 150, duration: 150 }
@@ -49,6 +49,8 @@
   onMount(() => {
     navItems.forEach(item => prefetch(item.route))
   })
+
+  console.log('routes/__layout')
 </script>
 
 

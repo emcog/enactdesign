@@ -2,36 +2,37 @@
 	import { storePosts, storeUniqueCategories } from "$lib/assets/js/store";
 	import { onMount} from 'svelte';
 
+
+
 	let navPosts;
 	let navUniqueCats;
 	onMount(navUniqueCats = storeUniqueCategories)
 	onMount(navPosts = storePosts)
 
-	onMount(() => console.log("mounted"))
-
+console.log('lib/components/SecondaryNav', $navPosts, $navUniqueCats);
 </script>
 
 <nav class="secondary-nav">
 	<ul>
 		<li class="secondary-nav__categories">
-<!--			<p>Categories</p>-->
-<!--				{#if $navUniqueCats}-->
-<!--					<ul>-->
-<!--						{#each $navUniqueCats as navCat}-->
-<!--							<li><a href="/work/category/{navCat}">{navCat}</a></li>-->
-<!--					{/each}-->
-<!--				</ul>-->
-<!--			{/if}-->
-<!--		</li>-->
+			<p>Categories</p>
+					<ul>
+						{#if $navUniqueCats	}
+							{#each $navUniqueCats as navCat}
+								<li><a href="/work/category/{navCat}">{navCat}</a></li>
+						{/each}
+					{/if}
+				</ul>
+		</li>
 		<li class="secondary-nav__case-studies">
 			<p>Case studies</p>
 				<ul>
 					{#if $navPosts }
-					{#each $navPosts as post}
-					<!--todo replace hard coded with ref to settings-->
-					<li><a href="/work/{post.slug}">{post.title}</a></li>
-				{/each}
-						{/if}
+						{#each $navPosts as post}
+						<!--todo replace hard coded with ref to settings-->
+							<li><a href="/work/{post.slug}">{post.title}</a></li>
+						{/each}
+					{/if}
 			</ul>
 		</li>
 	</ul>
@@ -75,7 +76,7 @@
 
 
     li > p {
-      margin: vars.$sm 0 0 0;
+      margin: vars.$sm 0 ;
       line-height: 1.25;
     }
 

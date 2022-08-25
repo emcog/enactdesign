@@ -18,13 +18,12 @@
   import Pagination from '$lib/components/Pagination.svelte'
 	import { siteDescription } from '$lib/config'
 	import { storePosts, storeUniqueCategories } from '$lib/assets/js/store';
-	import { onMount } from 'svelte';
 	export let posts;
   export let total;
 
 	//save posts to a store
 	storePosts.set(posts)
-	console.log('storePosts', $storePosts)
+	console.log('routes/blog/index', $storePosts)
 
 
 	//save unique categories to store
@@ -33,23 +32,15 @@
 	let setCategories = new Set()
 	let uniqueCategories = []
 
-		// onMount(() => {
-		// arrange categories into unique entries in an array
+ // arrange categories into uniques and save in a store
 		posts.map(e => arraysOfCategories.push(e.categories))
 		duplicateCategories = arraysOfCategories.flat(2)
 		duplicateCategories.forEach(e => setCategories.add(e))
 		uniqueCategories = [...setCategories]
 		uniqueCategories.sort()
 		storeUniqueCategories.set(uniqueCategories)
-		console.log('store uniques', $storeUniqueCategories);
-		// }
-	// )
-
-
-	// setTimeout(function() {
-	// 	console.log('unique', uniqueCategories)}, 1000);
-
-
+		console.log('routes/blog/index', $storeUniqueCategories);
+		console.log(posts);
 </script>
 
 

@@ -12,7 +12,7 @@ coverHeight: 9
 excerpt: Check out how heading links work with this starter in this post.
 ---
 <script>
-import FigforMd from "../components/FigforMd.svelte"
+import FigforMd from "../../../../sveltekit-breaking-changes/src/lib/components/FigforMd.svelte"
 </script>
 
 

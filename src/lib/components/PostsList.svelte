@@ -1,6 +1,6 @@
 <script>
   export let posts = []
-  import Card from './Card.svelte';
+  import Card from '../../../../sveltekit-breaking-changes/src/lib/components/Card.svelte';
 </script>
 
 <ul class="posts-list">

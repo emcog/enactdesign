@@ -72,7 +72,7 @@
     @media (min-width: vars.$for-tablet-landscape-up) and (max-width: vars.$for-desktop-up) { margin: calc(1em * -1 + 7px) 0 0 0; }
 
 		margin: 0 vars.$base;
-		padding-bottom: vars.$base;
+		padding: 0 vars.$base vars.$base 0;
 
 		h2 {
       font-size: vars.$xl;
