@@ -19,12 +19,13 @@
   import '$lib/assets/scss/global.scss'
   import Header from '$lib/components/Header.svelte'
   import Footer from '$lib/components/Footer.svelte'
-  import { currentPage, isMenuOpen } from '$lib/assets/js/store'
+  import { currentPage, isMenuOpen, storeUniqueCategories, storePosts } from '$lib/assets/js/store'
   import { navItems } from '$lib/config'
 	import { prefetch } from '$app/navigation'
   import { onMount } from 'svelte'
   import { fade } from 'svelte/transition'
-  // import SecondaryNav from '$lib/components/SecondaryNav.svelte';
+  import SecondaryNav from '$lib/components/SecondaryNav.svelte';
+
 
 
 
@@ -38,7 +39,22 @@
    * the current page in the nav, but could be useful for other purposes.)
    **/
   $: currentPage.set(path)
+  // console.log('__layout path', path);
+  let displaySecondaryNav = false;
+  $: displaySecondaryNav = path === '/work';
 
+  // $: {
+  //   console.log(`the path is ${path}`,
+  //     `the categories are ${$storeUniqueCategories}`,
+  //       `and the posts are ${$storePosts}`)
+  // }
+
+
+function autoUpdate(value) {
+  console.log('autoUpdate',value)
+}
+
+autoUpdate($currentPage)
   /**
    * This pre-fetches all top-level routes on the site in the background for faster loading.
    * https://kit.svelte.dev/docs#modules-$app-navigation
@@ -60,7 +76,9 @@
 -->
 <div class="layout" class:open={$isMenuOpen}>
   <Header />
-<!--  <SecondaryNav />-->
+    {#if displaySecondaryNav}
+      <SecondaryNav />
+    {/if}
   {#key path}
     <!-- as-->
     <main

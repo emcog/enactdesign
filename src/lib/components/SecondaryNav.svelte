@@ -3,7 +3,6 @@
 	import { onMount} from 'svelte';
 
 
-
 	let navPosts;
 	let navUniqueCats;
 	onMount(navUniqueCats = storeUniqueCategories)

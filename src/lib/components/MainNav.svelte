@@ -2,7 +2,14 @@
   import { navItems } from '$lib/config'
   import { isMenuOpen } from '$lib/assets/js/store'
   import NavItem from './NavItem.svelte'
-  import HamburgerMenuButton from './HamburgerMenuButton.svelte'
+
+  import { createEventDispatcher } from 'svelte';
+  const dispatch = createEventDispatcher();
+
+  function handleNavClick() {
+    dispatch('navClick')
+  }
+
 </script>
 
 <!-- Contents of this file will be used in the header and the responsive hamburger menu. -->
@@ -14,7 +21,6 @@
     </NavItem>
     {/each}
   </ul>
-<!--  <HamburgerMenuButton closeOnly="true" />-->
 </nav>
 
 <style lang="scss">
