@@ -2,7 +2,7 @@
 	import { storePosts, storeUniqueCategories } from "$lib/assets/js/store";
 
 
-// console.log('lib/components/SecondaryNav', $navPosts, $navUniqueCats)
+$: console.log('lib/components/SecondaryNav ', `store categories${$storeUniqueCategories}`)
 </script>
 
 <nav class="secondary-nav">
