@@ -78,7 +78,6 @@ autoUpdate($currentPage)
 
   <!--todo here's the path problem, possibly -->
   {#key path}
-<!--     as-->
     <main
       id="main"
       tabindex="-1"
@@ -90,6 +89,8 @@ autoUpdate($currentPage)
   {/key}
   <Footer />
 </div>
+
+
 
 
 <style lang="scss">
