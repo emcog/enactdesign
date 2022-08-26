@@ -72,9 +72,9 @@ autoUpdate($currentPage)
 -->
 <div class="layout" class:open={$isMenuOpen}>
   <Header />
-    {#if displaySecondaryNav}
-      <SecondaryNav />
-    {/if}
+    <!--{#if displaySecondaryNav}-->
+    <!--  <SecondaryNav />-->
+    <!--{/if}-->
 
   <!--todo here's the path problem, possibly -->
   {#key path}
