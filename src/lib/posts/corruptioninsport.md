@@ -5,8 +5,8 @@ updated: "2021-11-01"
 categories:
 - "art direction"
 - "print"
-  coverImage: "/media/jefferson-santos-fCEJGBzAkrU-unsplash.jpg"
-  coverWidth: 16
-  coverHeight: 9
-  excerpt: "data corruption"
+coverImage: "/media/jefferson-santos-fCEJGBzAkrU-unsplash.jpg"
+coverWidth: 16
+coverHeight: 9
+excerpt: "data corruption"
 ---
