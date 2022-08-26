@@ -95,7 +95,7 @@ You're welcome and encouraged to create your own (using them in Markdown is fun!
 
 ## Static files
 
-Things that should just live in the site root of the finished site (like a `robots.txt` file, favicon, or maybe images) should go in the `static` folder. If you link to them, use the root path (e.g., `/images/my.png`, not `../static/images/my.png`).
+Things that should just live in the site root of the finished site (like a `robots.txt` file, favicon, or maybe images) should go in the `static` folder. If you link to them, use the root path (e.g., `/media/my.png`, not `../static/media/my.png`).
 
 (Placeholder images credit [Unsplash](https://unsplash.com); photographer names are in the file names.)
 

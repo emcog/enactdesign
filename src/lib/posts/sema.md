@@ -6,7 +6,7 @@ categories:
 - "ui"
 - "ux"
 - "dashboard"
-coverImage: "/images/jefferson-santos-fCEJGBzAkrU-unsplash.jpg"
+coverImage: "/media/jefferson-santos-fCEJGBzAkrU-unsplash.jpg"
 coverWidth: 16
 coverHeight: 9
 excerpt: Grid design and font selection for useability

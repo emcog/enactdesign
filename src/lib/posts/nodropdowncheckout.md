@@ -6,11 +6,14 @@ categories:
 - "ui"
 - "useability"
 - "presentation"
-coverImage: "/images/jefferson-santos-fCEJGBzAkrU-unsplash.jpg"
+coverImage: "/media/jefferson-santos-fCEJGBzAkrU-unsplash.jpg"
 coverWidth: 16
 coverHeight: 9
 excerpt: Check out how heading links work with this starter in this post.
 ---
+<script>
+    import VidForMd from "../components/VidforMd.svelte"
+</script>
 
 F**k drop downs. A checkout inspired by Golden Krishna and Eric Campbell. 
 Krishna is a design strategist and author at Google so I didn't think too hard about questioning his logic 
@@ -19,3 +22,4 @@ Krishna and Campbell's talk is entertaining and their premise is simple Drop dow
 
 I decided to put this idea to test and design a checkout without drop downs.
 
+<VidForMd name={"no-drop-down-form"} caption={"video of a presentation"}/>
