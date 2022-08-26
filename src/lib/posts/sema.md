@@ -1,5 +1,5 @@
 ---
-title: "Sema"
+title: "A dashboard for programming music"
 date: "2021-10-26"
 updated: "2021-11-01"
 categories:
@@ -9,15 +9,72 @@ categories:
 coverImage: "/media/jefferson-santos-fCEJGBzAkrU-unsplash.jpg"
 coverWidth: 16
 coverHeight: 9
-excerpt: Grid design and font selection for useability
+excerpt: "Reducing user effort with grouping and seeding a design system with a simple concept"
 ---
+<script>
+import VidForMd from '../components/VidForMd.svelte';
+import PicForMd from '../components/PicForMd.svelte';
+</script>
+{excerpt}
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nullam eget felis eget nunc lobortis mattis aliquam. Ut diam quam nulla porttitor massa id. Eros donec ac odio tempor orci dapibus ultrices in. Hac habitasse platea dictumst quisque. Volutpat sed cras ornare arcu dui. Parturient montes nascetur ridiculus mus. Scelerisque mauris pellentesque pulvinar pellentesque habitant morbi. Aliquam ut porttitor leo a diam sollicitudin tempor id. Ipsum suspendisse ultrices gravida dictum fusce ut placerat orci nulla. Arcu non sodales neque sodales ut. In ante metus dictum at tempor commodo ullamcorper a lacus. Sed nisi lacus sed viverra tellus in hac habitasse platea. Quis viverra nibh cras pulvinar mattis nunc sed blandit libero. Dictumst vestibulum rhoncus est pellentesque elit.
+***roli seabase and finished design***
+## SITUATION
+A team at Sussex University are building a web-app which for live programming of music, "Live coding". 
 
-Adipiscing commodo elit at imperdiet dui accumsan sit amet nulla. Tempor nec feugiat nisl pretium fusce id velit ut tortor. In pellentesque massa placerat duis ultricies lacus. Pellentesque habitant morbi tristique senectus et netus et malesuada. Nunc eget lorem dolor sed viverra ipsum nunc aliquet. Nibh tortor id aliquet lectus proin nibh nisl. Accumsan lacus vel facilisis volutpat est velit. Risus feugiat in ante metus dictum at tempor commodo. Arcu ac tortor dignissim convallis aenean et tortor. Pellentesque pulvinar pellentesque habitant morbi tristique senectus et. Viverra orci sagittis eu volutpat odio. Sagittis aliquam malesuada bibendum arcu. Rhoncus urna neque viverra justo nec ultrices dui sapien eget. Neque gravida in fermentum et sollicitudin ac orci phasellus. Risus in hendrerit gravida rutrum. Odio facilisis mauris sit amet massa vitae tortor. Tellus at urna condimentum mattis pellentesque id nibh tortor id. Nisl pretium fusce id velit ut tortor pretium viverra. Ridiculus mus mauris vitae ultricies leo integer malesuada nunc vel. Eros in cursus turpis massa.
 
-Consequat nisl vel pretium lectus quam id. Ut pharetra sit amet aliquam id diam maecenas. Integer quis auctor elit sed vulputate mi sit. Adipiscing diam donec adipiscing tristique risus. Amet nisl suscipit adipiscing bibendum est ultricies. Amet aliquam id diam maecenas ultricies mi eget. Sapien faucibus et molestie ac feugiat sed lectus. Amet tellus cras adipiscing enim eu turpis egestas pretium. Ultrices neque ornare aenean euismod elementum nisi quis eleifend quam. Proin fermentum leo vel orci porta non pulvinar. Consectetur adipiscing elit duis tristique sollicitudin nibh sit amet commodo.
+## PROCESS
 
-Est ante in nibh mauris cursus mattis molestie. Varius duis at consectetur lorem donec massa sapien faucibus et. Sagittis nisl rhoncus mattis rhoncus. Lobortis scelerisque fermentum dui faucibus. Leo vel orci porta non pulvinar neque laoreet. Amet nulla facilisi morbi tempus iaculis urna id volutpat lacus. Viverra tellus in hac habitasse. Nam aliquam sem et tortor consequat id porta. Ac tortor vitae purus faucibus ornare suspendisse. Quis varius quam quisque id diam. Ultricies mi eget mauris pharetra et. Fermentum dui faucibus in ornare quam viverra orci. Praesent semper feugiat nibh sed. In iaculis nunc sed augue. Amet luctus venenatis lectus magna fringilla urna. Egestas pretium aenean pharetra magna ac. Justo nec ultrices dui sapien eget. At tellus at urna condimentum mattis pellentesque id nibh tortor. Lobortis scelerisque fermentum dui faucibus in ornare quam.
+The initial brief directed look and feel. I worked in sprints with reviews at the end of each stage. At review more problems would be discovered. These in  
+turn set the direction for next sprint. Gradually the project shifted from UI  
+to UI, UX and interaction design.
 
-Adipiscing enim eu turpis egestas pretium aenean pharetra magna. Aenean pharetra magna ac placerat. Cras sed felis eget velit aliquet sagittis id. Eget egestas purus viverra accumsan. Sed viverra tellus in hac habitasse platea dictumst. Placerat duis ultricies lacus sed turpis. Nulla porttitor massa id neque. Nisl condimentum id venenatis a condimentum vitae sapien pellentesque habitant. Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper. Ipsum nunc aliquet bibendum enim facilisis gravida neque convallis a. Feugiat nibh sed pulvinar proin gravida hendrerit. Quis hendrerit dolor magna eget est lorem ipsum dolor. Enim tortor at auctor urna nunc id cursus. Cras ornare arcu dui vivamus arcu felis.
+
+## OUTCOME
+
+The team bought in to a radical update, which was future proofed against the development road map. This  
+simplified the interface and afforded a more complex arrangement with intuitive navigation.
+
+
+### Everything is a widget.
+
+
+The workspace was striped back so that all components shared the same basic
+styles and behaviours including simplified tool and navigation bars.
+- Progressive enhancement.
+Widgets were then progressively enhanced to reveal features which were relevant  
+to the changing context.
+
+
+### Grouping.
+Growing complexity and scale was managed by giving widgets the ability to spawn sub-widgets. This created the capacity for multiple related widgets to be  
+grouped. Over and above these specifics, a design pattern was seeded that could easily grow and maintain its integrity.
+
+
+## Streamlining the navigation and toolbars
+<VidForMd name={"sema-many-editors"}/>
+
+Live coding uses different languages for different musical sections. Each section is written inside its 
+own text editor. These sections can have their any number of child text editors with unique languages 
+which effect it. 
+
+A musical piece will be made of multiple sections. However, the current design does not provide a 
+graphic connection between sections and their children. So, the dashboard burdens the user and 
+requires them to track which children belong to which sections.
+
+<VidForMd name={"sema-grouped-editors"}/>
+
+The solution is to group families of editors together. A section can spawn a child which is contained within 
+its parent's boundary. Options relevant to the context present as necessary
+
+## Navigation and toolbars
+Navigation and toolbars are streamlined to make it easier to focus. System wide controls are condensed 
+into collapsable buttons and session controls replace words with icons
+
+
+
+## Integrating all the parts under a simple concept
+
+***graphics: illustration to wrap everything, dashboard and different graphic sized widgets***
+Finally the workspace is expanded so that it includes the buttons and navigation. This maintains consistency with the parent/child concept and provides and immersive feel to the entire app.
+It affords a simple design concept "everything is a widget" Navigation and toolbars are widgets within the workspace, toolbars spawn editor widgets, which in turn spawn their own children.
+

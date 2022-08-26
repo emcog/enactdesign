@@ -8,7 +8,7 @@
 </script>
 
 <figure>
-	<video width="320" height="240" autoplay muted loop>
+	<video autoplay muted loop>
 		<source src="/media/{name}.webm" type="video/webm">
 		<source src="/media/{name}.mp4" type="video/mp4">
 		Your browser does not support the video tag.
@@ -19,5 +19,10 @@
 </figure>
 
 <style lang="scss">
-	figure { grid-column: 3/7; }
+	figure {
+		grid-column: 3/7;
+		margin: 0;
+	}
+
+	video {width: 100%}
 </style>

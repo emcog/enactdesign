@@ -12,7 +12,7 @@ coverHeight: 9
 excerpt: Check out how heading links work with this starter in this post.
 ---
 <script>
-    import VidForMd from "../components/VidforMd.svelte"
+    import VidForMd from "../components/VidForMd.svelte"
 </script>
 
 F**k drop downs. A checkout inspired by Golden Krishna and Eric Campbell. 
