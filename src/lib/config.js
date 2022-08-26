@@ -23,17 +23,17 @@ export const navItems = [
 
 export const socials = [
   {
-    display: true,
+    display: false,
     title: 'Instagram',
     icon: false,
     link: '',
   }, {
-    display: true,
+    display: false,
     title: 'Linkedin',
     icon: false,
     link: '',
   }, {
-    display: true,
+    display: false,
     title: 'Github',
     icon: false,
     link: '',
