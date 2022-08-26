@@ -12,8 +12,8 @@ coverHeight: 9
 excerpt: "Reducing user effort with grouping and seeding a design system with a simple concept"
 ---
 <script>
-import VidForMd from '../components/VidForMd.svelte';
-import PicForMd from '../components/PicForMd.svelte';
+import VidForMd from '../../components/VidForMd.svelte';
+import PicForMd from '../../components/PicForMd.svelte';
 </script>
 {excerpt}
 
