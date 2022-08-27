@@ -13,7 +13,7 @@ excerpt: Check out how heading links work with this starter in this post.
 ---
 
 <script>
-    import PicForMd from "../../components/PicForMd.svelte"
+    import PicForMd from "../components/PicForMd.svelte"
 </script>
 
 <!---- todo, surely there is a better way to do this --->

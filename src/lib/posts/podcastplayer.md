@@ -12,7 +12,7 @@ coverHeight: 9
 excerpt: Custom podcast player
 ---
 <script>
-    import PicForMd from "../../components/PicForMd.svelte"
+    import PicForMd from "../components/PicForMd.svelte"
 </script>
 This custom podcast player automatically generates an rss file which is valid for Apple Podcasts. 
 It is built using Svelte and SvelteKit. The content is hosted on AWS S3 and distributed on their 
