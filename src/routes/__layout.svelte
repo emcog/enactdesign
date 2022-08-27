@@ -71,23 +71,23 @@ autoUpdate($currentPage)
   actual contents will show up.
 -->
 <div class="layout" class:open={$isMenuOpen}>
-  <Header />
+<!--  <Header />-->
     <!--{#if displaySecondaryNav}-->
     <!--  <SecondaryNav />-->
     <!--{/if}-->
 
   <!--todo here's the path problem, possibly -->
-  {#key path}
-    <main
-      id="main"
-      tabindex="-1"
-      in:fade={transitionIn}
-      out:fade={transitionOut}
-    >
-      <slot />
-    </main>
-  {/key}
-  <Footer />
+  <!--{#key path}-->
+  <!--  <main-->
+  <!--    id="main"-->
+  <!--    tabindex="-1"-->
+  <!--    in:fade={transitionIn}-->
+  <!--    out:fade={transitionOut}-->
+  <!--  >-->
+  <!--    <slot />-->
+  <!--  </main>-->
+  <!--{/key}-->
+  <!--<Footer />-->
 </div>
 
 
