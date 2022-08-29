@@ -82,7 +82,7 @@
 			font-weight: bold;
 
       @media (min-width: vars.$for-tablet-landscape-up) {
-				font-size: vars.$xl3;
+				font-size: vars.$xl2;
         //margin-top: vars.$xs2;
 			}
 		}
@@ -90,7 +90,8 @@
 		p {
 			font-size: vars.$lg;
       @media (min-width: vars.$for-tablet-landscape-up) {
-				font-size: vars.$xl;
+				font-size: vars.$lg;
+				line-height: 1.2;
 				margin-top: vars.$xl;
       }
 		}

@@ -1,5 +1,5 @@
 ---
-title: "A dashboard for programming music"
+title: "An environment for programming music"
 date: "2021-10-26"
 updated: "2021-11-01"
 categories:
@@ -7,7 +7,7 @@ categories:
 - "dx"
 - "ui"
 - "ux"
-coverImage: "/media/jefferson-santos-fCEJGBzAkrU-unsplash.jpg"
+coverImage: "/media/sema__ui.png"
 coverWidth: 16
 coverHeight: 9
 excerpt: "How I bridged a culture gap to create space for user-centred design"
@@ -17,8 +17,6 @@ import VidForMd from '../components/VidForMd.svelte';
 import PicsForMd from '../components/PicsForMd.svelte';
 </script>
 {excerpt}
-
-***roli seabase and finished design***
 
 <PicsForMd images={[
 {name: "sema__ui.png", alt: "Screen shot of Sema, a UI for programming music"}, 
