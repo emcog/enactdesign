@@ -1,13 +1,22 @@
-<script context="module">
-  export const load = async () => {
-		const ReadMeFile = await import('../../README.md');
-    const ReadMe = ReadMeFile.default;
+<!--<script context="module">-->
+<!--  export const load = async () => {-->
+<!--		const ReadMeFile = await import('../../README.md');-->
+<!--    const ReadMe = ReadMeFile.default;-->
 
+<!--		return {-->
+<!--			props: {-->
+<!--				ReadMe-->
+<!--			}-->
+<!--		}-->
+<!--	}-->
+<!--</script>-->
+
+<script context="module">
+	export async function load() {
 		return {
-			props: {
-				ReadMe
-			}
-		}
+			status: 302,
+			redirect: "/work"
+		};
 	}
 </script>
 
