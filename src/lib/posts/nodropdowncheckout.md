@@ -6,7 +6,8 @@ categories:
 - "ui"
 - "useability"
 - "presentation"
-coverImage: "/media/jefferson-santos-fCEJGBzAkrU-unsplash.jpg"
+coverImage: "/media/nodd-form--1.png"
+ 
 coverWidth: 16
 coverHeight: 9
 excerpt: Check out how heading links work with this starter in this post.
@@ -29,7 +30,6 @@ I took their opinnion to heart (Krishna is a design strategist at Google) and se
 form without a drop down. 
 
 ## Early descisions
-
 
 Throughout the design process I was asking myself "can this be removed and does this build trust in the user". 
 I wanted each stage to be as minimial as possible all while providing enough contextual information to 

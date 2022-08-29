@@ -84,7 +84,6 @@ $: console.log('lib/components/SecondaryNav ', `store categories${$storeUniqueCa
 
     &__categories {
       margin: 0 vars.$xl;
-      //@media(min-width: vars.$for-tablet-landscape-up) { grid-column: 1/2; }
       @media(min-width: vars.$for-tablet-landscape-up) { grid-column: 1/-1; }
     }
 

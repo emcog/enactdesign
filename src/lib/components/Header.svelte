@@ -31,7 +31,7 @@
     margin: vars.$base;
     display: flex;
     grid-column: 1/-1;
-    border-bottom: 4px vars.$blue-600;
+    //border-bottom: 4px vars.$blue-600;
     padding: 0 vars.$xs;
 
     @media(max-width: vars.$for-tablet-portrait-up) {

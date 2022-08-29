@@ -7,6 +7,7 @@
 						 title,
 						 excerpt,
 						 categories;
+	console.log(`the cover image is ${coverImage}`)
 </script>
 <a href="/work/{slug}">
 	<article class="card">
@@ -42,43 +43,35 @@
 			 grid-template-columns: repeat(12, 1fr);
 			 grid-gap: 8px;
        margin: 0 vars.$xl5 vars.$xs2 vars.$xl5;
-			 height: 485px;
+			 //height: 485px;
        border-top: 3px solid var(--bright-green);
        color: var(--black);
        background: var(--soft-green);
      }
 
-		&:hover{
-			background: #00E596;
-		}
+    	&:hover{ background: var(--mid-green); }
 
-     img {
+
+    img {
 			 grid-column: 3/-1;
+			 height: 100%;
 			 width: 100%;
-			 height: 485px;
+			 object-fit: cover;
        margin-bottom: 0;
        padding-bottom: 0;
        @media (min-width: vars.$for-tablet-landscape-up) {
          grid-column: 7/-1;
        }
-
      }
    }
 
-  a {
-		//h2 {text-decoration: underline; }
-		text-decoration: none;
-	}
+  a { text-decoration: none; }
 
   a:hover { text-decoration: none;}
 
 	.card__copy {
 		grid-column: 1/7;
 		@media (min-width: vars.$for-tablet-landscape-up) { padding: vars.$lg 0 0 0; }
-    //@media (min-width: vars.$for-desktop-up) { margin: calc(1em * -1 + 1px ) 0 0 0; }
-    //@media (min-width: vars.$for-tablet-landscape-up) and (max-width: vars.$for-desktop-up) {
-			//margin: calc(1em * -1 + 7px) 0 0 0;
-
 
 		margin: 0;
 		padding: 0 vars.$base vars.$base 0;
@@ -92,9 +85,6 @@
 				font-size: vars.$xl3;
         //margin-top: vars.$xs2;
 			}
-
-
-
 		}
 
 		p {
@@ -107,11 +97,5 @@
 
 		span {font-size: vars.$base;}
    }
-
-
-
-	 //.card:hover {
-		// filter:drop-shadow(0 vars.$xs6 vars.$xs vars.$slate-200);
-	 //}
 
 </style>
