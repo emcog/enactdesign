@@ -91,15 +91,15 @@
 
   :global article.post {
       grid-template-rows: vars.$xl6 auto;
+
       @media (min-width: vars.$for-tablet-portrait-up) {
         display: grid;
         grid-template-columns: repeat(8, 1fr);
 
-        h2, h3, h4, h5, h6, p, span, section, div, img, pre { grid-column: 3/-3;}
+        h2, h3, h4, h5, h6, p, span, section, div, pre, ul { grid-column: 3/-3;}
 
-        p {
-          font-size: vars.$lg;
-        }
+        p { font-size: vars.$lg; }
+
       }
 
     .meta {
@@ -117,6 +117,8 @@
       margin-top: 1rem;
     }
   }
+
+
 
   .post-footer {
 

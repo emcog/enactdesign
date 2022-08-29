@@ -17,17 +17,17 @@ $: console.log('lib/components/SecondaryNav ', `store categories${$storeUniqueCa
 					{/if}
 				</ul>
 		</li>
-		<li class="secondary-nav__case-studies">
-			<p>Case studies</p>
-				<ul>
-					{#if $storePosts }
-						{#each $storePosts as post}
-						<!--todo replace hard coded with ref to settings-->
-						<li><a href="/work/{post.slug}">{post.title}</a></li>
-						{/each}
-					{/if}
-			</ul>
-		</li>
+<!--		<li class="secondary-nav__case-studies">-->
+<!--			<p>Case studies</p>-->
+<!--				<ul>-->
+<!--					{#if $storePosts }-->
+<!--						{#each $storePosts as post}-->
+<!--						&lt;!&ndash;todo replace hard coded with ref to settings&ndash;&gt;-->
+<!--						<li><a href="/work/{post.slug}">{post.title}</a></li>-->
+<!--						{/each}-->
+<!--					{/if}-->
+<!--			</ul>-->
+<!--		</li>-->
 	</ul>
 </nav>
 
@@ -110,7 +110,8 @@ $: console.log('lib/components/SecondaryNav ', `store categories${$storeUniqueCa
 
     &__categories {
       margin: 0 vars.$xl;
-      @media(min-width: vars.$for-tablet-landscape-up) { grid-column: 1/2; }
+      //@media(min-width: vars.$for-tablet-landscape-up) { grid-column: 1/2; }
+      @media(min-width: vars.$for-tablet-landscape-up) { grid-column: 1/-1; }
     }
 
 

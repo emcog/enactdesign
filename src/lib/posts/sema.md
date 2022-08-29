@@ -10,17 +10,17 @@ categories:
 coverImage: "/media/jefferson-santos-fCEJGBzAkrU-unsplash.jpg"
 coverWidth: 16
 coverHeight: 9
-excerpt: "How I bridged a culture gap to create a space for user-centred design and sell change"
+excerpt: "How I bridged a culture gap to create space for user-centred design"
 ---
 <script>
 import VidForMd from '../components/VidForMd.svelte';
-import PicForMd from '../components/PicForMd.svelte';
+import PicsForMd from '../components/PicsForMd.svelte';
 </script>
 {excerpt}
 
 ***roli seabase and finished design***
 
-<PicForMd images={[
+<PicsForMd images={[
 {name: "sema__ui.png", alt: "Screen shot of Sema, a UI for programming music"}, 
 {name: "sema__roli.jpg", alt: "roli seaboard, next generation midi keyboard"}
 ]} caption={"Left: Sema, a UI for programming music in the Neumorphic style. Right: The Roli Seaboard family, next generation midi controllers"}
@@ -70,7 +70,7 @@ once they are programming they don't need to do this. So, the site wide navigati
 likewise with the session setting (volume, save, download etc ).
 
 
-<PicForMd images={[
+<PicsForMd images={[
 {name: "sema__collapse--ill.png", alt: "Design illustration"}
 ]} caption={"Design illustration"}
 />
@@ -112,7 +112,7 @@ docs within their workspace.
 Finally, this simple concept became the foundation for a design system. It is a simple metaphor anyone involved in 
 the project could hook on to work to.
 
-<PicForMd images={[
+<PicsForMd images={[
 {name: "sema__widget-everything--ill.png", alt: "Design illustration"},
 {name: "sema__hover.png", alt: "Design drawing"},
 {name: "sema__widgets.png", alt: "Components for a design system"},

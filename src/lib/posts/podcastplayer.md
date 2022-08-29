@@ -9,10 +9,10 @@ categories:
 coverImage: "/media/meditation-player-cover.png"
 coverWidth: 16
 coverHeight: 9
-excerpt: Custom podcast player
+excerpt: A podcast player and rss feed built in Svelte  
 ---
 <script>
-    import PicForMd from "../components/PicForMd.svelte"
+    import PicsForMd from "../components/PicsForMd.svelte"
 </script>
 This custom podcast player automatically generates an rss file which is valid for Apple Podcasts. 
 It is built using Svelte and SvelteKit. The content is hosted on AWS S3 and distributed on their 
@@ -32,16 +32,16 @@ messing up the mark-up, produce a professional looking platform that partner web
 and, provide the basic architecture for an organisation that is set to grow internationally.
  
 
-<PicForMd caption={"Screenshots"} images={[
+<PicsForMd caption={"Screenshots"} images={[
 { name: "meditation-player-desktop-half.png", alt:"desktop" },
 { name: "meditation-player-mobile-half.png", alt: "mobile"},
 ]}/>
 
 
-<PicForMd caption={"Screenshots"} images={[
+<PicsForMd caption={"Screenshots"} images={[
 { name: "meditation-player-desktop-half.png", alt: "imagine"}
 ]}/>
 
-<PicForMd caption={"Screenshots"} images={[
+<PicsForMd caption={"Screenshots"} images={[
 { name: "meditation-player-mobile-half.png", alt:"imagine" }
 ]}/>

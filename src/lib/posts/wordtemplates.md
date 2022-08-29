@@ -10,22 +10,23 @@ coverHeight: 9
 excerpt: Custom word documents to bring inter and intra comms on brand and increased efficicency
 ---
 
-What is a word template?
-A word template is a custom document designed to keep your inter and intra comms on brand.
+<script>
+import PicsForMd from "../components/PicsForMd.svelte"
+</script>
+<PicsForMd hasBorder={true} images={[
+{ name: "word__zebra-1.jpg", alt:"Custom word template" },
+{ name: "word__zebra-2.jpg", alt: "Custom word template"},
+{ name: "word__zebra-3.jpg", alt: "Custom word template"}
+]} />
 
-Why do you use a word template?
-Consistency and speed
-By keeping it on brand messaging stays consistent in look and feel, reducing the number of choices a staff member can make.
-Choices are bad because you want staff to focus on content and avoid them wasting time playing with design for the sake of it.
+Custom word templates keep inter and intra comms on brand add efficiecies too.
 
-What is a useable word template?
-A useable template makes the most of the native features of word. For example, pre-defined styles with meaningful nomeclature.
-Usually a short handover session (5-20) minutes can set you up to get the most from your template. 
 
-How do you design a word template?
-I can follow brand guidelines or detailed designs done elsewhere, e.g. Indesign or Illustrator. If you don't have brand guidelines that not a problem either. 
+I have built custom word templates for Clarivate analytics and their sub-brands in Europe and USA, 
+Alliance for Better Health and Zebra Architects.
 
-what images?
-– Clarivate
-– Lena
-– Jas
+<PicsForMd hasBorder={true}  images={[
+{ name: "word__abc--2.jpg", alt: "Custom word template"},
+{ name: "word__abc--2-3.jpg", alt: "Custom word template"},
+{ name: "word__abc--1.jpg", alt:"Custom word template" }
+]} />

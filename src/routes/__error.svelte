@@ -1,23 +1,23 @@
-<!--&lt;!&ndash; This page handles any error encountered by the site. &ndash;&gt;-->
+<!-- This page handles any error encountered by the site. -->
 
-<!--<script context="module">-->
-<!--  export const load = ({ error, status }) => {-->
-<!--      return { props: { error, status } };-->
-<!--  };-->
-<!--</script>-->
-
-
-<!--<script>-->
-<!--  export let status-->
-<!--  export let error-->
-<!--</script>-->
+<script context="module">
+  export const load = ({ error, status }) => {
+      return { props: { error, status } };
+  };
+</script>
 
 
-<!--<h2>{status}</h2>-->
+<script>
+  export let status
+  export let error
+</script>
 
-<!--<p class="subhead">{error.message}</p>-->
 
-<!--<p><strong>Sorry!</strong> Maybe try one of these links?</p>-->
-<!--<ul>-->
-<!--  <li><a href="/">Home</a></li>-->
-<!--</ul>-->
+<h2>{status}</h2>
+
+<p class="subhead">{error.message}</p>
+
+<p><strong>Sorry!</strong> Maybe try one of these links?</p>
+<ul>
+  <li><a href="/">Home</a></li>
+</ul>

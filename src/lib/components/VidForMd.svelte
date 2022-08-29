@@ -1,14 +1,15 @@
 <script>
 	export let name,
-						 caption;
-						 // mute = true,
-						 // autoplay = true,
-						 // controls = false,
-						 // loop = true;
+						 caption,
+						 hasControls = false;
+
+	let controls = hasControls ? "controls" : null;
+
 </script>
 
 <figure>
-	<video autoplay muted loop>
+
+	<video autoplay muted loop {controls} >
 		<source src="/media/{name}.webm" type="video/webm">
 		<source src="/media/{name}.mp4" type="video/mp4">
 		Your browser does not support the video tag.

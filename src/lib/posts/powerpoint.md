@@ -1,5 +1,5 @@
 ---
-title: "PowerPoint"
+title: "Presentations"
 date: "2021-10-26"
 updated: "2021-11-01"
 categories:
@@ -7,14 +7,42 @@ categories:
 coverImage: "/media/jefferson-santos-fCEJGBzAkrU-unsplash.jpg"
 coverWidth: 16
 coverHeight: 9
-excerpt: Check out how heading links work with this starter in this post.
+excerpt: "PowerPoint, Keynote and Google Slides"
 ---
-Custom PowerPoints, Keynotes and Google slides. 
-Brand templates and content tailored to meet your needs. 
+<script>
+import VidForMd from "../components/VidForMd.svelte";
+import PicsForMd from "../components/PicsForMd.svelte";
+</script>
 
-My templates make the most of default features and short training session (5-20 minutes) at hand over can help you and your team get the best from these.
+<VidForMd name={"pptx--vid"}/>
 
-Branded templates help keep your businesses comms consistent and increase efficiencies in staff communicatiion. It helps reduce workload on a design team and empowers staff out with design to present professionally.
+I have over 7 years experience creating custom PowerPoints, Keynotes and Google slides. Producing brand 
+templates and artworking content to meet your needs. 
 
-Content?
-Video, also up to date screenshots e.g genius tesco etc
+My work has been used to win pitches, sales and help grow business to scale required to go public.
+
+I can enter an organisation at any stage in its development establish creative relationships, innovate with brand 
+or follow tight guidelines and be brand guardian. 
+
+I am also skilled in print, digital and 3D. For more examples please (get in touch)[/contact]
+
+I have worked with small and large agencies including:
+- Adam and Eve
+- Avant Garde
+- BBDO
+- Bird n Bird
+- Clarivate
+- Eve sleep
+- Flamingo
+- Signal | Noise (Economist group)
+- Selfridges
+
+For industries which include:
+- Accounting
+- Data
+- Engineering
+- Tech
+- Health Care
+- FMCG
+- Luxury  
+- Pharmaceutical
