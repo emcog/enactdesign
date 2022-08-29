@@ -1,11 +1,14 @@
-:root {
-    --soft-green: #E6F2EE;
-    --bright-green: #00E596;
-    --grey:#6D7371;
-    --black: #0C0D0D;
-}
+/*todo make sure this is importing and move css variables from vars.scss*/
+/*:root {*/
+/*    --soft-green: #E6F2EE;*/
+/*    --bright-green: #00E596;*/
+/*    --grey:#6D7371;*/
+/*    --black: #0C0D0D;*/
+/*}*/
 
 a:hover {
     background: var(--bright-green);
     text-decoration: none;
 }
+
+a {color: var(--black)}

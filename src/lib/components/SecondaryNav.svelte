@@ -39,73 +39,47 @@ $: console.log('lib/components/SecondaryNav ', `store categories${$storeUniqueCa
 
     @media (min-width: vars.$for-tablet-landscape-up) {
       z-index: 1;
-      grid-column: 1/3;
+      grid-column: 1/4;
       grid-row: 2/-1;
       margin: 0;
       padding: 0;
+      top: 0;
+      height: 100vh;
+      position: sticky;
     }
 
 
     ul {
-      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
       padding: 0;
       font-size: vars.$sm;
+			list-style: none;
     }
 
-
-    > ul {
-      display: flex;
-      flex-direction: column;
-			margin: 0;
-
-			@media(min-width: vars.$for-tablet-landscape-up)  {
-        top: 0;
-        display: grid;
-        height: 100vh;
-        grid-template-columns: repeat(2, 1fr);
-        position: sticky;
-			}
-    }
-
-
-    li > p {
-      margin: vars.$sm 0 ;
-      line-height: 1.25;
-    }
 
 
 		&__categories,
     &__case-studies {
 
-      ul {
-        display: flex;
-        flex-direction: row;
-				overflow: scroll;
-        scroll-snap-type: both proximity;
-				@media(min-width: vars.$for-tablet-landscape-up) { flex-direction: column; }
-      }
-
       li {
-				min-width: vars.$xl6;
-				@media(min-width: vars.$for-tablet-landscape-up) { min-width: auto; }
+				//min-width: vars.$xl6;
+				margin: 0 vars.$xs6 vars.$xs6 0;
+				font-size: vars.$sm;
+				font-weight: 500;
+				letter-spacing: vars.$xs9;
+				text-transform: uppercase;
+				background: var(--soft-green) ;
 
+				@media(min-width: vars.$for-tablet-landscape-up) { min-width: auto; }
 			}
 
-      ul li a:hover {
-        background: #00E596;
-        //color: white;
-				//text-decoration: underline;
-      }
+      ul li a:hover { background: #00E596; }
 
-      ul li a:visited {
-        //background: white;
-        //color: gray;
-      }
+      ul li a:visited { }
 
-      ul li a:visited:hover {
-        //background: black;
-        //color: white;
-      }
+      ul li a:visited:hover { }
     }
 
     &__categories {

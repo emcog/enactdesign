@@ -34,18 +34,18 @@
 		flex-direction: column-reverse;
 		max-width: 100%;
 		margin: vars.$xs 0;
-		//border-bottom-left-radius: vars.$xs3;
-		color: black;
-		background: white;
+
 
      @media (min-width: vars.$for-tablet-landscape-up) {
        grid-column: 1/-1;
 			 display: grid;
 			 grid-template-columns: repeat(12, 1fr);
 			 grid-gap: 8px;
-       margin: 0 0 vars.$xs2 0;
-			 //border-top-left-radius: vars.$xs5;
+       margin: 0 vars.$xl5 vars.$xs2 vars.$xl5;
 			 height: 485px;
+       border-top: 3px solid var(--bright-green);
+       color: var(--black);
+       background: var(--soft-green);
      }
 
 		&:hover{
@@ -74,30 +74,38 @@
 
 	.card__copy {
 		grid-column: 1/7;
-    @media (min-width: vars.$for-desktop-up) { margin: calc(1em * -1 + 1px ) 0 0 0; }
-    @media (min-width: vars.$for-tablet-landscape-up) and (max-width: vars.$for-desktop-up) {
-			margin: calc(1em * -1 + 7px) 0 0 0;
-		}
+		@media (min-width: vars.$for-tablet-landscape-up) { padding: vars.$lg 0 0 0; }
+    //@media (min-width: vars.$for-desktop-up) { margin: calc(1em * -1 + 1px ) 0 0 0; }
+    //@media (min-width: vars.$for-tablet-landscape-up) and (max-width: vars.$for-desktop-up) {
+			//margin: calc(1em * -1 + 7px) 0 0 0;
 
-		margin: 0 vars.$base;
+
+		margin: 0;
 		padding: 0 vars.$base vars.$base 0;
 
 		h2 {
-      font-size: vars.$xl;
       margin-top: vars.$xs4;
+      font-size: vars.$xl;
+			font-weight: bold;
 
-      @media (min-width: vars.$for-desktop-up) {
-				font-size: vars.$xl2;
-        margin-top: vars.$xs2;
+      @media (min-width: vars.$for-tablet-landscape-up) {
+				font-size: vars.$xl3;
+        //margin-top: vars.$xs2;
 			}
 
 
 
 		}
 
-		p {font-size: vars.$lg;}
+		p {
+			font-size: vars.$lg;
+      @media (min-width: vars.$for-tablet-landscape-up) {
+				font-size: vars.$xl;
+				margin-top: vars.$xl;
+      }
+		}
 
-		span {font-size: vars.$sm;}
+		span {font-size: vars.$base;}
    }
 
 
