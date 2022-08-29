@@ -106,7 +106,7 @@ autoUpdate($currentPage)
   .layout {
     @media (min-width: vars.$for-tablet-landscape-up) {
       display: grid;
-      grid-template-columns: repeat(8, 1fr);
+      grid-template-columns: repeat(12, 1fr);
       grid-template-rows: minmax(min-content, max-content) vars.$xl6 auto;
     }
 

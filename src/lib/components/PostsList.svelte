@@ -1,6 +1,6 @@
 <script>
   export let posts = []
-  import Card from '../../../../sveltekit-breaking-changes/src/lib/components/Card.svelte';
+  import Card from './Card.svelte';
 </script>
 
 <ul class="posts-list">
@@ -24,7 +24,7 @@
 
 .posts-list {
   display: grid;
-  grid-template-columns: vars.$primary-grid;
+  grid-template-columns: repeat(12, 1fr);
   list-style-type: none;
   padding: 0;
 }
@@ -32,8 +32,9 @@
 li {
     grid-column: 1/-1;
     width: 100%;
-  @media(min-width: vars.$for-tablet-landscape-up) {
-  grid-column: 3/-1;
+
+    @media(min-width: vars.$for-tablet-landscape-up) {
+    grid-column: 4/-1;
   }
 }
 </style>
