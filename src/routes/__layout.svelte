@@ -62,7 +62,6 @@ autoUpdate($currentPage)
     navItems.forEach(item => prefetch(item.route))
   })
 
-  console.log('routes/__layout')
 </script>
 
 

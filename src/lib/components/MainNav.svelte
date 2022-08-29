@@ -13,15 +13,15 @@
 </script>
 
 <!-- Contents of this file will be used in the header and the responsive hamburger menu. -->
-<nav class="main-nav" class:open={$isMenuOpen}>
-  <ul>
-    {#each navItems as page}
-    <NavItem class="nav-item" href={page.route}>
-      {page.title}
-    </NavItem>
-    {/each}
-  </ul>
-</nav>
+<!--<nav class="main-nav" class:open={$isMenuOpen}>-->
+<!--  <ul>-->
+<!--    {#each navItems as page}-->
+<!--    <NavItem class="nav-item" href={page.route}>-->
+<!--      {page.title}-->
+<!--    </NavItem>-->
+<!--    {/each}-->
+<!--  </ul>-->
+<!--</nav>-->
 
 <style lang="scss">
   .main-nav {
