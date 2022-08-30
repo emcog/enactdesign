@@ -8,7 +8,7 @@ $: console.log('lib/components/SecondaryNav ', `store categories${$storeUniqueCa
 <nav class="secondary-nav">
 	<ul>
 		<li class="secondary-nav__categories">
-			<p>Categories</p>
+			<p class="label">Categories</p>
 					<ul>
 						{#if $storeUniqueCategories	}
 							{#each $storeUniqueCategories as category}
@@ -41,7 +41,7 @@ $: console.log('lib/components/SecondaryNav ', `store categories${$storeUniqueCa
       z-index: 1;
       grid-column: 1/4;
       grid-row: 2/-1;
-      margin: 0;
+      margin: 5px 0 0 0;
       padding: 0;
       top: 0;
       height: 100vh;
@@ -62,6 +62,15 @@ $: console.log('lib/components/SecondaryNav ', `store categories${$storeUniqueCa
 
 		&__categories,
     &__case-studies {
+			border-top: 3px solid var(--bright-green);
+
+			.label {
+				margin: vars.$xs3 0 vars.$sm 0;
+				padding: 0;
+				font-size: vars.$base;
+				color: var(--mid-grey);
+
+			}
 
       li {
 				//min-width: vars.$xl6;

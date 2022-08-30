@@ -27,9 +27,6 @@
   import SecondaryNav from '$lib/components/SecondaryNav.svelte';
 
 
-
-
-
   const transitionIn = { delay: 150, duration: 150 }
   const transitionOut = { duration: 100 }
 
@@ -43,7 +40,7 @@
   $: currentPage.set(path)
 
   let displaySecondaryNav = false;
-  $: displaySecondaryNav = path === '/work';
+  $: displaySecondaryNav = path === '/work' || '/work/category';
 
 
 function autoUpdate(value) {

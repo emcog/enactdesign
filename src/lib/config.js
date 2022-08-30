@@ -12,13 +12,14 @@ export const navItems = [
   {
     title: 'Work',
     route: '/work'
-  }, {
-    title: 'About',
-    route: '/about'
-  }, {
-    title: 'Contact',
-    route: '/contact' 
-  },
+  }
+  // {
+  //   title: 'About',
+  //   route: '/about'
+  // }, {
+  //   title: 'Contact',
+  //   route: '/contact'
+  // },
 ]
 
 export const socials = [

@@ -16,7 +16,7 @@
 		<p>{excerpt}</p>
 		<span>{categories}</span>
 	</div>
-
+		{#if coverImage}
 		<img
 			src={coverImage}
 			alt="{alt}"
@@ -24,6 +24,9 @@
 			height={coverHeight}
 			style="ratio: {coverWidth} / {coverHeight}"
 		/>
+			{:else }
+			<div class="nda"><p>NDA</p></div>
+			{/if}
 </article>
 </a>
 
@@ -43,13 +46,13 @@
 			 grid-template-columns: repeat(12, 1fr);
 			 grid-gap: 8px;
        margin: 0 vars.$xl5 vars.$xs2 vars.$xl5;
-			 //height: 485px;
+			 min-height: 200px;
        border-top: 3px solid var(--bright-green);
        color: var(--black);
-       background: var(--soft-green);
+       background: var(--mid-green);
      }
 
-    	&:hover{ background: var(--mid-green); }
+    	&:hover{ background: var(--soft-green); }
 
 
     img {
@@ -81,7 +84,8 @@
       font-size: vars.$xl;
 			font-weight: bold;
 
-      @media (min-width: vars.$for-tablet-landscape-up) { font-size: vars.$xl2; }
+      //@media (min-width: vars.$for-tablet-landscape-up) { font-size: vars.$xl; }
+      @media (min-width: vars.$for-desktop-up) { font-size: vars.$xl2; }
 		}
 
 		p {
@@ -95,5 +99,15 @@
 
 		span {font-size: vars.$base;}
    }
+
+	.nda {
+		grid-column: 7/-1;
+		display: flex;
+		color: white;
+		background: black;
+
+		p { margin: auto; }
+	}
+
 
 </style>

@@ -6,8 +6,7 @@ categories:
 - "office-stationary"
 - "data-visualisation"
 - "ui"
-
-coverImage: "/media/jefferson-santos-fCEJGBzAkrU-unsplash.jpg"
+coverImage:
 coverWidth: 16
 coverHeight: 9
 excerpt: Custom dashboard built in excel

@@ -26,8 +26,8 @@
 
 <style lang="scss">
   a {
-    margin: 0 vars.$base;
-    padding: vars.$xs4 vars.$xs2;
+    margin: 0 0 0 vars.$base;
+    padding: vars.$xs4 0 0 vars.$xs;
 
     &:hover {
       background: #00E596;

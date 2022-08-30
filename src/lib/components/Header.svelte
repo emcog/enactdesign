@@ -31,12 +31,10 @@
     margin: vars.$base;
     display: flex;
     grid-column: 1/-1;
-    //border-bottom: 4px vars.$blue-600;
     padding: 0 vars.$xs;
 
-    @media(max-width: vars.$for-tablet-portrait-up) {
-      margin: vars.$base vars.$xl;
-    }
+    @media (min-width: vars.$for-tablet-landscape-up) { margin: vars.$base vars.$xl5 vars.$xs6 vars.$base; }
+
 
     @media (min-width: vars.$smMin) {
       justify-content: center;
