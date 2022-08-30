@@ -3,11 +3,11 @@ title: "Excel Dashboard"
 date: "2021-10-26"
 updated: "2021-11-01"
 categories:
-- "office-stationary"
+- "office"
 - "data-visualisation"
 - "ui"
 
-coverImage: "/media/jefferson-santos-fCEJGBzAkrU-unsplash.jpg"
+coverImage: 
 coverWidth: 16
 coverHeight: 9
 excerpt: Custom dashboard built in excel

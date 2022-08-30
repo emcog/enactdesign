@@ -16,14 +16,17 @@
 		<p>{excerpt}</p>
 		<span>{categories}</span>
 	</div>
-
+		{#if coverImage}
 		<img
 			src={coverImage}
 			alt="{alt}"
-			width={coverWidth}
-			height={coverHeight}
-			style="ratio: {coverWidth} / {coverHeight}"
-		/>
+				width={coverWidth}
+				height={coverHeight}
+				style="ratio: {coverWidth} / {coverHeight}"
+			/>
+			{:else }
+			<div class="nda"><span>NDA</span></div>
+			{/if}
 </article>
 </a>
 
@@ -95,5 +98,16 @@
 
 		span {font-size: vars.$base;}
    }
+
+	.nda {
+		grid-column: 7/-1;
+		background: var(--black);
+		display: flex;
+
+		span {
+			margin: auto;
+			color: white;
+		}
+	}
 
 </style>
