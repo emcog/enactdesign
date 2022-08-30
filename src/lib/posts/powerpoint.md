@@ -4,10 +4,10 @@ date: "2021-10-26"
 updated: "2021-11-01"
 categories:
 - "office"
-coverImage: "/media/jefferson-santos-fCEJGBzAkrU-unsplash.jpg"
+coverImage: "/media/presentation__cover-temp.jpg"
 coverWidth: 16
 coverHeight: 9
-excerpt: "PowerPoint, Keynote and Google Slides"
+excerpt: "Templates, artworking and training in PowerPoint, Keynote and Google Slides"
 ---
 <script>
 import VidForMd from "../components/VidForMd.svelte";

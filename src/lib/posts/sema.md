@@ -1,9 +1,8 @@
 ---
 title: "An environment for programming music"
-date: "2021-10-26"
-updated: "2021-11-01"
+date: "2022-08-30"
+updated: ""
 categories:
-- "dashboard"
 - "dx"
 - "ui"
 - "ux"

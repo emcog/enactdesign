@@ -4,10 +4,10 @@ date: "2021-10-26"
 updated: "2021-11-01"
 categories:
 - "office"
-coverImage: "/media/jefferson-santos-fCEJGBzAkrU-unsplash.jpg"
+coverImage: "/media/word__cover--temp.png"
 coverWidth: 16
 coverHeight: 9
-excerpt: Custom word documents to bring inter and intra comms on brand and increased efficicency
+excerpt: Custom word documents to bring inter and intra comms on brand
 ---
 
 <script>

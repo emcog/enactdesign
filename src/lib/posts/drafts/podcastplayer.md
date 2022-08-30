@@ -12,7 +12,7 @@ coverHeight: 9
 excerpt: A podcast player and rss feed built in Svelte  
 ---
 <script>
-    import PicsForMd from "../components/PicsForMd.svelte"
+    import PicsForMd from "../../components/PicsForMd.svelte"
 </script>
 This custom podcast player automatically generates an rss file which is valid for Apple Podcasts. 
 It is built using Svelte and SvelteKit. The content is hosted on AWS S3 and distributed on their 
