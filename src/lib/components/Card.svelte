@@ -46,10 +46,10 @@
 			 //height: 485px;
        border-top: 3px solid var(--bright-green);
        color: var(--black);
-       background: var(--soft-green);
+       background: var(--mid-grey);
      }
 
-    	&:hover{ background: var(--mid-green); }
+    	&:hover{ background: var(--soft-green); }
 
 
     img {

@@ -26,7 +26,7 @@
 
 <style lang="scss">
   a {
-    margin: 0 vars.$base;
+    margin: 0 calc(vars.$xs2 * -1) 0 0;
     padding: vars.$xs4 vars.$xs2;
 
     &:hover {

@@ -31,18 +31,16 @@
     margin: vars.$base;
     display: flex;
     grid-column: 1/-1;
-    //border-bottom: 4px vars.$blue-600;
-    padding: 0 vars.$xs;
 
-    @media(max-width: vars.$for-tablet-portrait-up) {
-      margin: vars.$base vars.$xl;
+    @media(min-width: vars.$for-tablet-portrait-up) {
+      margin: vars.$base vars.$xl5 0 vars.$xl;
     }
 
-    @media (min-width: vars.$smMin) {
-      justify-content: center;
-      //flex-wrap: wrap;
-      height: auto;
-    }
+    //@media (min-width: vars.$smMin) {
+    //  justify-content: center;
+    //  //flex-wrap: wrap;
+    //  height: auto;
+    //}
 
     .site-title {
       font-family: var(--bodyFont);
