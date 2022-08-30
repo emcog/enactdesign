@@ -1,30 +1,8 @@
 <!-- This file renders each individual blog post for reading. Be sure to update the svelte:head below -->
 
-<script context="module">
-
-  export const load = async ({ params }) => {
-    try {
-      const post = await import(`../../lib/posts/${params.post}.md`)
-
-      return {
-        props: {
-          PostContent: post.default,
-          meta: { ...post.metadata, slug: params.post }
-        }
-      }
-    } catch(error) {
-      return {
-        status: 404,
-        error: error.message
-      }
-    }
-  }
-
-
-</script>
-
-
 <script>
+  throw new Error("@migration task: Add data prop (https://github.com/sveltejs/kit/discussions/5774#discussioncomment-3292707)");
+
   export let PostContent
   export let meta
 

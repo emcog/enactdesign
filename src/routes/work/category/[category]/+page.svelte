@@ -1,26 +1,30 @@
 <!-- This dynamic page renders any page at /work/category/* -->
 <!-- TODO: add pagination to this route -->
 <script context="module">
-  import fetchPosts from '$lib/assets/js/fetchPosts'
+  throw new Error("@migration task: Check code was safely removed (https://github.com/sveltejs/kit/discussions/5774#discussioncomment-3292722)");
+
+  // import fetchPosts from '$lib/assets/js/fetchPosts'
 
 	export const load = async ({ params, fetch }) => {
-    const category = params.category
-    const options = { category }
-    const { posts } = await fetchPosts(options)
-    const res = await fetch(`/api/posts/category/${category}/count.json`)
-    const { total } = await res.json()
+  //   const category = params.category
+  //   const options = { category }
+  //   const { posts } = await fetchPosts(options)
+  //   const res = await fetch(`/api/posts/category/${category}/count.json`)
+  //   const { total } = await res.json()
 
 		return {
 			props: { 
-        posts,
-        category,
-        total
-      }
+  //       posts,
+  //       category,
+  //       total
+  //     }
 		}
 	}
 </script>
 
 <script>
+  throw new Error("@migration task: Add data prop (https://github.com/sveltejs/kit/discussions/5774#discussioncomment-3292707)");
+
   import PostsList from '$lib/components/PostsList.svelte'
   import Pagination from '$lib/components/Pagination.svelte'
 

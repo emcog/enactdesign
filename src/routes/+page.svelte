@@ -1,26 +1,8 @@
-<!--<script context="module">-->
-<!--  export const load = async () => {-->
-<!--		const ReadMeFile = await import('../../README.md');-->
-<!--    const ReadMe = ReadMeFile.default;-->
-
-<!--		return {-->
-<!--			props: {-->
-<!--				ReadMe-->
-<!--			}-->
-<!--		}-->
-<!--	}-->
-<!--</script>-->
-
-<script context="module">
-	export async function load() {
-		return {
-			status: 302,
-			redirect: "/work"
-		};
-	}
-</script>
+<!---->
 
 <script>
+  throw new Error("@migration task: Add data prop (https://github.com/sveltejs/kit/discussions/5774#discussioncomment-3292707)");
+
   export let ReadMe
 </script>
 

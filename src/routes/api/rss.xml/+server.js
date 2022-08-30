@@ -1,3 +1,4 @@
+import { json } from '@sveltejs/kit';
 // IMPORTANT: update all these property values in src/lib/config.js
 import { siteTitle, siteDescription, siteURL, siteLink } from '$lib/config'
 
@@ -18,6 +19,11 @@ export const GET = async () => {
     'Cache-Control': `max-age=0, s-max-age=${600}`,
     'Content-Type': 'application/xml',
   };
+  throw new Error("@migration task: Migrate this return statement (https://github.com/sveltejs/kit/discussions/5774#discussioncomment-3292701)");
+  // Suggestion (check for correctness before using):
+  // return json(body, {
+  //   headers: headers
+  // });
   return {
     body,
     headers,

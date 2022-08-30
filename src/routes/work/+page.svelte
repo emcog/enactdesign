@@ -1,19 +1,6 @@
-<script context="module">
-	export const load = async ({ fetch }) => {
-		const postRes = await fetch(`/api/posts.json`)
-		const { posts } = await postRes.json()
-
-    const totalRes = await fetch(`/api/posts/count.json`)
-    const { total } = await totalRes.json()
-
-		return {
-			props: { posts, total }
-		}
-	}
-</script>
-
-
 <script>
+	throw new Error("@migration task: Add data prop (https://github.com/sveltejs/kit/discussions/5774#discussioncomment-3292707)");
+
   import PostsList from '$lib/components/PostsList.svelte'
   import Pagination from '$lib/components/Pagination.svelte'
 	// import SecondaryNav from '$lib/components/SecondaryNav.svelte';

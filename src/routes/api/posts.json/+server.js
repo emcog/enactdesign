@@ -1,3 +1,6 @@
+import { json as json$1 } from '@sveltejs/kit';
+
+// @migration task: Check imports
 import { postsPerPage } from '$lib/config'
 import fetchPosts from '$lib/assets/js/fetchPosts'
 
@@ -21,20 +24,16 @@ export const GET = async ({ url }) => {
 		 */
 		const { posts } = await fetchPosts(options)
 		
-		return {
-			status: 200,
-			body: {
-				posts
-			}
-		}
+		return json$1({
+			posts
+		})
 	}
 			
 	catch(error) {
-		return {
-			status: 500,
-			body: {
-				error: 'Could not fetch posts. ' + error
-			}
-		}
+		return json$1({
+			error: 'Could not fetch posts. ' + error
+		}, {
+			status: 500
+		})
 	}
 }

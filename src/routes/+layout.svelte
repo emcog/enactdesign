@@ -1,21 +1,7 @@
 <!-- This is the global layout file; it "wraps" every page on the site. (Or more accurately: is the parent component to every page component on the site.) -->
-<script context="module">
-	export const load = async({ url, fetch }) => {
-    /**
-     * This fetch call is not used in this file, but the route won't be pre-rendered
-     * and routed properly unless it's called inside a `load` function. ¯\_(ツ)_/¯
-     * */
-    const rss = await fetch(`/api/rss.xml`)
-
-    return {
-      props: {
-        path: url.pathname
-      }
-    }
-  }
-</script>
-
 <script>
+  throw new Error("@migration task: Add data prop (https://github.com/sveltejs/kit/discussions/5774#discussioncomment-3292707)");
+
   import '$lib/assets/scss/global.scss'
   import Header from '$lib/components/Header.svelte'
   import Footer from '$lib/components/Footer.svelte'

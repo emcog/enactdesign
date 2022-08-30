@@ -1,3 +1,4 @@
+import { json } from '@sveltejs/kit';
 import fetchPosts from '$lib/assets/js/fetchPosts'
 
 export const GET = async ({ params }) => {
@@ -7,20 +8,16 @@ export const GET = async ({ params }) => {
   try {
     const { posts } = await fetchPosts(options)
     
-		return {
-			status: 200,
-			body: {
-				total: posts.length
-			}
-		}
+		return json({
+			total: posts.length
+		})
 	}
 
 	catch {
-		return {
-			status: 500,
-			body: {
-				error: `Could not retrieve total number of ${category} posts.`
-			}
-		}
+		return json({
+			error: `Could not retrieve total number of ${category} posts.`
+		}, {
+			status: 500
+		})
 	}
 }
