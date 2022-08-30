@@ -1,60 +1,11 @@
 <!-- Renders posts listed by category -->
-
-<script context="module">
-  throw new Error("@migration task: Check code was safely removed (https://github.com/sveltejs/kit/discussions/5774#discussioncomment-3292722)");
-
-  // import { postsPerPage } from '$lib/config'
-  // import fetchPosts from '$lib/assets/js/fetchPosts'
-
-  // export const load = async ({ fetch, params }) => {
-  //   try {
-  //     const page = params.page ? params.page : 1
-  //     const { category } = params
-
-  //     // Prevents duplication of page 1 as the index page
-  //     if (page <= 1) {
-  //       return {
-  //         status: 301,
-  //         redirect: `/work/category/${category}`
-  //       }
-  //     }
-  //     
-  //     let offset = (page * postsPerPage) - postsPerPage
-  //   
-  //     const totalPostsRes = await fetch('/api/posts/count.json')
-  //     const { total } = await totalPostsRes.json()
-  //     const { posts } = await fetchPosts({ offset, page })
-
-  //     return {
-  //       status: 200,
-  //       props: {
-  //         posts,
-  //         page,
-  //         category,
-  //         totalPosts: total
-  //       }
-  //     }
-  //   } catch(error) {
-  //     return {
-  //       status: 404,
-  //       error: error.message
-  //     }
-  //   }
-  // }
-</script>
-
-
 <script>
-  throw new Error("@migration task: Add data prop (https://github.com/sveltejs/kit/discussions/5774#discussioncomment-3292707)");
-
   import PostsList from '$lib/components/PostsList.svelte'
   import Pagination from '$lib/components/Pagination.svelte'
-  import { siteDescription } from '$lib/config'
+  import { siteDescription, postsPerPage } from '$lib/config'
 
-  export let page
-  export let category
-  export let totalPosts
-  export let posts = []
+  export let data
+  const { page, category, totalPosts, posts } = data
 
   $: lowerBound = (page * postsPerPage) - (postsPerPage - 1) || 1
   $: upperBound = Math.min(page * postsPerPage, totalPosts)
@@ -62,13 +13,13 @@
 
 
 <svelte:head>
-	<title>Blog - page {page}</title>
-	<meta data-key="description" name={siteDescription}>
+  <title>Blog category {category} - page {page}</title>
+  <meta data-key="description" name={siteDescription}>
 </svelte:head>
 
 
-<!-- TODO: this is duplicated in both `[page].svelte` files -->
-{#if posts.length}
+<!-- TODO: this is duplicated across multiple `+page.svelte` files -->
+{#if posts && posts.length}
   <h1>
     Category: {category}
     <br />
@@ -84,5 +35,5 @@
 
   <p>Sorry, no posts to show here.</p>
 
-  <a href="/work">Back to blog</a>
+  <a href="/blog">Back to blog</a>
 {/if}

@@ -1,33 +1,29 @@
-import { json } from '@sveltejs/kit';
 // IMPORTANT: update all these property values in src/lib/config.js
 import { siteTitle, siteDescription, siteURL, siteLink } from '$lib/config'
 
 export const GET = async () => {
   const data = await Promise.all(
-    Object.entries(import.meta.glob('../../lib/posts/*.md')).map(async ([path, page]) => {
+    Object.entries(import.meta.glob('$lib/posts/*.md')).map(async ([path, page]) => {
       const { metadata } = await page()
       const slug = path.split('/').pop().split('.').shift()
       return { ...metadata, slug }
     })
   )
-  .then(posts => {
-    return posts.sort((a, b) => new Date(b.date) - new Date(a.date))
-  })
+    .then(posts => {
+      return posts.sort((a, b) => new Date(b.date) - new Date(a.date))
+    })
 
   const body = render(data)
-  const headers = {
-    'Cache-Control': `max-age=0, s-max-age=${600}`,
-    'Content-Type': 'application/xml',
-  };
-  throw new Error("@migration task: Migrate this return statement (https://github.com/sveltejs/kit/discussions/5774#discussioncomment-3292701)");
-  // Suggestion (check for correctness before using):
-  // return json(body, {
-  //   headers: headers
-  // });
-  return {
+  const options = {
+    headers: {
+      'Cache-Control': `max-age=0, s-max-age=${600}`,
+      'Content-Type': 'application/xml',
+    }
+  }
+  return new Response(
     body,
-    headers,
-  };
+    options,
+  )
 };
 
 
@@ -42,9 +38,9 @@ const render = (posts) => `<?xml version="1.0" encoding="UTF-8" ?>
 ${posts
   .map(
     (post) => `<item>
-<guid isPermaLink="true">https://${siteURL}/work/${post.slug}</guid>
+<guid isPermaLink="true">https://${siteURL}/blog/${post.slug}</guid>
 <title>${post.title}</title>
-<link>https://${siteURL}/work/${post.slug}</link>
+<link>https://${siteURL}/blog/${post.slug}</link>
 <description>${post.excerpt}</description>
 <pubDate>${new Date(post.date).toUTCString()}</pubDate>
 </item>`

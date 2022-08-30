@@ -1,51 +1,24 @@
-<!-- This dynamic page renders any page at /work/category/* -->
-<!-- TODO: add pagination to this route -->
-<script context="module">
-  throw new Error("@migration task: Check code was safely removed (https://github.com/sveltejs/kit/discussions/5774#discussioncomment-3292722)");
-
-  // import fetchPosts from '$lib/assets/js/fetchPosts'
-
-	export const load = async ({ params, fetch }) => {
-  //   const category = params.category
-  //   const options = { category }
-  //   const { posts } = await fetchPosts(options)
-  //   const res = await fetch(`/api/posts/category/${category}/count.json`)
-  //   const { total } = await res.json()
-
-		return {
-			props: { 
-  //       posts,
-  //       category,
-  //       total
-  //     }
-		}
-	}
-</script>
-
+<!-- Renders any page at /work/category/* -->
 <script>
-  throw new Error("@migration task: Add data prop (https://github.com/sveltejs/kit/discussions/5774#discussioncomment-3292707)");
+	import PostsList from '$lib/components/PostsList.svelte'
+	import Pagination from '$lib/components/Pagination.svelte'
 
-  import PostsList from '$lib/components/PostsList.svelte'
-  import Pagination from '$lib/components/Pagination.svelte'
-
-	export let posts
-  export let category
-  export let total
+	export let data
 </script>
 
 
 <svelte:head>
-	<title>Category: {category}</title>
+	<title>Category: {data.category}</title>
 </svelte:head>
 
 
-<h1>Category: {category}</h1>
+<h1>Blog category: {data.category}</h1>
 
-{#if posts.length}
-  <PostsList {posts} />
-  <Pagination currentPage="1" totalPosts={total} path="/work/category/{category}/page" />
+{#if data.posts.length}
+	<PostsList posts={data.posts} />
+	<Pagination currentPage="1" totalPosts={data.total} path="/work/category/{data.category}/page" />
 {:else}
-  <p><strong>Ope!</strong> Sorry, couldn't find any posts in the category "{category}".</p>
+	<p><strong>Ope!</strong> Sorry, couldn't find any posts in the category "{data.category}".</p>
 
-  <p><a href="/work">Back to blog</a></p>
+	<p><a href="/blog">Back to blog</a></p>
 {/if}

@@ -1,39 +1,24 @@
 <!-- This is the global layout file; it "wraps" every page on the site. (Or more accurately: is the parent component to every page component on the site.) -->
 <script>
-  throw new Error("@migration task: Add data prop (https://github.com/sveltejs/kit/discussions/5774#discussioncomment-3292707)");
-
   import '$lib/assets/scss/global.scss'
   import Header from '$lib/components/Header.svelte'
   import Footer from '$lib/components/Footer.svelte'
-  import { currentPage, isMenuOpen, storeUniqueCategories, storePosts } from '$lib/assets/js/store'
+  import { currentPage, isMenuOpen } from '$lib/assets/js/store'
   import { navItems } from '$lib/config'
-	import { prefetch } from '$app/navigation'
+  import { prefetch } from '$app/navigation'
   import { onMount } from 'svelte'
   import { fade } from 'svelte/transition'
-  import SecondaryNav from '$lib/components/SecondaryNav.svelte';
-
+  export let data
 
   const transitionIn = { delay: 150, duration: 150 }
   const transitionOut = { duration: 100 }
-
-  export let path
 
   /**
    * Updates the global store with the current path. (Used for highlighting
    * the current page in the nav, but could be useful for other purposes.)
    **/
+  $: currentPage.set(data.path)
 
-  $: currentPage.set(path)
-
-  let displaySecondaryNav = false;
-  $: displaySecondaryNav = path === '/work' || '/work/category';
-
-
-function autoUpdate(value) {
-  console.log('autoUpdate',value)
-}
-
-autoUpdate($currentPage)
   /**
    * This pre-fetches all top-level routes on the site in the background for faster loading.
    * https://kit.svelte.dev/docs#modules-$app-navigation
@@ -44,21 +29,11 @@ autoUpdate($currentPage)
   onMount(() => {
     navItems.forEach(item => prefetch(item.route))
   })
-
 </script>
 
-
-<!--
-  The below markup is used on every page in the site. The <slot> is where the page's
-  actual contents will show up.
--->
 <div class="layout" class:open={$isMenuOpen}>
   <Header />
-    {#if displaySecondaryNav}
-      <SecondaryNav />
-    {/if}
-
-  {#key path}
+  {#key data.path}
     <main
       id="main"
       tabindex="-1"
@@ -70,6 +45,81 @@ autoUpdate($currentPage)
   {/key}
   <Footer />
 </div>
+
+
+<!--todo:  REINSTATE Secondary nav-->
+<!--&lt;!&ndash; This is the global layout file; it "wraps" every page on the site. (Or more accurately: is the parent component to every page component on the site.) &ndash;&gt;-->
+<!--<script>-->
+<!--  throw new Error("@migration task: Add data prop (https://github.com/sveltejs/kit/discussions/5774#discussioncomment-3292707)");-->
+
+<!--  import '$lib/assets/scss/global.scss'-->
+<!--  import Header from '$lib/components/Header.svelte'-->
+<!--  import Footer from '$lib/components/Footer.svelte'-->
+<!--  import { currentPage, isMenuOpen, storeUniqueCategories, storePosts } from '$lib/assets/js/store'-->
+<!--  import { navItems } from '$lib/config'-->
+<!--	import { prefetch } from '$app/navigation'-->
+<!--  import { onMount } from 'svelte'-->
+<!--  import { fade } from 'svelte/transition'-->
+<!--  import SecondaryNav from '$lib/components/SecondaryNav.svelte';-->
+
+
+<!--  const transitionIn = { delay: 150, duration: 150 }-->
+<!--  const transitionOut = { duration: 100 }-->
+
+<!--  export let path-->
+
+<!--  /**-->
+<!--   * Updates the global store with the current path. (Used for highlighting-->
+<!--   * the current page in the nav, but could be useful for other purposes.)-->
+<!--   **/-->
+
+<!--  $: currentPage.set(path)-->
+
+<!--  let displaySecondaryNav = false;-->
+<!--  $: displaySecondaryNav = path === '/work' || '/work/category';-->
+
+
+<!--function autoUpdate(value) {-->
+<!--  console.log('autoUpdate',value)-->
+<!--}-->
+
+<!--autoUpdate($currentPage)-->
+<!--  /**-->
+<!--   * This pre-fetches all top-level routes on the site in the background for faster loading.-->
+<!--   * https://kit.svelte.dev/docs#modules-$app-navigation-->
+<!--   *-->
+<!--   * Any route added in src/lib/config.js will be prefetched automatically. You can add your-->
+<!--   * own prefetch() calls here, too.-->
+<!--   **/-->
+<!--  onMount(() => {-->
+<!--    navItems.forEach(item => prefetch(item.route))-->
+<!--  })-->
+
+<!--</script>-->
+
+
+<!--
+  The below markup is used on every page in the site. The <slot> is where the page's
+  actual contents will show up.
+-->
+<!--<div class="layout" class:open={$isMenuOpen}>-->
+<!--  <Header />-->
+<!--    &lt;!&ndash;{#if displaySecondaryNav}&ndash;&gt;-->
+<!--    &lt;!&ndash;  <SecondaryNav />&ndash;&gt;-->
+<!--    &lt;!&ndash;{/if}&ndash;&gt;-->
+
+<!--  {#key path}-->
+<!--    <main-->
+<!--      id="main"-->
+<!--      tabindex="-1"-->
+<!--      in:fade={transitionIn}-->
+<!--      out:fade={transitionOut}-->
+<!--    >-->
+<!--      <slot />-->
+<!--    </main>-->
+<!--  {/key}-->
+<!--  <Footer />-->
+<!--</div>-->
 
 
 

@@ -13,10 +13,3 @@ export const load = async () => {
 		throw error(500, err)
 	}
 }
-
-
-// import { redirect } from '@sveltejs/kit';
-//
-// export async function load() {
-// 	throw redirect(302, "/work");
-// }

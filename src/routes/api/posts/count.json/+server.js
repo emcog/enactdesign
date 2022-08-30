@@ -1,19 +1,21 @@
-import { json } from '@sveltejs/kit';
+import { error } from '@sveltejs/kit'
 
 export const GET = async () => {
-  try {
-    const posts = import.meta.glob(`../../../lib/posts/*.md`)
-    
-		return json({
-			total: Object.keys(posts).length
-		})
+	try {
+		const posts = import.meta.glob(`$lib/posts/*.md`)
+
+		return new Response(
+			JSON.stringify(Object.keys(posts).length),
+			{
+				status: 200,
+				headers: {
+					'content-type': 'application/json'
+				}
+			}
+		)
 	}
 
-	catch {
-		return json({
-			error: 'Could not retrieve total number of posts.'
-		}, {
-			status: 500
-		})
+	catch(err) {
+		throw error(500, `Could not retrieve total posts. ${err}`)
 	}
 }
