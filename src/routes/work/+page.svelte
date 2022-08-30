@@ -1,46 +1,19 @@
 <script>
-	throw new Error("@migration task: Add data prop (https://github.com/sveltejs/kit/discussions/5774#discussioncomment-3292707)");
-
-  import PostsList from '$lib/components/PostsList.svelte'
-  import Pagination from '$lib/components/Pagination.svelte'
-	// import SecondaryNav from '$lib/components/SecondaryNav.svelte';
+	import PostsList from '$lib/components/PostsList.svelte'
+	import Pagination from '$lib/components/Pagination.svelte'
 	import { siteDescription } from '$lib/config'
-	import { storePosts, storeUniqueCategories } from '$lib/assets/js/store';
 
-	export let posts;
-  export let total;
-
-	//save posts to a store
-	storePosts.set(posts)
-	console.log('routes/blog/index', $storePosts)
-
-
-	//save unique categories to store
-	let arraysOfCategories = []
-	let duplicateCategories = []
-	let setCategories = new Set()
-	let uniqueCategories = []
-
- // arrange categories into uniques and save in a store
-		posts.map(e => arraysOfCategories.push(e.categories))
-		duplicateCategories = arraysOfCategories.flat(2)
-		duplicateCategories.forEach(e => setCategories.add(e))
-		uniqueCategories = [...setCategories]
-		uniqueCategories.sort()
-		storeUniqueCategories.set(uniqueCategories)
-		console.log('routes/blog/index', $storeUniqueCategories);
-		console.log(posts);
+	export let data
 </script>
 
 
 <svelte:head>
-	<title>Work</title>
+	<title>Blog</title>
 	<meta data-key="description" name="description" content={siteDescription}>
 </svelte:head>
 
-<!--todo use h1 for seo-->
-<!--<h1>Work</h1>-->
+<h1>Blog</h1>
 
-<PostsList {posts} />
+<PostsList posts={data.posts} />
 
-<Pagination currentPage={1} totalPosts={total} />
+<Pagination currentPage={1} totalPosts={data.total} />
