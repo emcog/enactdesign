@@ -73,7 +73,6 @@ $: console.log('lib/components/SecondaryNav ', `store categories${$storeUniqueCa
 			border-top: 3px solid var(--bright-green);
 
       li {
-				//min-width: vars.$xl6;
 				margin: 0 vars.$xs6 vars.$xs6 0;
 				font-size: vars.$sm;
 				font-weight: 500;
@@ -81,7 +80,10 @@ $: console.log('lib/components/SecondaryNav ', `store categories${$storeUniqueCa
 				text-transform: uppercase;
 				background: var(--soft-green) ;
 
-				@media(min-width: vars.$for-tablet-landscape-up) { min-width: auto; }
+				@media(min-width: vars.$for-tablet-landscape-up) {
+					//margin: 0 0 vars.$xs6 vars.$xs6;
+					min-width: auto;
+				}
 			}
 
       ul li a:hover { background: #00E596; }
@@ -93,7 +95,10 @@ $: console.log('lib/components/SecondaryNav ', `store categories${$storeUniqueCa
 
     &__categories {
       margin: 0 vars.$xl;
-      @media(min-width: vars.$for-tablet-landscape-up) { grid-column: 1/-1; }
+      @media(min-width: vars.$for-tablet-landscape-up) {
+				grid-column: 1/-1;
+				margin: 0 0 0 vars.$xl;
+			}
     }
 
     &__case-studies {

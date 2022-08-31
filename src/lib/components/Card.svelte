@@ -39,18 +39,24 @@
 		max-width: 100%;
 		margin: vars.$xs 0;
 
+		 //todo I hope no one looks at this – this has a 1px gap, should be nice solution
+     //@media (min-width: vars.$for-tablet-portrait-up) { margin: 0; }
 
      @media (min-width: vars.$for-tablet-landscape-up) {
        grid-column: 1/-1;
 			 display: grid;
 			 grid-template-columns: repeat(12, 1fr);
 			 grid-gap: 8px;
-       margin: 0 vars.$xl5 vars.$xs2 vars.$xl5;
+       margin: 0 vars.$xl vars.$xs2 vars.$xl2 ;
 			 //height: 485px;
        border-top: 3px solid var(--bright-green);
        color: var(--black);
        background: var(--mid-grey);
      }
+
+		@media (min-width: vars.$for-desktop-up) {
+      margin: 0 vars.$xl5 vars.$xs2 vars.$xl5;
+		}
 
     	&:hover{ background: var(--soft-green); }
 
@@ -74,10 +80,10 @@
 
 	.card__copy {
 		grid-column: 1/7;
-		@media (min-width: vars.$for-tablet-landscape-up) { padding: vars.$lg 0 0 0; }
+    margin: 0;
+    padding: 0 vars.$base vars.$base 0;
 
-		margin: 0;
-		padding: 0 vars.$base vars.$base 0;
+		@media (min-width: vars.$for-tablet-landscape-up) { padding: vars.$lg 0 0 0; }
 
 		h2 {
       margin-top: vars.$xs4;
