@@ -32,24 +32,16 @@
     display: flex;
     grid-column: 1/-1;
 
-    @media(min-width: vars.$for-tablet-portrait-up) {
-      margin: vars.$base vars.$xl5 0 vars.$xl;
-    }
+    @media(min-width: vars.$for-tablet-landscape-up ) { margin: vars.$base vars.$xl 0 vars.$xl; }
 
-    //@media (min-width: vars.$smMin) {
-    //  justify-content: center;
-    //  //flex-wrap: wrap;
-    //  height: auto;
-    //}
+    @media(min-width: vars.$for-desktop-up) { margin: vars.$base vars.$xl5 0 vars.$xl; }
+
 
     .site-title {
       font-family: var(--bodyFont);
-      font-size: 2.1rem;
-      //line-height: 1;
+      font-size: vars.$xl2;
       color: inherit;
-      //text-align: center;
       margin: 0;
-      //display: block;
       font-size: 1.4rem;
       font-weight: bold;
 
