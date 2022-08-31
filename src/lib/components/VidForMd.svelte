@@ -21,8 +21,9 @@
 
 <style lang="scss">
 	figure {
-		grid-column: 3/7;
+		grid-column: 3/-1;
 		margin: 0;
+    @media (min-width: vars.$for-tablet-portrait-up) { grid-column: 2/-1; }
 	}
 
 	video {width: 100%}

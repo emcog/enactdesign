@@ -25,9 +25,11 @@
 <style lang="scss">
 	figure {
 		display: grid;
-		grid-column: 3/-1;
+		grid-column: 2/-1;
 		grid-gap: vars.$xs4;
 		margin: 0;
+		//@media (min-width: vars.$for-tablet-portrait-up) { grid-column: 2/-1; }
+		@media (min-width: vars.$for-tablet-portrait-up) { grid-column: 3/-1; }
 	}
 
 	figcaption {

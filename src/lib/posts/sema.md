@@ -1,5 +1,5 @@
 ---
-title: "An environment for programming music"
+title: "Designing a programming environment for musicians"
 date: "2022-08-30"
 updated: ""
 categories:
@@ -9,7 +9,7 @@ categories:
 coverImage: "/media/sema__ui.png"
 coverWidth: 16
 coverHeight: 9
-excerpt: "How I bridged a culture gap to create space for user-centred design"
+excerpt: "How I bridged a culture gap and made space for user-centred design"
 ---
 <script>
 import VidForMd from '../components/VidForMd.svelte';

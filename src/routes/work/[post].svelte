@@ -88,18 +88,20 @@
 
 <style lang="scss">
 
-
   :global article.post {
       grid-template-rows: vars.$xl6 auto;
+    grid-column: 1/-1;
+    margin: 0 vars.$base;
 
       @media (min-width: vars.$for-tablet-portrait-up) {
         display: grid;
-        grid-template-columns: repeat(8, 1fr);
+        grid-template-columns: repeat(12, 1fr);
 
-        h2, h3, h4, h5, h6, p, span, section, div, pre, ul { grid-column: 3/-3;}
+          h2, h3, h4, h5, h6, p, span, section, div, pre, ul { grid-column: 2/-2;}
+          p { font-size: vars.$lg; } }
 
-        p { font-size: vars.$lg; }
-
+      @media (min-width: vars.$for-tablet-landscape-up) {
+        h2, h3, h4, h5, h6, p, span, section, div, pre, ul { grid-column: 3/-3; }
       }
 
     .meta {
@@ -108,9 +110,14 @@
     }
 
   h1 {
-    font-size: vars.$xl3;
-    grid-column: 2  /7;
+    grid-column: 1/1;
     align-self: end;
+    font-size: vars.$xl2;
+    @media(min-width: vars.$for-tablet-portrait-up) { grid-column: 2/-2}
+    @media(min-width: vars.$for-tablet-landscape-up) {
+      grid-column: 3/-2;
+      font-size: vars.$xl3;
+    }
   }
 
     img + h1 {

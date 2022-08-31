@@ -17,11 +17,12 @@
 
 <style lang="scss">
   figure {
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(12, 1fr);
     display: grid;
-    grid-column: 3/-1;
+    grid-column: 1/-1;
     grid-gap: vars.$xs4;
     margin: 0;
+    //@media (min-width: vars.$for-tablet-portrait-up) { grid-column: 1/-1; }
   }
 
   figcaption {
@@ -31,7 +32,7 @@
   img {
     width: 100%;
     object-fit: cover;
-		grid-column: 1/5;
+		grid-column: 2/-2;
   }
 
   .hairline { border: 1px solid #EDF2F1 }

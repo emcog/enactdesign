@@ -21,7 +21,7 @@ excerpt: Check out how heading links work with this starter in this post.
 
 ## Inspiration
 
-I was bouncing around the internet like you when the great algorthym led me to a talk by [Golden Krishna and 
+I was bouncing around the internet like you when I bumped into a talk by [Golden Krishna and 
 Eric Campbell at SXSW](https://www.youtube.com/watch?v=hcYAHix-riY&t=120s).  Though only about drop-downs it was 
 entertaining and left me feeling inspired.
 

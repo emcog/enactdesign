@@ -103,14 +103,14 @@ autoUpdate($currentPage)
 
 
   .layout {
-    @media (min-width: vars.$for-tablet-portrait-up) {
+    //@media (min-width: vars.$for-tablet-portrait-up) {
       display: grid;
       grid-template-columns: repeat(12, 1fr);
       grid-template-rows: minmax(min-content, max-content) vars.$xl6 auto;
-    }
+    //}
 
-    display: flex;
-    flex-direction: column;
+    //display: flex;
+    //flex-direction: column;
     min-height: 100vh;
   }
 
