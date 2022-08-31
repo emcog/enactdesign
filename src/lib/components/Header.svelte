@@ -28,7 +28,7 @@
 
   header {
 
-    margin: vars.$base;
+    margin: vars.$base vars.$xs vars.$base vars.$xs;
     display: flex;
     grid-column: 1/-1;
 

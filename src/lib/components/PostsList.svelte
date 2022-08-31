@@ -33,8 +33,8 @@ li {
     grid-column: 1/-1;
     width: 100%;
 
-    @media(min-width: vars.$for-tablet-landscape-up) {
-    grid-column: 4/-1;
-  }
+  @media(min-width: vars.$for-tablet-portrait-up) { grid-column: 5/-1; }
+
+    @media(min-width: vars.$for-tablet-landscape-up) { grid-column: 4/-1; }
 }
 </style>

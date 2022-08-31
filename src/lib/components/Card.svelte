@@ -36,11 +36,11 @@
 		transition: all .25s;
 		display: flex;
 		flex-direction: column-reverse;
+		margin: vars.$xs vars.$xs 0  vars.$xs;
+	 	border-top: 3px solid var(--bright-green);
 		max-width: 100%;
-		margin: vars.$xs 0;
 
-		 //todo I hope no one looks at this – this has a 1px gap, should be nice solution
-     //@media (min-width: vars.$for-tablet-portrait-up) { margin: 0; }
+
 
      @media (min-width: vars.$for-tablet-landscape-up) {
        grid-column: 1/-1;
@@ -48,8 +48,6 @@
 			 grid-template-columns: repeat(12, 1fr);
 			 grid-gap: 8px;
        margin: 0 vars.$xl vars.$xs2 vars.$xl2 ;
-			 //height: 485px;
-       border-top: 3px solid var(--bright-green);
        color: var(--black);
        background: var(--mid-grey);
      }
@@ -83,6 +81,7 @@
 
 		@media (min-width: vars.$for-tablet-landscape-up) { padding: vars.$lg 0 0 0; }
 
+
 		h2 {
       margin-top: vars.$xs4;
       font-size: vars.$xl;
@@ -93,7 +92,8 @@
 
 		p {
 			font-size: vars.$base;
-				line-height: 1.2;
+			line-height: 1.2;
+
       @media (min-width: vars.$for-desktop-up) {
 				font-size: vars.$lg;
 				line-height: 1.2;

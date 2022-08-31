@@ -36,17 +36,22 @@ $: console.log('lib/components/SecondaryNav ', `store categories${$storeUniqueCa
 	.secondary-nav {
     grid-column: 1/-1;
     grid-row: 2/3;
-
-    @media (min-width: vars.$for-tablet-landscape-up) {
       z-index: 1;
-      grid-column: 1/4;
+
+		@media(min-width: vars.$for-tablet-portrait-up) {
+      margin: 14px 0 0 0;
+			grid-column: 1/5;
       grid-row: 2/-1;
-      margin: 3px 0 0 0;
       padding: 0;
       top: 0;
       height: 100vh;
       position: sticky;
-    }
+		}
+
+    @media (min-width: vars.$for-tablet-landscape-up) {
+			grid-column: 1/4;
+      margin: 3px 0 0 0;
+		}
 
 		.label {
 			padding-left: 0;
@@ -69,8 +74,14 @@ $: console.log('lib/components/SecondaryNav ', `store categories${$storeUniqueCa
 
 		&__categories,
     &__case-studies {
-
 			border-top: 3px solid var(--bright-green);
+      margin: 0 vars.$base;
+			width: 100%;
+
+			@media(min-width: vars.$for-tablet-portrait-up) {
+				min-width: auto;
+      	margin: 0 vars.$xs 0 vars.$xs;
+			}
 
       li {
 				margin: 0 vars.$xs6 vars.$xs6 0;
@@ -80,31 +91,22 @@ $: console.log('lib/components/SecondaryNav ', `store categories${$storeUniqueCa
 				text-transform: uppercase;
 				background: var(--soft-green) ;
 
-				@media(min-width: vars.$for-tablet-landscape-up) {
-					//margin: 0 0 vars.$xs6 vars.$xs6;
-					min-width: auto;
-				}
-			}
+				@media(min-width: vars.$for-tablet-landscape-up) { min-width: auto; } }
 
       ul li a:hover { background: #00E596; }
-
       ul li a:visited { }
-
       ul li a:visited:hover { }
     }
 
     &__categories {
-      margin: 0 vars.$xl;
       @media(min-width: vars.$for-tablet-landscape-up) {
 				grid-column: 1/-1;
 				margin: 0 0 0 vars.$xl;
 			}
     }
 
+
     &__case-studies {
-        margin: 0 vars.$xl;
-
-
       @media(min-width: vars.$for-tablet-landscape-up) {
 				grid-column: 2/3;
       	margin: 0 vars.$xl2 0 vars.$xs*-1 ;

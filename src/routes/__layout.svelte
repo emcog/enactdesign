@@ -103,7 +103,7 @@ autoUpdate($currentPage)
 
 
   .layout {
-    @media (min-width: vars.$for-tablet-landscape-up) {
+    @media (min-width: vars.$for-tablet-portrait-up) {
       display: grid;
       grid-template-columns: repeat(12, 1fr);
       grid-template-rows: minmax(min-content, max-content) vars.$xl6 auto;
@@ -122,7 +122,7 @@ autoUpdate($currentPage)
     margin: auto;
     width: 100%;
 
-    @media (min-width: vars.$for-tablet-landscape-up) {
+    @media (min-width: vars.$for-tablet-portrait-up) {
       grid-row: 2/-1
     }
   }
