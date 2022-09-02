@@ -103,7 +103,7 @@ $: console.log('lib/components/SecondaryNav ', `store categories${$storeUniqueCa
     text-decoration: none;
     display: block;
     line-height: 1.25;
-    padding: vars.$xs4 vars.$xs4;
+    padding: vars.$xs4;
   }
 
   .secondary-nav .label {
@@ -126,10 +126,8 @@ $: console.log('lib/components/SecondaryNav ', `store categories${$storeUniqueCa
       @media(min-width: vars.$for-tablet-landscape-up) { min-width: auto; }
 
       a:hover { background: var(--bright-green); }
-      a:visited { }
-      a:visited:hover { }
-
+      a:visited { background: var(--mid-grey) }
+      a:visited:hover { background: var(--bright-green) }
     }
-
 
 </style>

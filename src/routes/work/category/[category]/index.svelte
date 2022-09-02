@@ -35,7 +35,8 @@
 </svelte:head>
 
 <div class="category-col">
-	<h1 class="category-title">Category: <span>{category}</span></h1>
+	<h1 class="category-title">Category</h1>
+	<p>{category}</p>
 	<a class="" href="/work">all categories</a>
 </div>
 
@@ -53,7 +54,7 @@
 	div.category-col {
     border-top: 3px solid var(--bright-green);
     margin: 0 vars.$xs;
-    width: 100%;
+    width: auto;
 
     @media(min-width: vars.$for-tablet-portrait-up) {
       min-width: auto;
@@ -62,21 +63,21 @@
 
     @media(min-width: vars.$for-tablet-landscape-up) {
       grid-column: 1/4;
-      margin: 15px 0 0 vars.$xl;
-      padding: vars.$base 0 0 0;
+      margin: 15px 0 vars.$base vars.$xl;
+      padding: vars.$xs3 0 0 0;
     }
 	}
 
 	h1.category-title {
-		margin:0 0 vars.$xs5 0;
 		font-family: var(--headings);
 		font-size: vars.$base;
 		background: none;
 		width: auto;
   	background: var(--bright-green);
-		color: var(--black);
-		padding: vars.$xs4 0 vars.$xs4 vars.$xs4;
-		//float: left;
+    margin: vars.$xs6 0 vars.$sm 0;
+    padding-left: 0;
+    color: var(--grey);
+    background: none;
 
     @media(min-width: vars.$for-tablet-landscape-up) {
       //grid-column: 1/4;
@@ -85,7 +86,14 @@
     }
     }
 
-  h1.category-title > span { text-transform: uppercase; }
+  .category-col > p {
+		font-size: vars.$base;
+		margin: vars.$base 0 vars.$xs6 0;
+		padding: vars.$xs6;
+		text-transform: uppercase;
+		width: auto;
+    background: var(--bright-green);
+	}
 
 	a {
     margin: vars.$xs6 vars.$xs6 vars.$xs6 0;
