@@ -103,7 +103,16 @@
 
     h2, h3, h4, h5, h6, p, span, section, div, pre, ul {
       margin: 0 0 vars.$sm 0;
+    }
 
+    h2 {
+      font-size: vars.$xl;
+      font-weight: 500;
+    }
+
+    h3, h4, h5, h6 {
+      font-size: vars.$lg;
+      font-weight: 500;
     }
 
     @media (min-width: vars.$for-tablet-portrait-up) {
@@ -112,7 +121,7 @@
 
       h2, h3, h4, h5, h6, p, span, section, div, pre, ul {
         grid-column: 2/-2;
-        margin: 0 0 vars.$base 0;
+        margin: vars.$xs4 0 vars.$base 0;
       }
 
 
