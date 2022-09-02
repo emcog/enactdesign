@@ -88,42 +88,69 @@
 
 <style lang="scss">
 
+// todo this is awful, pure css with where is likely much better
+
   :global article.post {
     grid-template-rows: vars.$xl6 auto;
     grid-column: 1/-1;
     margin: 0 vars.$base;
+    max-width: 1200px;
 
-      @media (min-width: vars.$for-tablet-portrait-up) {
-        display: grid;
-        grid-template-columns: repeat(12, 1fr);
+    h1 + p {
+      margin: 0 0 vars.$xs2 0;
+      font-weight: 500;
+    }
 
-          h2, h3, h4, h5, h6, p, span, section, div, pre, ul { grid-column: 2/-2; }
-          p { font-size: vars.$lg; } }
+    h2, h3, h4, h5, h6, p, span, section, div, pre, ul {
+      margin: 0 0 vars.$sm 0;
 
-      @media (min-width: vars.$for-tablet-landscape-up) {
-        h2, h3, h4, h5, h6, p, span, section, div, pre, ul { grid-column: 3/-3; }
-        margin: 0;
+    }
+
+    @media (min-width: vars.$for-tablet-portrait-up) {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+
+      h2, h3, h4, h5, h6, p, span, section, div, pre, ul {
+        grid-column: 2/-2;
+        margin: 0 0 vars.$base 0;
       }
+
+
+      p {
+        font-size: vars.$lg;
+        margin: 0 0 vars.$xl 0;
+      }
+    }
+
+    @media (min-width: vars.$for-tablet-landscape-up) {
+      h2, h3, h4, h5, h6, p, span, section, div, pre, ul {
+        grid-column: 3/-3;
+      }
+      margin: 0 auto;
+    }
 
     .meta {
       font-size: 0.8rem;
       margin-bottom: 4rem;
     }
 
-  h1 {
-    grid-column: 1/1;
-    align-self: end;
-    font-size: vars.$xl2;
-    @media(min-width: vars.$for-tablet-portrait-up) { grid-column: 2/-2}
-    @media(min-width: vars.$for-tablet-landscape-up) {
-      grid-column: 3/-2;
-      font-size: vars.$xl3;
+    h1 {
+      grid-column: 1/1;
+      align-self: end;
+      font-size: vars.$xl2;
+      @media(min-width: vars.$for-tablet-portrait-up) {
+        grid-column: 2/-2
+      }
+      @media(min-width: vars.$for-tablet-landscape-up) {
+        grid-column: 3/-2;
+        font-size: vars.$xl3;
+      }
     }
-  }
 
     img + h1 {
       margin-top: 1rem;
     }
+
   }
 
 

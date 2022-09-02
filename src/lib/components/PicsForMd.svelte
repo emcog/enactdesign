@@ -26,17 +26,21 @@
 	figure {
 		display: grid;
 		grid-column: 2/-1;
-		grid-gap: vars.$xs4;
-		margin: 0;
+		grid-gap: 0 vars.$xs6;
+		margin: 0 0 vars.$xl2 0;
 
 		@media (min-width: vars.$for-tablet-portrait-up) { grid-column: 2/-2; }
-		@media (min-width: vars.$for-tablet-landscape-up) { grid-column: 3/-1; }
+    @media (min-width: vars.$for-tablet-landscape-up) { grid-column: 3/-3; }
 	}
 
 	figcaption {
 		grid-column: 1/-1;
 		font-size: vars.$sm;
-    @media (min-width: vars.$for-tablet-landscape-up) { grid-column: 1/-2; }
+    margin:  0;
+    padding: vars.$xs4;
+    background: var(--mid-grey);
+
+    @media (min-width: vars.$for-tablet-landscape-up) { grid-column: 1/-1; }
 	}
 
 	img {
