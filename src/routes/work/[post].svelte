@@ -96,6 +96,8 @@
     margin: 0 vars.$base;
     max-width: 1200px;
 
+
+
     h1 + p {
       margin: 0 0 vars.$xs2 0;
       font-weight: 500;

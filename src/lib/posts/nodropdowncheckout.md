@@ -54,7 +54,7 @@ transparency and would build trust in the user.
 
 ## Final renders
 
-<VidForMd name={"nodd-form__hi-fi--vid"} hasControls={true}/>
+<VidForMd name={"nodd-form__hi-fi--vid"} hasControls={true}  hasBorder={true}/>
 
 Delivery address
 Card Details

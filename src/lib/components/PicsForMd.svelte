@@ -25,31 +25,38 @@
 <style lang="scss">
 
 	:global .post :where(figure.for-md) {
-		display: grid;
-		grid-column: 2/-1;
-		grid-gap: 0 vars.$xs6;
-		margin: 0 0 vars.$xl2 0;
+    display: grid;
+    grid-column: 2/-1;
+    grid-gap: 0 vars.$xs6;
+    margin: 0 0 vars.$xl2 0;
 
-		@media (min-width: vars.$for-tablet-portrait-up) { grid-column: 2/-2; }
-    @media (min-width: vars.$for-tablet-landscape-up) { grid-column: 3/-3; }
-	}
+    @media (min-width: vars.$for-tablet-portrait-up) {
+      grid-column: 2/-2;
+    }
+    @media (min-width: vars.$for-tablet-landscape-up) {
+      grid-column: 3/-3;
+    }
 
-	figcaption {
-		grid-column: 1/-1;
-		font-size: vars.$sm;
-    margin:  0;
-    padding: vars.$xs4;
-    background: var(--mid-grey);
 
-    @media (min-width: vars.$for-tablet-landscape-up) { grid-column: 1/-1; }
-	}
+    figcaption {
+      grid-column: 1/-1;
+      font-size: vars.$sm;
+      margin: 0;
+      padding: vars.$xs4;
+      background: var(--mid-grey);
 
-	img, video {
-		width: 100%;
-		object-fit: cover;
-	}
+      @media (min-width: vars.$for-tablet-landscape-up) {
+        grid-column: 1/-1;
+      }
+    }
 
-	.hairline { border: 1px solid #EDF2F1 }
+    img, video {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  :global .post .hairline { border: 1px solid #EDF2F1 }
 
 
 

@@ -34,8 +34,10 @@
 	<title>Category: {category}</title>
 </svelte:head>
 
-
-<h1>Category: {category}</h1>
+<div class="category-col">
+	<h1 class="category-title">Category: <span>{category}</span></h1>
+	<a class="" href="/work">all categories</a>
+</div>
 
 {#if posts.length}
   <PostsList {posts} />
@@ -45,3 +47,61 @@
 
   <p><a href="/work">Back to blog</a></p>
 {/if}
+
+<style lang="scss">
+
+	div.category-col {
+    border-top: 3px solid var(--bright-green);
+    margin: 0 vars.$xs;
+    width: 100%;
+
+    @media(min-width: vars.$for-tablet-portrait-up) {
+      min-width: auto;
+      margin: 0 vars.$xs 0 vars.$xs;
+    }
+
+    @media(min-width: vars.$for-tablet-landscape-up) {
+      grid-column: 1/4;
+      margin: 15px 0 0 vars.$xl;
+      padding: vars.$base 0 0 0;
+    }
+	}
+
+	h1.category-title {
+		margin:0 0 vars.$xs5 0;
+		font-family: var(--headings);
+		font-size: vars.$base;
+		background: none;
+		width: auto;
+  	background: var(--bright-green);
+		color: var(--black);
+		padding: vars.$xs4 0 vars.$xs4 vars.$xs4;
+		//float: left;
+
+    @media(min-width: vars.$for-tablet-landscape-up) {
+      //grid-column: 1/4;
+      //margin: 15px 0 0 vars.$xl;
+      //padding: vars.$base 0 0 0;
+    }
+    }
+
+  h1.category-title > span { text-transform: uppercase; }
+
+	a {
+    margin: vars.$xs6 vars.$xs6 vars.$xs6 0;
+    font-size: vars.$sm;
+    font-weight: 500;
+    letter-spacing: vars.$xs9;
+    text-transform: uppercase;
+		text-decoration: none;
+    background: var(--soft-green);
+    //display: block;
+    line-height: 1.25;
+    padding: vars.$xs3;
+  }
+
+	a:hover {
+		background: var(--bright-green);
+	}
+
+</style>
