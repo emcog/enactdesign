@@ -74,5 +74,5 @@
 
   <p>Sorry, no posts to show here.</p>
 <!--todo refactor hard code to link to config-->
-  <a href="/work">Back to blog</a>
+  <a href="/work">Back to work</a>
 {/if}

@@ -80,5 +80,5 @@
 
   <p>Sorry, no posts to show here.</p>
 
-  <a href="/work">Back to blog</a>
+  <a href="/work">Back to work</a>
 {/if}

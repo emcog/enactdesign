@@ -75,7 +75,7 @@
       <h2>Posted in</h2>
       <ul>
         {#each categories as category}
-          <li>
+          <li class="category">
             <a href="/work/category/{category}/">
               { category }
             </a>
@@ -191,29 +191,37 @@
         font-weight: 500;
         text-decoration: none;
         display: block;
-        border-radius: vars.$xs6;
         line-height: 1.25;
-        margin: vars.$xs6 0;
-        padding: vars.$xs6 vars.$xs4;
+        //margin: vars.$xs6 0;
+        padding: vars.$xs4 vars.$xs2;
       }
 
-      a:hover {
-          background: black;
-          color: white;
+    }
+  }
 
-         a:visited {
-          background: white;
-          color: gray;
-        }
-        a:visited:hover {
-          background: black;
-          color: white;
-        }
-      }
+  //todo duplicated over several files
+  .category {
+    margin: 0 vars.$xs6 vars.$xs6 0;
+    font-size: vars.$sm;
+    font-weight: 500;
+    letter-spacing: vars.$xs9;
+    text-transform: uppercase;
+    background: var(--soft-green);
 
-      + li {
-        margin-left: 0.5rem;
-      }
+    @media(min-width: vars.$for-tablet-landscape-up) {
+      min-width: auto;
+    }
+
+    a:hover {
+      background: var(--bright-green);
+    }
+
+    a:visited {
+      background: var(--mid-grey)
+    }
+
+    a:visited:hover {
+      background: var(--bright-green)
     }
   }
 
