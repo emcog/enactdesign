@@ -23,17 +23,25 @@
 <style lang="scss">
 
 .posts-list {
-  display: grid;
+  grid-column: 1/-1;
+  display: flex;
+  flex-direction: column;
   grid-template-columns: repeat(12, 1fr);
   list-style-type: none;
   padding: 0;
+
+  @media(min-width: vars.$for-tablet-portrait-up) { grid-column: 5/-1; }
+  @media(min-width: vars.$for-tablet-landscape-up) { grid-column: 4/-1; }
 }
 
 li {
     grid-column: 1/-1;
     width: 100%;
 
-  @media(min-width: vars.$for-tablet-portrait-up) { grid-column: 5/-1; }
+  @media(min-width: vars.$for-tablet-portrait-up) {
+    grid-column: 5/-1;
+    display: grid;
+  }
 
     @media(min-width: vars.$for-tablet-landscape-up) { grid-column: 4/-1; }
 }

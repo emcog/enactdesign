@@ -28,17 +28,17 @@
 
   header {
 
-    margin: vars.$base vars.$xs vars.$base vars.$xs;
+    margin: vars.$base vars.$xs 0 vars.$xs;
     display: flex;
     grid-column: 1/-1;
 
-    @media(min-width: vars.$for-tablet-landscape-up ) { margin: vars.$base vars.$xl 0 vars.$xl; }
+    @media(min-width: vars.$for-tablet-landscape-up ) { margin: vars.$base vars.$xl vars.$lg vars.$xl; }
 
-    @media(min-width: vars.$for-desktop-up) { margin: vars.$base vars.$xl5 0 vars.$xl; }
+    @media(min-width: vars.$for-desktop-up) { margin: vars.$base vars.$xl5 vars.$lg vars.$xl; }
 
 
     .site-title {
-      font-family: var(--bodyFont);
+      font-family: var(--headings);
       font-size: vars.$xl2;
       color: inherit;
       margin: 0;

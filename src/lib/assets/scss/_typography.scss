@@ -1,9 +1,9 @@
 @use './vars';
 
-:where(h1, h2, h3, h4, h5, h6) {
+:where(h1, h2, h3, h4, h5, h6, a) {
   margin: 0;
   line-height: 1.1;
-  font-family: var(--bodyFont);
+  font-family: var(--headings);
   font-weight: 500;
   color: black;
 }
@@ -13,6 +13,10 @@ a {
   color: black;
   text-decoration-thickness: 1px;
   text-decoration-color: var(--dark);
+
+  span, p, li {
+    font-family: var(--bodyFont);
+  }
 }
 
 li {

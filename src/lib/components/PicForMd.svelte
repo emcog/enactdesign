@@ -22,7 +22,9 @@
     grid-column: 1/-1;
     grid-gap: vars.$xs4;
     margin: 0;
-    //@media (min-width: vars.$for-tablet-portrait-up) { grid-column: 1/-1; }
+
+    @media (min-width: vars.$for-tablet-portrait-up) { grid-column: 2/-2; }
+    @media (min-width: vars.$for-tablet-landscape-up) { grid-column: 3/-1; }
   }
 
   figcaption {

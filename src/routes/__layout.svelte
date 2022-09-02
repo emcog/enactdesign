@@ -104,25 +104,29 @@ autoUpdate($currentPage)
 
   .layout {
     //@media (min-width: vars.$for-tablet-portrait-up) {
+      display: flex;
+      flex-direction: column;
+
+    @media (min-width: vars.$for-tablet-portrait-up) {
       display: grid;
       grid-template-columns: repeat(12, 1fr);
       grid-template-rows: minmax(min-content, max-content) vars.$xl6 auto;
-    //}
-
-    //display: flex;
-    //flex-direction: column;
-    min-height: 100vh;
+      min-height: 100vh;
+    }
   }
 
 
   main {
-
     grid-column: 1/-1;
-    grid-row: 3/-2;
+    grid-row: 2/-1;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+
     margin: auto;
     width: 100%;
 
     @media (min-width: vars.$for-tablet-portrait-up) {
+      //grid-column: 1/-1;
       grid-row: 2/-1
     }
   }

@@ -65,9 +65,12 @@ $xl9: 11.642rem;
    * These are broken out into two separate variables from a previous iteration. I left
    * it in because it's nice to be able to split out the heading and body fonts.
    */
-  --bodyFont: 'Inter', Georgia, Times, serif;
-  --primaryFont: 'Inter', sans-serif;
+  --bodyFont: 'Inter', sans-serif;
+  --headings: 'Inter', sans-serif;
   --codeFont: 'Fira Code', monospace;
+
+  //--bodyFont: 'Source Serif Pro', serif;
+
 
   // Base styles
   font-size: 1rem;

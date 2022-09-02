@@ -39,6 +39,8 @@
 		margin: vars.$xs vars.$xs 0  vars.$xs;
 	 	border-top: 3px solid var(--bright-green);
 		max-width: 100%;
+		 color: var(--black);
+		 background: var(--mid-grey);
 
 
 
@@ -48,8 +50,6 @@
 			 grid-template-columns: repeat(12, 1fr);
 			 grid-gap: 8px;
        margin: 0 vars.$xl vars.$xs2 vars.$xl2 ;
-       color: var(--black);
-       background: var(--mid-grey);
      }
 
 		@media (min-width: vars.$for-desktop-up) { margin: 0 vars.$xl5 vars.$xs2 vars.$xl5; }
@@ -93,6 +93,7 @@
 		p {
 			font-size: vars.$base;
 			line-height: 1.2;
+			font-family: var(--bodyCopy);
 
       @media (min-width: vars.$for-desktop-up) {
 				font-size: vars.$lg;

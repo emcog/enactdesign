@@ -36,7 +36,7 @@ $: console.log('lib/components/SecondaryNav ', `store categories${$storeUniqueCa
 	.secondary-nav {
     grid-column: 1/-1;
     grid-row: 2/3;
-      z-index: 1;
+		z-index: 1;
 
 		@media(min-width: vars.$for-tablet-portrait-up) {
       margin: 14px 0 0 0;
@@ -54,11 +54,16 @@ $: console.log('lib/components/SecondaryNav ', `store categories${$storeUniqueCa
 		}
 
 		.label {
-			padding-left: 0;
 			margin: vars.$xs6 0 vars.$sm 0;
+			padding-left: 0;
+			font-family: var(--headings);
 			font-size: vars.$base;
-			color: var(--grey)
+			color: var(--grey);
+			background: none;
 		}
+
+
+		> ul { margin-bottom: 0;}
 
 
     ul {
@@ -71,11 +76,10 @@ $: console.log('lib/components/SecondaryNav ', `store categories${$storeUniqueCa
     }
 
 
-
 		&__categories,
     &__case-studies {
 			border-top: 3px solid var(--bright-green);
-      margin: 0 vars.$base;
+      margin: 0 vars.$xs;
 			width: 100%;
 
 			@media(min-width: vars.$for-tablet-portrait-up) {

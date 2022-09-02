@@ -89,7 +89,7 @@
 <style lang="scss">
 
   :global article.post {
-      grid-template-rows: vars.$xl6 auto;
+    grid-template-rows: vars.$xl6 auto;
     grid-column: 1/-1;
     margin: 0 vars.$base;
 
@@ -97,11 +97,12 @@
         display: grid;
         grid-template-columns: repeat(12, 1fr);
 
-          h2, h3, h4, h5, h6, p, span, section, div, pre, ul { grid-column: 2/-2;}
+          h2, h3, h4, h5, h6, p, span, section, div, pre, ul { grid-column: 2/-2; }
           p { font-size: vars.$lg; } }
 
       @media (min-width: vars.$for-tablet-landscape-up) {
         h2, h3, h4, h5, h6, p, span, section, div, pre, ul { grid-column: 3/-3; }
+        margin: 0;
       }
 
     .meta {
@@ -129,8 +130,13 @@
 
   .post-footer {
 
-    grid-column: 3/7;
-    margin: vars.$xs2 0 vars.$xl4 0 ;
+    border-top: 3px solid var(--bright-green);
+    grid-column: 1/-1;
+    margin: vars.$xl3 0 vars.$xl4 0 ;
+    padding: vars.$base 0 0 0;
+    width: 100%;
+
+    @media(min-width: vars.$for-tablet-portrait-up) {grid-column: 3/-3;}
 
     ul {
       padding: 0;
@@ -142,7 +148,7 @@
       font-size: 0.8rem;
 
       a {
-        font-family: var(--primaryFont);
+        font-family: var(--headings);
         font-size: vars.$base;
         font-weight: 500;
         text-decoration: none;
