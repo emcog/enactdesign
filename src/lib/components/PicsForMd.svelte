@@ -7,7 +7,7 @@
 
 </script>
 
-<figure style="grid-template-columns: repeat({images.length}, 1fr)">
+<figure class="for-md" style="grid-template-columns: repeat({images.length}, 1fr)">
 	{ #each images as image, i }
 			<img  src="/media/{image.name}" alt="{image.alt}"
 						class:hairline={hasBorder}
@@ -23,7 +23,8 @@
 </figure>
 
 <style lang="scss">
-	figure {
+
+	:global .post :where(figure.for-md) {
 		display: grid;
 		grid-column: 2/-1;
 		grid-gap: 0 vars.$xs6;
@@ -43,7 +44,7 @@
     @media (min-width: vars.$for-tablet-landscape-up) { grid-column: 1/-1; }
 	}
 
-	img {
+	img, video {
 		width: 100%;
 		object-fit: cover;
 	}

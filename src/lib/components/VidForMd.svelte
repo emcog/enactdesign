@@ -7,7 +7,7 @@
 
 </script>
 
-<figure>
+<figure class="for-md">
 
 	<video autoplay muted loop {controls} >
 		<source src="/media/{name}.webm" type="video/webm">
@@ -20,11 +20,17 @@
 </figure>
 
 <style lang="scss">
-	figure {
-		grid-column: 3/-1;
-		margin: 0;
-    @media (min-width: vars.$for-tablet-portrait-up) { grid-column: 2/-1; }
-	}
+// see pics for md
 
-	video {width: 100%}
+	//figure {
+	//	grid-column: 3/-1;
+	//	margin: 0;
+  //  @media (min-width: vars.$for-tablet-portrait-up) { grid-column: 2/-1; }
+	//}
+	//
+	//video {width: 100%}
+	//
+	//
+
+
 </style>
