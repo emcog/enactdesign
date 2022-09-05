@@ -12,9 +12,9 @@ coverHeight: 9
 excerpt: Check out how heading links work with this starter in this post.
 ---
 <script>
-    import VidForMd from '../components/VidForMd.svelte';
-    import PicForMd from '../components/PicForMd.svelte';
-    import PicsForMd from '../components/PicsForMd.svelte';
+    import VidForMd from '../../components/VidForMd.svelte';
+    import PicForMd from '../../components/PicForMd.svelte';
+    import PicsForMd from '../../components/PicsForMd.svelte';
 </script>
 
 <PicForMd image={ {name: "nodd-form--1.png", alt: "'Lets fill in a form', No one ever"} }/>
