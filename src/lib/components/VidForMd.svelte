@@ -11,8 +11,8 @@
 <figure class="for-md">
 
 	<video autoplay muted loop {controls} class:hairline={hasBorder} >
-		<source src="/media/{name}.webm" type="video/webm">
 		<source src="/media/{name}.mp4" type="video/mp4">
+		<source src="/media/{name}.webm" type="video/webm">
 		Your browser does not support the video tag.
 	</video>
 	{#if caption}

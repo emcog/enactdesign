@@ -59,7 +59,8 @@
 
     img {
 			 grid-column: 3/-1;
-			 height: 100%;
+			 //height: 100%;
+      height: auto;
 			 width: 100%;
 			 object-fit: cover;
        margin-bottom: 0;
@@ -112,6 +113,7 @@
 		grid-column: 7/-1;
 		background: var(--black);
 		display: flex;
+		min-height: 200px;
 
 		span {
 			margin: auto;
