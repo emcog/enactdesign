@@ -3,6 +3,7 @@ title: "Programming software for musicians"
 date: "2022-08-30"
 updated: ""
 categories:
+- "_product"
 - "dx"
 - "ui"
 - "ux"

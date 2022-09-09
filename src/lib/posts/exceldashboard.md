@@ -3,7 +3,7 @@ title: "Excel dashboard"
 date: "2021-10-26"
 updated: "2021-11-01"
 categories:
-- "branding"
+- "_product"
 - "office"
 - "data-visualisation"
 - "ui"

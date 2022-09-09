@@ -3,6 +3,7 @@ title: "Rediscover your data"
 date: "2022-08-29"
 updated: ""
 categories:
+- "_comms"
 - "branding"
 - "art direction"
 - "persona"

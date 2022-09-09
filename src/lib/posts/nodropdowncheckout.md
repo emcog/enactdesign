@@ -3,6 +3,7 @@ title: "No drop down checkout"
 date: "2022-08-29"
 updated: ""
 categories:
+- "_product"
 - "ui"
 - "useability"
 coverImage: "/media/nodd-form--1.png"

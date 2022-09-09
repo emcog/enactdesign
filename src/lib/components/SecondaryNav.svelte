@@ -3,6 +3,7 @@
 
 
 $: console.log('lib/components/SecondaryNav ', `store categories${$storeUniqueCategories}`)
+	// document.querySelectorAll('[href="https://example.com"]');
 </script>
 
 <nav class="secondary-nav">
@@ -129,5 +130,7 @@ $: console.log('lib/components/SecondaryNav ', `store categories${$storeUniqueCa
       a:visited { background: var(--mid-grey) }
       a:visited:hover { background: var(--bright-green) }
     }
+
+  .secondary-nav__category:nth-child(-n+2) > a { font-weight: 600;}
 
 </style>

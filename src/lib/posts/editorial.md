@@ -3,7 +3,7 @@ title: "Editorial and graphic design"
 date: "2022-08-29"
 updated: ""
 categories:
-- "branding"
+- "_comms"
 - "editorial"
 - "art direction"
 coverImage: "/media/editorial-cover.png"
