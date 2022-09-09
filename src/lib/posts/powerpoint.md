@@ -3,6 +3,7 @@ title: "Presentations"
 date: "2021-10-26"
 updated: "2021-11-01"
 categories:
+- "branding"
 - "office"
 coverImage: "/media/presentation__cover-temp.jpg"
 coverWidth: 16

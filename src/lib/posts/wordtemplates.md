@@ -3,6 +3,7 @@ title: "Word Templates"
 date: "2021-10-26"
 updated: "2021-11-01"
 categories:
+- "branding"
 - "office"
 coverImage: "/media/word__cover--temp.png"
 coverWidth: 16
