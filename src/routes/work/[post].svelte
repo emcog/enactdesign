@@ -103,7 +103,7 @@
       font-weight: 500;
     }
 
-    h2, h3, h4, h5, h6, p, span, section, div, pre, ul {
+    h2, h3, h4, h5, h6, p, span, section, div, pre, ul, ol {
       margin: 0 0 vars.$sm 0;
     }
 
@@ -121,7 +121,7 @@
       display: grid;
       grid-template-columns: repeat(12, 1fr);
 
-      h2, h3, h4, h5, h6, p, span, section, div, pre, ul {
+      h2, h3, h4, h5, h6, p, span, section, div, pre, ul, ol {
         grid-column: 2/-2;
         margin: vars.$xs4 0 vars.$base 0;
       }
@@ -134,7 +134,7 @@
     }
 
     @media (min-width: vars.$for-tablet-landscape-up) {
-      h2, h3, h4, h5, h6, p, span, section, div, pre, ul {
+      h2, h3, h4, h5, h6, p, span, section, div, pre, ul, ol {
         grid-column: 3/-3;
       }
       margin: 0 auto;
