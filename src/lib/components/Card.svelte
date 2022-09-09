@@ -1,4 +1,6 @@
 <script>
+	import category from '../../routes/work/category/index.svelte';
+
 	export let slug,
 						 coverImage,
 						 alt,
@@ -7,14 +9,18 @@
 						 title,
 						 excerpt,
 						 categories;
-	console.log(`the cover image is ${coverImage}`)
+	console.log(categories, 'categories')
 </script>
 <a href="/work/{slug}">
 	<article class="card">
 	<div class="card__copy">
 		<h2>{title}</h2>
 		<p>{excerpt}</p>
-		<span>{categories}</span>
+		<div class="categories">
+			{#each categories as category}
+				<span>{category}, </span>
+			{/each}
+		</div>
 	</div>
 		{#if coverImage}
 		<img
@@ -71,7 +77,7 @@
      }
    }
 
-  a { text-decoration: none; }
+	a { text-decoration: none; }
 
   a:hover { text-decoration: none;}
 
@@ -120,5 +126,9 @@
 			color: white;
 		}
 	}
+
+	.categories { margin: 0 vars.$sm vars.$sm 0}
+	.categories > span { line-height: 1.4 }
+
 
 </style>

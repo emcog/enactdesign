@@ -4,6 +4,7 @@ date: "2022-08-30"
 updated: ""
 categories:
 - "_product"
+- "art direction"
 - "dx"
 - "ui"
 - "ux"

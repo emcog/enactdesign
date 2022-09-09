@@ -3,7 +3,6 @@
 
 
 $: console.log('lib/components/SecondaryNav ', `store categories${$storeUniqueCategories}`)
-	// document.querySelectorAll('[href="https://example.com"]');
 </script>
 
 <nav class="secondary-nav">
