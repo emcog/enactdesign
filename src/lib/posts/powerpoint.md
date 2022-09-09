@@ -15,7 +15,7 @@ import VidForMd from "../components/VidForMd.svelte";
 import PicsForMd from "../components/PicsForMd.svelte";
 </script>
 
-<VidForMd name={"pptx--vid"}/>
+<VidForMd name={"pptx--vid"} hasControls={"true"}/>
 
 I have over 7 years experience creating custom PowerPoints, Keynotes and Google slides. Producing brand 
 templates and artworking content to meet your needs. 
