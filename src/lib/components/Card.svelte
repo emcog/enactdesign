@@ -1,5 +1,4 @@
 <script>
-	import category from '../../routes/work/category/index.svelte';
 
 	export let slug,
 						 coverImage,
