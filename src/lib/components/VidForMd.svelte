@@ -4,14 +4,15 @@
 						 hasControls = false;
 
 	let controls = hasControls ? "controls" : null;
+	export let hasBorder;
 
 </script>
 
-<figure>
+<figure class="for-md">
 
-	<video autoplay muted loop {controls} >
-		<source src="/media/{name}.webm" type="video/webm">
+	<video autoplay muted loop {controls} class:hairline={hasBorder} >
 		<source src="/media/{name}.mp4" type="video/mp4">
+		<source src="/media/{name}.webm" type="video/webm">
 		Your browser does not support the video tag.
 	</video>
 	{#if caption}
@@ -20,10 +21,17 @@
 </figure>
 
 <style lang="scss">
-	figure {
-		grid-column: 3/7;
-		margin: 0;
-	}
+// see pics for md
 
-	video {width: 100%}
+	//figure {
+	//	grid-column: 3/-1;
+	//	margin: 0;
+  //  @media (min-width: vars.$for-tablet-portrait-up) { grid-column: 2/-1; }
+	//}
+	//
+	//video {width: 100%}
+	//
+	//
+
+
 </style>

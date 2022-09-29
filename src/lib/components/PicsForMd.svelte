@@ -7,7 +7,7 @@
 
 </script>
 
-<figure style="grid-template-columns: repeat({images.length}, 1fr)">
+<figure class="for-md" style="grid-template-columns: repeat({images.length}, 1fr)">
 	{ #each images as image, i }
 			<img  src="/media/{image.name}" alt="{image.alt}"
 						class:hairline={hasBorder}
@@ -23,23 +23,40 @@
 </figure>
 
 <style lang="scss">
-	figure {
-		display: grid;
-		grid-column: 3/-1;
-		grid-gap: vars.$xs4;
-		margin: 0;
-	}
 
-	figcaption {
-		grid-column: 1/-2;
-	}
+	:global .post :where(figure.for-md) {
+    display: grid;
+    grid-column: 2/-1;
+    grid-gap: 0 vars.$xs6;
+    margin: 0 0 vars.$xl2 0;
 
-	img {
-		width: 100%;
-		object-fit: cover;
-	}
+    @media (min-width: vars.$for-tablet-portrait-up) {
+      grid-column: 2/-2;
+    }
+    @media (min-width: vars.$for-tablet-landscape-up) {
+      grid-column: 3/-3;
+    }
 
-	.hairline { border: 1px solid #EDF2F1 }
+
+    figcaption {
+      grid-column: 1/-1;
+      font-size: vars.$sm;
+      margin: 0;
+      padding: vars.$xs4;
+      background: var(--mid-grey);
+
+      @media (min-width: vars.$for-tablet-landscape-up) {
+        grid-column: 1/-1;
+      }
+    }
+
+    img, video {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  :global .post .hairline { border: 1px solid #EDF2F1 }
 
 
 

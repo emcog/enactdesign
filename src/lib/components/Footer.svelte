@@ -30,9 +30,11 @@
 </footer>
 
 <style lang="scss">
-  footer{ grid-column: 1/-1; }
+
 
   footer {
+    //grid-row: -2/-1;
+    grid-column: 1/-1;
     display: flex;
     margin: vars.$base vars.$xl vars.$xl vars.$xl;
     justify-items: center;

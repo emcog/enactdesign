@@ -4,7 +4,7 @@
 	export let hasBorder = false;
 </script>
 
-<figure style="">
+<figure class="for-md" style="">
 		<img  src="/media/{image.name}" alt="{image.alt}"
 					class:hairline={hasBorder}
 		/>
@@ -16,26 +16,5 @@
 </figure>
 
 <style lang="scss">
-  figure {
-    grid-template-columns: repeat(6, 1fr);
-    display: grid;
-    grid-column: 3/-1;
-    grid-gap: vars.$xs4;
-    margin: 0;
-  }
-
-  figcaption {
-    grid-column: 1/-2;
-  }
-
-  img {
-    width: 100%;
-    object-fit: cover;
-		grid-column: 1/5;
-  }
-
-  .hairline { border: 1px solid #EDF2F1 }
-
-
-
+//  see component picsformd
 </style>

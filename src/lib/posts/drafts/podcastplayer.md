@@ -12,7 +12,7 @@ coverHeight: 9
 excerpt: A podcast player and rss feed built in Svelte  
 ---
 <script>
-    import PicsForMd from "../components/PicsForMd.svelte"
+    import PicsForMd from "../../components/PicsForMd.svelte"
 </script>
 
 Situation

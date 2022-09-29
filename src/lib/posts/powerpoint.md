@@ -3,18 +3,19 @@ title: "Presentations"
 date: "2021-10-26"
 updated: "2021-11-01"
 categories:
-- "office-stationary"
-coverImage: "/media/jefferson-santos-fCEJGBzAkrU-unsplash.jpg"
+- "_comms"
+- "office"
+coverImage: "/media/presentation__cover-temp.jpg"
 coverWidth: 16
 coverHeight: 9
-excerpt: "PowerPoint, Keynote and Google Slides"
+excerpt: "Templates, artworking and training in PowerPoint, Keynote and Google Slides"
 ---
 <script>
 import VidForMd from "../components/VidForMd.svelte";
 import PicsForMd from "../components/PicsForMd.svelte";
 </script>
 
-<VidForMd name={"pptx--vid"}/>
+<VidForMd name={"pptx--vid"} hasControls={"true"}/>
 
 I have over 7 years experience creating custom PowerPoints, Keynotes and Google slides. Producing brand 
 templates and artworking content to meet your needs. 

@@ -28,28 +28,22 @@
 
   header {
 
-    margin: vars.$base;
+    margin: vars.$base vars.$xs 0 vars.$xs;
     display: flex;
     grid-column: 1/-1;
-    padding: 0 vars.$xs;
-
-    @media (min-width: vars.$for-tablet-landscape-up) { margin: vars.$base vars.$xl5 vars.$xs6 vars.$base; }
 
 
-    @media (min-width: vars.$smMin) {
-      justify-content: center;
-      //flex-wrap: wrap;
-      height: auto;
-    }
+    @media(min-width: vars.$for-tablet-landscape-up ) { margin: vars.$base vars.$xl vars.$lg vars.$xl; }
+
+    @media(min-width: vars.$for-desktop-up) { margin: vars.$base vars.$xl5 vars.$lg vars.$xl; }
+
+
 
     .site-title {
-      font-family: var(--bodyFont);
-      font-size: 2.1rem;
-      //line-height: 1;
+      font-family: var(--headings);
+      font-size: vars.$xl2;
       color: inherit;
-      //text-align: center;
       margin: 0;
-      //display: block;
       font-size: 1.4rem;
       font-weight: bold;
 

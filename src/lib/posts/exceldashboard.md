@@ -1,28 +1,32 @@
 ---
-title: "Excel Dashboard"
+title: "Excel dashboard"
 date: "2021-10-26"
 updated: "2021-11-01"
 categories:
-- "office-stationary"
+- "_product"
+- "office"
 - "data-visualisation"
 - "ui"
-coverImage:
 coverWidth: 16
 coverHeight: 9
-excerpt: Custom dashboard built in excel
+excerpt: Saving money for one of the big four accountancy firms
 ---
 
-I recently built a dashboard for one of the big-four accountancy firms. This is used to help them visualise
-savings by using a global team rather than a local team. It takes inputs and creates graphs which update 
-in real-time.
+I recently built a dashboard for one of the big-four accountancy firms. This is used to help 
+them visualise costs and potential saving. It generates graphs in real time and allows the user
+to compare costs.
 
-This was used to give staff an impression of the cost savings if they used a larger more complex application
-purpose built. There had been resistance in using the new software. Excel is a commonly used tool, so it faced
-relatively low-friction in staff picking it up.
+Using excel is "default behviour" within the organsisation, so this was idea tool to seed the idea.
+It was then used to coax staff to adopt a more complex database driven system.
 
 
-The design and implementation of the project followed as many softward development conventions as possible.
-e.g. Separation of concerns and visible tests. Excel doesn't have state, so I was constrained in what I could 
-visualise. I applied principles of form design too so that inputs were highlighted and only they were editable.
+The design and implementation of the project followed software design and development 
+conventions where possible. It was separated into a front and back end. Front end for data
+input and back end where all the maths took place. The design of the back end was inspired
+by test driven development, and exposed as many steps as possible, so a "developer" could
+see the maths and check the results. The back end was deeply hidden so a user would not 
+stumble on it. Then front end was inspired by good design practice for forms. Inputs were
+highlighted and only these were editable. 
 
-Understandably, this project is under NDA so I can't share a visualisations of it.
+Finally the spreadsheet was programmed to show only the dashboard when opened. ie. no other cells 
+were visible. 

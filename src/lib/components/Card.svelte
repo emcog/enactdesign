@@ -1,4 +1,6 @@
 <script>
+	import category from '../../routes/work/category/index.svelte';
+
 	export let slug,
 						 coverImage,
 						 alt,
@@ -7,25 +9,30 @@
 						 title,
 						 excerpt,
 						 categories;
-	console.log(`the cover image is ${coverImage}`)
+	console.log(categories, 'categories')
 </script>
 <a href="/work/{slug}">
 	<article class="card">
 	<div class="card__copy">
 		<h2>{title}</h2>
 		<p>{excerpt}</p>
-		<span>{categories}</span>
+		<div class="categories">
+			{#each categories as category}
+				<span>{category}, </span>
+			{/each}
+		</div>
 	</div>
 		{#if coverImage}
 		<img
 			src={coverImage}
 			alt="{alt}"
-			width={coverWidth}
-			height={coverHeight}
-			style="ratio: {coverWidth} / {coverHeight}"
-		/>
+
+				width={coverWidth}
+				height={coverHeight}
+				style="ratio: {coverWidth} / {coverHeight}"
+			/>
 			{:else }
-			<div class="nda"><p>NDA</p></div>
+			<div class="nda"><span>NDA</span></div>
 			{/if}
 </article>
 </a>
@@ -36,8 +43,12 @@
 		transition: all .25s;
 		display: flex;
 		flex-direction: column-reverse;
+		margin: vars.$xs vars.$xs 0  vars.$xs;
+	 	border-top: 3px solid var(--bright-green);
 		max-width: 100%;
-		margin: vars.$xs 0;
+		 color: var(--black);
+		 background: var(--mid-grey);
+
 
 
      @media (min-width: vars.$for-tablet-landscape-up) {
@@ -45,19 +56,18 @@
 			 display: grid;
 			 grid-template-columns: repeat(12, 1fr);
 			 grid-gap: 8px;
-       margin: 0 vars.$xl5 vars.$xs2 vars.$xl5;
-			 min-height: 200px;
-       border-top: 3px solid var(--bright-green);
-       color: var(--black);
-       background: var(--mid-green);
+       margin: 0 vars.$xl vars.$xs2 vars.$xl2 ;
      }
+
+		@media (min-width: vars.$for-desktop-up) { margin: 0 vars.$xl5 vars.$xs2 vars.$xl5; }
 
     	&:hover{ background: var(--soft-green); }
 
 
     img {
 			 grid-column: 3/-1;
-			 height: 100%;
+			 //height: 100%;
+      height: auto;
 			 width: 100%;
 			 object-fit: cover;
        margin-bottom: 0;
@@ -68,46 +78,59 @@
      }
    }
 
-  a { text-decoration: none; }
+	a { text-decoration: none; }
 
   a:hover { text-decoration: none;}
 
 	.card__copy {
 		grid-column: 1/7;
+    margin: 0;
+    padding: 0 vars.$base vars.$base 0;
+
 		@media (min-width: vars.$for-tablet-landscape-up) { padding: vars.$lg 0 0 0; }
 
-		margin: 0;
-		padding: 0 vars.$base vars.$base 0;
 
 		h2 {
       margin-top: vars.$xs4;
       font-size: vars.$xl;
 			font-weight: bold;
 
-      //@media (min-width: vars.$for-tablet-landscape-up) { font-size: vars.$xl; }
-      @media (min-width: vars.$for-desktop-up) { font-size: vars.$xl2; }
-		}
+
+      @media (min-width: vars.$for-desktop-up) { font-size: vars.$xl2; } }
+
 
 		p {
-			font-size: vars.$lg;
-      @media (min-width: vars.$for-tablet-landscape-up) {
+			font-size: vars.$base;
+			line-height: 1.2;
+			font-family: var(--bodyCopy);
+
+      @media (min-width: vars.$for-desktop-up) {
 				font-size: vars.$lg;
 				line-height: 1.2;
-				margin-top: vars.$xl;
-      }
-		}
+				margin-top: vars.$xl; } }
 
-		span {font-size: vars.$base;}
+
+		span {
+			font-size: vars.$sm;
+			@media (min-width: vars.$for-desktop-up) { font-size: vars.$base;} }
    }
+
+
 
 	.nda {
 		grid-column: 7/-1;
+		background: var(--black);
 		display: flex;
-		color: white;
-		background: black;
+		min-height: 200px;
 
-		p { margin: auto; }
+		span {
+			margin: auto;
+			color: white;
+		}
 	}
+
+	.categories { margin: 0 vars.$sm vars.$sm 0}
+	.categories > span { line-height: 1.4 }
 
 
 </style>

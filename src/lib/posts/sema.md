@@ -1,16 +1,17 @@
 ---
-title: "An environment for programming music"
-date: "2021-10-26"
-updated: "2021-11-01"
+title: "Programming software for musicians"
+date: "2022-08-30"
+updated: ""
 categories:
-- "dashboard"
+- "_product"
+- "art direction"
 - "dx"
 - "ui"
 - "ux"
 coverImage: "/media/sema__ui.png"
 coverWidth: 16
 coverHeight: 9
-excerpt: "How I bridged a culture gap to create space for user-centred design"
+excerpt: "How I bridged a culture gap to make space for user-centred design"
 ---
 <script>
 import VidForMd from '../components/VidForMd.svelte';
@@ -26,32 +27,36 @@ import PicsForMd from '../components/PicsForMd.svelte';
 
 ## Summary
 ### Situation
-A team at Sussex University are building a web-app which for live programming of music, "Live coding". 
+
+A team at Sussex University are building a web-app for programming music, "Live coding". I was brought into help
+revamp its UI and interaction patterns. 
 
 
 ### Process
 
-The challenge with this project was to get enough to the team of theorists and engineers to 
-understand their language for the project and the road map. Information wasn't forthcoming because 
-they were in an established culture where everyone all ready understood the semantic nuts and bolts.
 
-protecting the design process and building relationship
-To bridge the gap in culture and knowledge, I arranged a regular reviews. This infromally  created a 
-role akin to product owner. In order to protect the design process I asked them not to share any of 
-my work without permisssion. 
+The brief concealed many assumptions. Important information wasn't forthcoming because of an  
+established work culture. Until this point, everyone in the project had been involved for years. And they
+were all academic experts in the field. So it was assumed that anyone involved had the same depth of knowledge. 
 
-By sandboxing the creative process like this, I could share roughs and ask naive questions. 
-This naturally led to a creative dialogue where questions could be asked from a user-centred perspective.
-Throughout this process my role evolved from UI to Interaction and UX designer. 
+The initial challenge was initial challenge was to build relationships so that I could understand  
+the product and its road map. To do this, I had to sandbox the creative process and make a space 
+for naieve questions and incorrect answers. 
 
-Below are key steps in the evolution of the design
+I needed someone akin to a product owner. One member of the team who I could arrange design reviews with. 
+These were scheduled in 2 week sprints. It was important that they did not share any design work without
+permission.
 
+Each review revealed more information which I used to design in greater detail. This cycle lead to 
+a dialogue founded on trust. This, in turn gave space for naieve, user-centred questions. 
 
-### Outcome
+These questions would eventually reveal the major challenge(s) a user faced when using the product, as well 
+detailed information about its roadmap. With this, the design lept forward. 
 
-The team bought in to a radical update, which was future proofed against the development road map. This  
-simplified the interface and afforded a more complex arrangement with intuitive navigation.
+I presented it to the team who adopted the redesign. Which has less distractions and allows for navigation through
+complex musical arrangements. 
 
+Below are the key steps in the evolution of the design.
 
 ## Process in detail
 
