@@ -8,6 +8,7 @@
   import { prefetch } from '$app/navigation'
   import { onMount } from 'svelte'
   import { fade } from 'svelte/transition'
+
   export let data
 
   const transitionIn = { delay: 150, duration: 150 }
@@ -30,6 +31,7 @@
     navItems.forEach(item => prefetch(item.route))
   })
 </script>
+
 
 <div class="layout" class:open={$isMenuOpen}>
   <Header />

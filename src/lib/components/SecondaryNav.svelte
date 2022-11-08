@@ -1,4 +1,5 @@
 <script>
+<!--	todo implement secondary nav-->
 	import { storePosts, storeUniqueCategories } from "$lib/assets/js/store";
 
 

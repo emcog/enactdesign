@@ -12,7 +12,9 @@
 	<meta data-key="description" name="description" content={siteDescription}>
 </svelte:head>
 
-<h1>Blog</h1>
+<!--todo update below-->
+<h1>Work</h1>
+
 
 <PostsList posts={data.posts} />
 
