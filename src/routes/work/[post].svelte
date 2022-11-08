@@ -223,7 +223,7 @@
     a:visited:hover {
       background: var(--bright-green)
     }
-  }
+  }g
 
 
 </style>
