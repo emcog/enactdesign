@@ -1,5 +1,4 @@
 <script>
-<!--	todo implement secondary nav-->
 	import { storePosts, storeUniqueCategories } from "$lib/assets/js/store";
 
 
@@ -70,7 +69,7 @@ $: console.log('lib/components/SecondaryNav ', `store categories${$storeUniqueCa
 //=======
 //      margin: 0 vars.$xs;
 //			width: 100%;
->>>>>>> main
+//>>>>>>> main
 
 			@media(min-width: vars.$for-tablet-portrait-up) {
 				min-width: auto;
