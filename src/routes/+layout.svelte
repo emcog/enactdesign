@@ -151,7 +151,7 @@
 
 
   main {
-
+    
     grid-column: 1/-1;
     grid-row: 3/-2;
     margin: auto;
