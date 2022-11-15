@@ -31,7 +31,8 @@ body {
 
 
  //todo return below styling to component (picsforMD)
- .post figure.for-md {
+
+.post figure.for-md {
   display: grid;
   grid-column: 2/-1;
   grid-gap: 0 vars.$xs6;
