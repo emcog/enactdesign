@@ -58,18 +58,18 @@ $: console.log('lib/components/SecondaryNav ', `store categories${$storeUniqueCa
 		&__categories,
     &__case-studies {
 			border-top: 3px solid var(--bright-green);
-<<<<<<< HEAD
-
-			.label {
-				margin: vars.$xs3 0 vars.$sm 0;
-				padding: 0;
-				font-size: vars.$base;
-				color: var(--mid-grey);
-
-			}
-=======
-      margin: 0 vars.$xs;
-			width: 100%;
+//<<<<<<< HEAD
+//
+//			.label {
+//				margin: vars.$xs3 0 vars.$sm 0;
+//				padding: 0;
+//				font-size: vars.$base;
+//				color: var(--mid-grey);
+//
+//			}
+//=======
+//      margin: 0 vars.$xs;
+//			width: 100%;
 >>>>>>> main
 
 			@media(min-width: vars.$for-tablet-portrait-up) {
