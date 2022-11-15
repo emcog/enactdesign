@@ -1,4 +1,7 @@
-/*todo make sure this is importing and move css variables from vars.scss*/
+/*todo make sure this is importing and move css variables from vars.scss
+   see lib/assets/scss/global.scss'
+   */
+
 /*:root {*/
 /*    --soft-green: #E6F2EE;*/
 /*    --bright-green: #00E596;*/
@@ -12,3 +15,6 @@ a:hover {
 }
 
 a {color: var(--black)}
+
+
+/*PicsforMD.svelte*/
