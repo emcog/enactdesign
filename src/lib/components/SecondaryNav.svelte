@@ -1,22 +1,32 @@
 <script>
 	import { storePosts, storeUniqueCategories } from "$lib/assets/js/store";
-
-
-$: console.log('lib/components/SecondaryNav ', `store categories${$storeUniqueCategories}`)
+	export let posts = []
+// $: console.log('lib/components/SecondaryNav ', `store categories${$storeUniqueCategories}`)
 </script>
 
-<nav class="secondary-nav">
+<nav>
 	<ul>
-		<li class="secondary-nav__categories">
-			<p class="label">Categories</p>
-					<ul>
-						{#if $storeUniqueCategories	}
-							{#each $storeUniqueCategories as category}
-								<li class="secondary-nav__category"><a href="/work/category/{category}">{category}</a></li>
-						{/each}
-					{/if}
-				</ul>
+		<li>
+			{#each posts as post}
+				<li>{post.title}</li>
+			{/each}
 		</li>
+	</ul>
+</nav>
+
+
+<!--<nav class="secondary-nav">-->
+<!--	<ul>-->
+<!--		<li class="secondary-nav__categories">-->
+<!--			<p class="label">Categories</p>-->
+<!--					<ul>-->
+<!--						{#if $storeUniqueCategories	}-->
+<!--							{#each $storeUniqueCategories as category}-->
+<!--								<li class="secondary-nav__category"><a href="/work/category/{category}">{category}</a></li>-->
+<!--						{/each}-->
+<!--					{/if}-->
+<!--				</ul>-->
+<!--		</li>-->
 <!--		<li class="secondary-nav__case-studies">-->
 <!--			<p>Case studies</p>-->
 <!--				<ul>-->
@@ -28,8 +38,8 @@ $: console.log('lib/components/SecondaryNav ', `store categories${$storeUniqueCa
 <!--					{/if}-->
 <!--			</ul>-->
 <!--		</li>-->
-	</ul>
-</nav>
+<!--	</ul>-->
+<!--</nav>-->
 
 <style lang="scss">
 
