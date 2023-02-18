@@ -1,5 +1,5 @@
 <script>
-
+//todo fix card
 	export let slug,
 						 coverImage,
 						 alt,

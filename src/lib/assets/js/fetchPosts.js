@@ -33,6 +33,7 @@ const fetchPosts = async ({ offset = 0, limit = postsPerPage, category = '' } = 
     date: post.date,
     categories: post.categories,
   }))
+  
 
   return {
     posts: sortedPosts

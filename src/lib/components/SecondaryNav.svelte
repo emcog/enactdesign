@@ -1,45 +1,30 @@
 <script>
-	import { storePosts, storeUniqueCategories } from "$lib/assets/js/store";
-	export let posts = []
-// $: console.log('lib/components/SecondaryNav ', `store categories${$storeUniqueCategories}`)
+
+	export let categories = []
+
+	// let arraysOfCategories = [];
+	// let duplicateCategories = [];
+	// let setCategories = /* @__PURE__ */ new Set();
+	// let uniqueCategories = [];
+	// posts.map((e) => arraysOfCategories.push(e.categories));
+	// duplicateCategories = arraysOfCategories.flat(2);
+	// duplicateCategories.forEach((e) => setCategories.add(e));
+	// uniqueCategories = [...setCategories];
+	// uniqueCategories.sort();
+	// console.log('secondary nav', uniqueCategories);
+	console.log('secondary nav', categories)
 </script>
 
-<nav>
+<nav class="secondary-nav">
 	<ul>
-		<li>
-			{#each posts as post}
-				<li>{post.title}</li>
+		<li class="secondary-nav__categories">
+			<p class="label">Categories</p>
+			{#each categories as category}
+				<li>{category.title}</li>
 			{/each}
 		</li>
 	</ul>
 </nav>
-
-
-<!--<nav class="secondary-nav">-->
-<!--	<ul>-->
-<!--		<li class="secondary-nav__categories">-->
-<!--			<p class="label">Categories</p>-->
-<!--					<ul>-->
-<!--						{#if $storeUniqueCategories	}-->
-<!--							{#each $storeUniqueCategories as category}-->
-<!--								<li class="secondary-nav__category"><a href="/work/category/{category}">{category}</a></li>-->
-<!--						{/each}-->
-<!--					{/if}-->
-<!--				</ul>-->
-<!--		</li>-->
-<!--		<li class="secondary-nav__case-studies">-->
-<!--			<p>Case studies</p>-->
-<!--				<ul>-->
-<!--					{#if $storePosts }-->
-<!--						{#each $storePosts as post}-->
-<!--						&lt;!&ndash;todo replace hard coded with ref to settings&ndash;&gt;-->
-<!--						<li><a href="/work/{post.slug}">{post.title}</a></li>-->
-<!--						{/each}-->
-<!--					{/if}-->
-<!--			</ul>-->
-<!--		</li>-->
-<!--	</ul>-->
-<!--</nav>-->
 
 <style lang="scss">
 
