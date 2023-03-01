@@ -8,7 +8,7 @@
   import { prefetch } from '$app/navigation'
   import { onMount } from 'svelte'
   import { fade } from 'svelte/transition'
-  import SecondaryNav from '$lib/components/SecondaryNav.svelte';
+  // import SecondaryNav from '$lib/components/SecondaryNav.svelte';
 
 
   export let data
@@ -42,7 +42,7 @@
   <Header />
 <!--todo fix secondary nav-->
 <!--      {#if displaySecondaryNav}-->
-        <SecondaryNav />
+<!--        <SecondaryNav />-->
       <!--{/if}-->
 
 

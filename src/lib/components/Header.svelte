@@ -2,7 +2,7 @@
   import MainNav from './MainNav.svelte'
   import HamburgerMenuButton from './HamburgerMenuButton.svelte'
   import { siteTitle } from '$lib/config'
-  // import {SecondaryNav} from './SecondaryNav.svelte';
+
 
   const focusMain = () => {
 		const main = document.querySelector('main');
