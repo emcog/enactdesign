@@ -1,5 +1,21 @@
 <script>
 	export let categories = []
+	export let activeCategory
+
+
+
+	console.log('activeCategory', typeof activeCategory, typeof categories[0].title)
+
+
+
+	/*
+	take activeCategory value
+	loop through categories
+	add class to the category which matches active categories
+
+	if activeCategory === category.title in categories
+	then
+	 */
 </script>
 
 <nav class="secondary-nav">
@@ -7,16 +23,22 @@
 	<ul>
 		<li class="secondary-nav__categories">
 			{#each categories as category}
-				<!--todo fix this hard code with site.value-->
-				<li><a href="/work/category/{category.title}"> {category.title}</a> </li>
+					<li class="{ activeCategory === category.title ? 'active': ''}" ><a href="/work/category/{category.title}"> {category.title}</a> </li>
 			{/each}
 		</li>
 	</ul>
+	{#if activeCategory}
+		<span>{activeCategory}</span>
+	{/if}
 </nav>
 
 
 
 <style lang="scss">
+
+	.active {
+		color: #E63946;
+	}
 
   div.category-col {
     border-top: 3px solid var(--bright-green);
