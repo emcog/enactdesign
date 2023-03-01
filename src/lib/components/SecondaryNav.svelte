@@ -3,6 +3,7 @@
 </script>
 
 <nav class="secondary-nav">
+	<p>Secondary Nav</p>
 	<ul>
 		<li class="secondary-nav__categories">
 			{#each categories as category}

@@ -2,8 +2,10 @@
 <script>
 	import PostsList from '$lib/components/PostsList.svelte'
 	import Pagination from '$lib/components/Pagination.svelte'
+	import SecondaryNav from '$lib/components/SecondaryNav.svelte';
 
 	export let data
+	console.log('category./+page.svelte', data)
 </script>
 
 
@@ -13,12 +15,8 @@
 
 <!--todo reinstate H1-->
 <!--<h1>Blog category: {data.category}</h1>-->
-
-<div class="category-col">
-	<h1 class="category-title">Category</h1>
-	<p>{data.category}</p>
-	<a class="" href="/work">all categories</a>
-</div>
+<SecondaryNav categories={data.categories}/>
+<p>{data.category}</p>
 
 {#if data.posts.length}
 	<PostsList posts={data.posts} />
