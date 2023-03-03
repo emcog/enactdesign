@@ -1,6 +1,7 @@
 <!-- This is the global layout file; it "wraps" every page on the site. (Or more accurately: is the parent component to every page component on the site.) -->
 <script>
   import '$lib/assets/scss/global.scss'
+  import '../app.css'
   import Header from '$lib/components/Header.svelte'
   import Footer from '$lib/components/Footer.svelte'
   import { currentPage, isMenuOpen } from '$lib/assets/js/store'
@@ -85,14 +86,20 @@
 
 
   main {
-    
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: vars.$base;
+    grid-template-rows: auto;
     grid-column: 1/-1;
     grid-row: 3/-2;
-    margin: auto;
-    width: 100%;
+    margin: vars.$base vars.$xs 0 vars.$xs;
+    width: auto;
+
+    @media(min-width: vars.$for-desktop-up) { margin: vars.$base vars.$xl5 vars.$lg vars.$xl; }
 
     @media (min-width: vars.$for-tablet-landscape-up) {
-      grid-row: 2/-1
+      grid-row: 2/-1;
+      margin: vars.$base vars.$xl vars.$lg vars.$xl;
     }
   }
 

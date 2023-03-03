@@ -5,7 +5,6 @@
 	import SecondaryNav from '$lib/components/SecondaryNav.svelte';
 
 	export let data
-	console.log('category./+page.svelte', data)
 </script>
 
 
@@ -16,7 +15,6 @@
 <!--todo reinstate H1-->
 <!--<h1>Blog category: {data.category}</h1>-->
 <SecondaryNav categories={data.categories} activeCategory="{data.category}"/>
-<p>{data.category}</p>
 
 {#if data.posts.length}
 	<PostsList posts={data.posts} />
