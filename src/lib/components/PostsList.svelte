@@ -49,4 +49,6 @@ li {
 
     @media(min-width: vars.$for-tablet-landscape-up) { grid-column: 4/-1; }
 }
+
+.posts-list__post { margin: 0 0 vars.$sm}
 </style>

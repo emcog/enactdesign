@@ -9,10 +9,10 @@
   import { prefetch } from '$app/navigation'
   import { onMount } from 'svelte'
   import { fade } from 'svelte/transition'
-  // import SecondaryNav from '$lib/components/SecondaryNav.svelte';
 
 
   export let data
+
 
   const transitionIn = { delay: 150, duration: 150 }
   const transitionOut = { duration: 100 }

@@ -1,16 +1,13 @@
 <script>
 	export let categories = []
 	export let activeCategory
-
-	console.log('activeCategory', typeof activeCategory, typeof categories[0].title)
-
 </script>
 
 <nav class="secondary-nav">
 	<ul>
 		<li class="secondary-nav__categories">
 			{#each categories as category}
-					<li class="{activeCategory === category.title ? 'active': ''}" >
+					<li class="{activeCategory === category.title ? 'active': ''} category" >
 						<a href="/work/category/{category.title}"> {category.title}</a>
 					</li>
 			{/each}
@@ -22,9 +19,7 @@
 
 <!--<style lang="scss">-->
 
-<!--	.active {-->
-<!--		color: #E63946;-->
-<!--	}-->
+
 
 <!--  div.category-col {-->
 <!--    border-top: 3px solid var(&#45;&#45;bright-green);-->
@@ -95,11 +90,12 @@
 
 <style lang="scss">
 
+	.category.active { background: var(--bright-green); }
+
 	.secondary-nav {
     grid-column: 1/-1;
     grid-row: 1/2;
 		z-index: 1;
-
 
 
     @media(min-width: vars.$for-tablet-portrait-up) { grid-column: 1/5; }
@@ -108,7 +104,6 @@
 		@media(min-width: vars.$for-desktop-up) {
       margin: 14px 0 0 0;
 			grid-column: 1/4;
-      //grid-row: 2/-1;
       padding: 0;
       top: 0;
       height: 100vh;
@@ -124,8 +119,6 @@
 		&__categories,
     &__case-studies {
 			border-top: 3px solid var(--bright-green);
-//<<<<<<< HEAD
-//
 			.label {
 				margin: vars.$xs3 0 vars.$sm 0;
 				padding: 0;
@@ -133,10 +126,10 @@
 				color: var(--mid-grey);
 
 			}
-//=======
+
       margin: 0 vars.$xs;
 			width: 100%;
-//>>>>>>> main
+
 
 			@media(min-width: vars.$for-tablet-portrait-up) {
 				min-width: auto;
@@ -209,6 +202,11 @@
 
   .secondary-nav__categories{
 		margin: 0;
+	}
+
+	.category {
+    background: var(--soft-green);
+		margin: vars.$xs8 vars.$xs8 0 0;
 	}
 
 </style>

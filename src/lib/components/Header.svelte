@@ -48,7 +48,7 @@
       font-weight: bold;
 
       @media (min-width: vars.$smMin) {
-        width: 100%;
+        //width: 100%;
         font-size: 1.6rem;
       }
     }
