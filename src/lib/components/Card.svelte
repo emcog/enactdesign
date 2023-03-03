@@ -1,6 +1,5 @@
 <script>
-	import category from '../../routes/work/category/index.svelte';
-
+//todo fix card
 	export let slug,
 						 coverImage,
 						 alt,
@@ -26,6 +25,7 @@
 		<img
 			src={coverImage}
 			alt="{alt}"
+
 				width={coverWidth}
 				height={coverHeight}
 				style="ratio: {coverWidth} / {coverHeight}"
@@ -42,7 +42,7 @@
 		transition: all .25s;
 		display: flex;
 		flex-direction: column-reverse;
-		margin: vars.$xs vars.$xs 0  vars.$xs;
+		//margin: vars.$xs vars.$xs 0  vars.$xs;
 	 	border-top: 3px solid var(--bright-green);
 		max-width: 100%;
 		 color: var(--black);
@@ -55,10 +55,12 @@
 			 display: grid;
 			 grid-template-columns: repeat(12, 1fr);
 			 grid-gap: 8px;
-       margin: 0 vars.$xl vars.$xs2 vars.$xl2 ;
+       //margin: 0 vars.$xl vars.$xs2 vars.$xl2 ;
      }
 
-		@media (min-width: vars.$for-desktop-up) { margin: 0 vars.$xl5 vars.$xs2 vars.$xl5; }
+		@media (min-width: vars.$for-desktop-up) {
+			//margin: 0 vars.$xl5 vars.$xs2 vars.$xl5;
+		}
 
     	&:hover{ background: var(--soft-green); }
 
@@ -93,6 +95,7 @@
       margin-top: vars.$xs4;
       font-size: vars.$xl;
 			font-weight: bold;
+
 
       @media (min-width: vars.$for-desktop-up) { font-size: vars.$xl2; } }
 

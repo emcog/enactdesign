@@ -14,6 +14,19 @@ excerpt: A podcast player and rss feed built in Svelte
 <script>
     import PicsForMd from "../../components/PicsForMd.svelte"
 </script>
+
+Situation
+I was working with small organisations, Mindfulness Connected, to help their digital strategy and implementation. 
+In the past they had explored native apps but these were costly to maintain, relied on their user's installing (and overcoming
+any security related hurdles) and provide the best platform form for prolonged concentration.  
+
+Task
+
+Reviewing the strategy with the team we decided to move away from a custom app and its overheads. Instead focusing
+on print and using 
+
+Action
+Result
 This custom podcast player automatically generates an rss file which is valid for Apple Podcasts. 
 It is built using Svelte and SvelteKit. The content is hosted on AWS S3 and distributed on their 
 CDN cloudfront and the interface hosted on Netlify. Unless your audience is huge it is basically free to run.

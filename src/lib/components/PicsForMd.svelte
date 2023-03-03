@@ -3,7 +3,7 @@
 	export let images = [{}];
 	export let hasBorder = false;
 	console.log('PicsForMd',images.length);
-	$: gridColumn = images.length === 1 ? "grid-column: 3/-1;": "";
+	// $: gridColumn = images.length === 1 ? "grid-column: 3/-1;": "";
 
 </script>
 
@@ -22,8 +22,10 @@
 
 </figure>
 
+<!--	todo reinstate styles below and remove from global.scss-->
 <style lang="scss">
 
+/*
 	:global .post :where(figure.for-md) {
     display: grid;
     grid-column: 2/-1;
@@ -57,7 +59,6 @@
   }
 
   :global .post .hairline { border: 1px solid #EDF2F1 }
-
-
+	*/
 
 </style>

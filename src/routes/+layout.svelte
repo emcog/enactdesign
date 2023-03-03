@@ -1,56 +1,31 @@
 <!-- This is the global layout file; it "wraps" every page on the site. (Or more accurately: is the parent component to every page component on the site.) -->
-<script context="module">
-	export const load = async({ url, fetch }) => {
-    /**
-     * This fetch call is not used in this file, but the route won't be pre-rendered
-     * and routed properly unless it's called inside a `load` function. ¯\_(ツ)_/¯
-     * */
-    const rss = await fetch(`/api/rss.xml`)
-
-    return {
-      props: {
-        path: url.pathname
-      }
-    }
-  }
-</script>
-
 <script>
   import '$lib/assets/scss/global.scss'
+  import '../app.css'
   import Header from '$lib/components/Header.svelte'
   import Footer from '$lib/components/Footer.svelte'
-  import { currentPage, isMenuOpen, storeUniqueCategories, storePosts } from '$lib/assets/js/store'
+  import { currentPage, isMenuOpen } from '$lib/assets/js/store'
   import { navItems } from '$lib/config'
-	import { prefetch } from '$app/navigation'
+  import { prefetch } from '$app/navigation'
   import { onMount } from 'svelte'
   import { fade } from 'svelte/transition'
-  import SecondaryNav from '$lib/components/SecondaryNav.svelte';
 
 
-
+  export let data
 
 
   const transitionIn = { delay: 150, duration: 150 }
   const transitionOut = { duration: 100 }
 
-  export let path
-
   /**
    * Updates the global store with the current path. (Used for highlighting
    * the current page in the nav, but could be useful for other purposes.)
    **/
+  $: currentPage.set(data.path)
 
-  $: currentPage.set(path)
+   // let displaySecondaryNav = false;
+   // $: displaySecondaryNav = data.path === '/work' || '/work/category';
 
-  let displaySecondaryNav = false;
-  $: displaySecondaryNav = path === '/work';
-
-
-function autoUpdate(value) {
-  console.log('autoUpdate',value)
-}
-
-autoUpdate($currentPage)
   /**
    * This pre-fetches all top-level routes on the site in the background for faster loading.
    * https://kit.svelte.dev/docs#modules-$app-navigation
@@ -61,21 +36,18 @@ autoUpdate($currentPage)
   onMount(() => {
     navItems.forEach(item => prefetch(item.route))
   })
-
 </script>
 
 
-<!--
-  The below markup is used on every page in the site. The <slot> is where the page's
-  actual contents will show up.
--->
 <div class="layout" class:open={$isMenuOpen}>
   <Header />
-    {#if displaySecondaryNav}
-      <SecondaryNav />
-    {/if}
+<!--todo fix secondary nav-->
+<!--      {#if displaySecondaryNav}-->
+<!--        <SecondaryNav />-->
+      <!--{/if}-->
 
-  {#key path}
+
+  {#key data.path}
     <main
       id="main"
       tabindex="-1"
@@ -87,8 +59,6 @@ autoUpdate($currentPage)
   {/key}
   <Footer />
 </div>
-
-
 
 
 <style lang="scss">
@@ -103,31 +73,33 @@ autoUpdate($currentPage)
 
 
   .layout {
-    //@media (min-width: vars.$for-tablet-portrait-up) {
-      display: flex;
-      flex-direction: column;
-
-    @media (min-width: vars.$for-tablet-portrait-up) {
+    @media (min-width: vars.$for-tablet-landscape-up) {
       display: grid;
       grid-template-columns: repeat(12, 1fr);
       grid-template-rows: minmax(min-content, max-content) vars.$xl6 auto;
-      min-height: 100vh;
     }
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
   }
 
 
   main {
-    grid-column: 1/-1;
-    grid-row: 2/-1;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
+    grid-gap: vars.$base;
+    grid-template-rows: auto;
+    grid-column: 1/-1;
+    grid-row: 3/-2;
+    margin: vars.$base vars.$xs 0 vars.$xs;
+    width: auto;
 
-    margin: auto;
-    width: 100%;
+    @media(min-width: vars.$for-desktop-up) { margin: vars.$base vars.$xl5 vars.$lg vars.$xl; }
 
-    @media (min-width: vars.$for-tablet-portrait-up) {
-      //grid-column: 1/-1;
-      grid-row: 2/-1
+    @media (min-width: vars.$for-tablet-landscape-up) {
+      grid-row: 2/-1;
+      margin: vars.$base vars.$xl vars.$lg vars.$xl;
     }
   }
 

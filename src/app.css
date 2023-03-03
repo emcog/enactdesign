@@ -1,10 +1,20 @@
-/*todo make sure this is importing and move css variables from vars.scss*/
-/*:root {*/
-/*    --soft-green: #E6F2EE;*/
-/*    --bright-green: #00E596;*/
-/*    --grey:#6D7371;*/
-/*    --black: #0C0D0D;*/
-/*}*/
+/*todo make sure this is importing and move css variables from vars.scss
+   see lib/assets/scss/global.scss'
+   */
+
+:root {
+    --soft-green: #E6F2EE;
+    --bright-green: #00E596;
+    --grey:#6D7371;
+    --black: #0C0D0D;
+
+    /*Breakpoints */
+    --for-phone-only: 599px;
+    --for-tablet-portrait-up: 600px;
+    --for-tablet-landscape-up: 900px;
+    --for-desktop-up: 1200px;
+    --for-big-desktop-up: 1800px;
+}
 
 a:hover {
     background: var(--bright-green);
@@ -12,3 +22,6 @@ a:hover {
 }
 
 a {color: var(--black)}
+
+
+/*PicsforMD.svelte*/

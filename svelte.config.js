@@ -6,7 +6,7 @@ import rehypeSlug from 'rehype-slug'
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
-	// Ensures both .svelte and .md files are treated as components (can be imported and used anywhere, or  used as pages)
+	// Ensures both .svelte and .md files are treated as components (can be imported and used anywhere, or used as pages)
 	extensions: ['.svelte', '.md'],
 
 	preprocess: [
@@ -28,12 +28,12 @@ const config = {
 		}),
 	],
 
-	kit: {
-    prerender: {
-      default: true
-    },
-		adapter: adapter(),
-	}
+	// kit: {
+	// 	prerender: {
+	// 		default: true
+	// 	},
+	// 	adapter: adapter(),
+	// }
 };
 
 export default config;

@@ -2,7 +2,7 @@
   import MainNav from './MainNav.svelte'
   import HamburgerMenuButton from './HamburgerMenuButton.svelte'
   import { siteTitle } from '$lib/config'
-  // import {SecondaryNav} from './SecondaryNav.svelte';
+
 
   const focusMain = () => {
 		const main = document.querySelector('main');
@@ -32,9 +32,11 @@
     display: flex;
     grid-column: 1/-1;
 
+
     @media(min-width: vars.$for-tablet-landscape-up ) { margin: vars.$base vars.$xl vars.$lg vars.$xl; }
 
     @media(min-width: vars.$for-desktop-up) { margin: vars.$base vars.$xl5 vars.$lg vars.$xl; }
+
 
 
     .site-title {
@@ -46,7 +48,7 @@
       font-weight: bold;
 
       @media (min-width: vars.$smMin) {
-        width: 100%;
+        //width: 100%;
         font-size: 1.6rem;
       }
     }

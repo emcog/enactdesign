@@ -7,9 +7,6 @@ categories:
 - "office"
 - "data-visualisation"
 - "ui"
-- dashboard
-
-coverImage: 
 coverWidth: 16
 coverHeight: 9
 excerpt: Saving money for one of the big four accountancy firms

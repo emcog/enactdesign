@@ -24,13 +24,17 @@
 
 .posts-list {
   grid-column: 1/-1;
+  grid-row: 3/-1;
   display: flex;
   flex-direction: column;
   grid-template-columns: repeat(12, 1fr);
   list-style-type: none;
   padding: 0;
 
-  @media(min-width: vars.$for-tablet-portrait-up) { grid-column: 5/-1; }
+  @media(min-width: vars.$for-tablet-portrait-up) {
+    grid-column: 5/-1;
+    grid-row: 1/-1;
+  }
   @media(min-width: vars.$for-tablet-landscape-up) { grid-column: 4/-1; }
 }
 
@@ -45,4 +49,6 @@ li {
 
     @media(min-width: vars.$for-tablet-landscape-up) { grid-column: 4/-1; }
 }
+
+.posts-list__post { margin: 0 0 vars.$sm}
 </style>
