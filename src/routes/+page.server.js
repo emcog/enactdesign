@@ -1,6 +1,10 @@
 import { error } from '@sveltejs/kit'
+import { redirect } from '@sveltejs/kit';
 
 export const load = async () => {
+
+	throw redirect(302, '/work');
+
 	try {
 		const ReadMeFile = await import('../../README.md');
 		const ReadMe = ReadMeFile.default.render().html
@@ -13,3 +17,4 @@ export const load = async () => {
 		throw error(500, err)
 	}
 }
+
