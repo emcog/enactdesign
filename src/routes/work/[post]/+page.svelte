@@ -1,7 +1,6 @@
 <!-- This file renders each individual blog post for reading. Be sure to update the svelte:head below -->
 <script>
   export let data
-
   const { title, excerpt, date, updated, coverImage, coverWidth, coverHeight, categories } = data.meta
 </script>
 
@@ -22,8 +21,9 @@
 </svelte:head>
 
 
-<article class="post">
+<article class="post primary-12-grid">
   <!-- You might want to add an alt frontmatter attribute. If not, leaving alt blank here works, too. -->
+  <div class="content-wrapper">
   <img
     class="cover-image"
     src="{coverImage}"
@@ -42,9 +42,10 @@
   </div>
 
   {@html data.PostContent}
+  </div>
 
   {#if categories}
-    <aside class="post-footer">
+    <aside class="secondary-nav">
       <h2>Posted in: </h2>
       <ul>
         {#each categories as category}
@@ -63,14 +64,16 @@
 
 <style lang="scss">
 
+  .content-wrapper { grid-column: 4/-1; }
+
   // todo this is awful, pure css with where is likely much better
 
   :global article.post {
-    display: grid;
-    grid-template-rows: vars.$xl6 auto;
+    //display: grid;
+    //grid-template-rows: vars.$xl6 auto;
     grid-column: 1/-1;
-    margin: 0 vars.$base;
-    max-width: 1200px;
+    margin: 0 ;
+    //max-width: 1200px;
 
 
 
@@ -94,8 +97,8 @@
     }
 
     @media (min-width: vars.$for-tablet-portrait-up) {
-      display: grid;
-      grid-template-columns: repeat(12, 1fr);
+      //display: grid;
+      //grid-template-columns: repeat(12, 1fr);
 
       h2, h3, h4, h5, h6, p, span, section, div, pre, ul, ol {
         grid-column: 2/-2;
@@ -111,7 +114,7 @@
 
     @media (min-width: vars.$for-tablet-landscape-up) {
       h2, h3, h4, h5, h6, p, span, section, div, pre, ul, ol {
-        grid-column: 3/-3;
+        //grid-column: 3/-3;
       }
       margin: 0 auto;
     }
@@ -126,11 +129,11 @@
       align-self: end;
       font-size: vars.$xl2;
       @media(min-width: vars.$for-tablet-portrait-up) {
-        grid-column: 2/-2
+        //grid-column: 2/-2
       }
       @media(min-width: vars.$for-tablet-landscape-up) {
-        grid-column: 3/-2;
-        font-size: vars.$xl3;
+        //grid-column: 3/-2;
+        //font-size: vars.$xl3;
       }
     }
 

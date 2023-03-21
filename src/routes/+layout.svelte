@@ -49,6 +49,7 @@
 
   {#key data.path}
     <main
+      class="primary-12-grid"
       id="main"
       tabindex="-1"
       in:fade={transitionIn}
@@ -86,21 +87,22 @@
 
 
   main {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-gap: vars.$base;
-    grid-template-rows: auto;
-    grid-column: 1/-1;
-    grid-row: 3/-2;
-    margin: vars.$base vars.$xs 0 vars.$xs;
-    width: auto;
-
-    @media(min-width: vars.$for-desktop-up) { margin: vars.$base vars.$xl5 vars.$lg vars.$xl; }
-
-    @media (min-width: vars.$for-tablet-landscape-up) {
-      grid-row: 2/-1;
-      margin: vars.$base vars.$xl vars.$lg vars.$xl;
-    }
+    //@extend %grid-12;
+    //display: grid;
+    //grid-template-columns: repeat(12, 1fr);
+    //grid-gap: vars.$base;
+    //grid-template-rows: auto;
+    //grid-column: 1/-1;
+    //grid-row: 3/-2;
+    //margin: vars.$base vars.$xs 0 vars.$xs;
+    //width: auto;
+    //
+    //@media(min-width: vars.$for-desktop-up) { margin: vars.$base vars.$xl5 vars.$lg vars.$xl; }
+    //
+    //@media (min-width: vars.$for-tablet-landscape-up) {
+    //  grid-row: 2/-1;
+    //  margin: vars.$base vars.$xl vars.$lg vars.$xl;
+    //}
   }
 
 
