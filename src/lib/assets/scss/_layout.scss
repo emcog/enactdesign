@@ -4,7 +4,8 @@
   .primary-12-grid {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-gap: vars.$base;
+    grid-row-gap: 0;
+    grid-column-gap: vars.$base;
     grid-template-rows: auto;
     grid-column: 1/-1;
     grid-row: 3/-2;

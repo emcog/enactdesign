@@ -2,6 +2,7 @@
 <script>
   export let data
   const { title, excerpt, date, updated, coverImage, coverWidth, coverHeight, categories } = data.meta
+  import SecondaryNav from '$lib/components/SecondaryNav.svelte';
 </script>
 
 
@@ -46,10 +47,10 @@
 
   {#if categories}
     <aside class="secondary-nav">
-      <h2>Posted in: </h2>
+      <h2>Posted in</h2>
       <ul>
         {#each categories as category}
-          <li>
+          <li class="category">
             <a href="/work/category/{category}/">
               { category }
             </a>
@@ -63,85 +64,18 @@
 
 
 <style lang="scss">
-
-  .content-wrapper { grid-column: 4/-1; }
-
-  // todo this is awful, pure css with where is likely much better
-
-  :global article.post {
-    //display: grid;
-    //grid-template-rows: vars.$xl6 auto;
-    grid-column: 1/-1;
-    margin: 0 ;
-    //max-width: 1200px;
-
-
-
-    h1 + p {
-      margin: 0 0 vars.$xs2 0;
-      font-weight: 500;
-    }
-
-    h2, h3, h4, h5, h6, p, span, section, div, pre, ul, ol {
-      margin: 0 0 vars.$sm 0;
-    }
-
-    h2 {
-      font-size: vars.$xl;
-      font-weight: 500;
-    }
-
-    h3, h4, h5, h6 {
-      font-size: vars.$lg;
-      font-weight: 500;
-    }
-
-    @media (min-width: vars.$for-tablet-portrait-up) {
-      //display: grid;
-      //grid-template-columns: repeat(12, 1fr);
-
-      h2, h3, h4, h5, h6, p, span, section, div, pre, ul, ol {
-        grid-column: 2/-2;
-        margin: vars.$xs4 0 vars.$base 0;
-      }
-
-
-      p {
-        font-size: vars.$lg;
-        margin: 0 0 vars.$xl 0;
-      }
-    }
-
-    @media (min-width: vars.$for-tablet-landscape-up) {
-      h2, h3, h4, h5, h6, p, span, section, div, pre, ul, ol {
-        //grid-column: 3/-3;
-      }
-      margin: 0 auto;
-    }
-
-    .meta {
-      font-size: 0.8rem;
-      margin-bottom: 4rem;
-    }
-
-    h1 {
-      grid-column: 1/1;
-      align-self: end;
-      font-size: vars.$xl2;
-      @media(min-width: vars.$for-tablet-portrait-up) {
-        //grid-column: 2/-2
-      }
-      @media(min-width: vars.$for-tablet-landscape-up) {
-        //grid-column: 3/-2;
-        //font-size: vars.$xl3;
-      }
-    }
-
-    img + h1 {
-      margin-top: 1rem;
-    }
-
+  aside {
+    border-top: 3px solid var(--bright-green);
   }
+    h2 {
+      text-transform: uppercase;
+      font-size: var(--base);
+      margin: var(--xs2) 0;
+    }
+
+  .content-wrapper { grid-column: 4/-4; }
+
+
 
 
 
@@ -175,32 +109,6 @@
         padding: vars.$xs4 vars.$xs2;
       }
 
-    }
-  }
-
-  //todo duplicated over several files
-  .category {
-    margin: 0 vars.$xs6 vars.$xs6 0;
-    font-size: vars.$sm;
-    font-weight: 500;
-    letter-spacing: vars.$xs9;
-    text-transform: uppercase;
-    background: var(--soft-green);
-
-    @media(min-width: vars.$for-tablet-landscape-up) {
-      min-width: auto;
-    }
-
-    a:hover {
-      background: var(--bright-green);
-    }
-
-    a:visited {
-      background: var(--mid-grey)
-    }
-
-    a:visited:hover {
-      background: var(--bright-green)
     }
   }
 

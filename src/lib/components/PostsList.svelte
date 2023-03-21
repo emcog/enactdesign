@@ -27,6 +27,7 @@
   grid-row: 3/-1;
   display: flex;
   flex-direction: column;
+  margin: 0;
   grid-template-columns: repeat(12, 1fr);
   list-style-type: none;
   padding: 0;
@@ -50,5 +51,5 @@ li {
     @media(min-width: vars.$for-tablet-landscape-up) { grid-column: 4/-1; }
 }
 
-.posts-list__post { margin: 0 0 vars.$sm}
+.posts-list__post { margin: 0 0 var(--sm) 0}
 </style>
