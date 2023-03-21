@@ -75,7 +75,10 @@
 
   .content-wrapper { grid-column: 4/-4; }
 
-
+.cover-image {
+  width: 100%;
+  //height: 100%;
+}
 
 
 

@@ -1,6 +1,13 @@
 <script>
+	import { currentPage } from '$lib/assets/js/store';
+	import { onMount } from 'svelte';
+
 	export let categories = []
-	export let activeCategory
+
+		let url = "";
+		currentPage.subscribe(value => {url = value;});
+		let cat = url.slice(15);
+
 </script>
 
 <nav class="secondary-nav">
@@ -8,8 +15,10 @@
 	<ul>
 		<li class="secondary-nav__categories">
 			{#each categories as category}
-					<li class="{activeCategory === category.title ? 'active': ''} category" >
-						<a href="/work/category/{category.title}"> {category.title}</a>
+					<li class="{ category.title === cat ? 'active' : '' }">
+						<a href="/work/category/{category.title}">
+							{category.title}
+						</a>
 					</li>
 			{/each}
 		</li>
@@ -25,6 +34,8 @@
 	.secondary-nav {
     border-top: 3px solid var(--bright-green);
 	}
+
+	.active { background: #E63946}
 
 	h2 {
 		text-transform: uppercase;
