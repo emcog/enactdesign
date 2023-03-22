@@ -2,7 +2,6 @@
 <script>
   export let data
   const { title, excerpt, date, updated, coverImage, coverWidth, coverHeight, categories } = data.meta
-  import SecondaryNav from '$lib/components/SecondaryNav.svelte';
 </script>
 
 
@@ -25,22 +24,21 @@
 <article class="post primary-12-grid">
   <!-- You might want to add an alt frontmatter attribute. If not, leaving alt blank here works, too. -->
   <div class="content-wrapper">
+  <h1>{ title }</h1>
   <img
     class="cover-image"
     src="{coverImage}"
     alt=""
-    style="aspect-ratio: {coverWidth} / {coverHeight};"
     width={coverWidth}
     height={coverHeight}
   />
 
-  <h1>{ title }</h1>
 
-  <div class="meta">
-    <b>Published:</b> {date}
-    <br>
-    <b>Updated:</b> {updated}
-  </div>
+<!--  <div class="meta">-->
+<!--    <b>Published:</b> {date}-->
+<!--    <br>-->
+<!--    <b>Updated:</b> {updated}-->
+<!--  </div>-->
 
   {@html data.PostContent}
   </div>
@@ -49,6 +47,7 @@
     <aside class="secondary-nav">
       <h2>Posted in</h2>
       <ul>
+        <li class="category"><a href="/work">all</a></li>
         {#each categories as category}
           <li class="category">
             <a href="/work/category/{category}/">
@@ -77,6 +76,7 @@
 
 .cover-image {
   width: 100%;
+  height: auto;
   //height: 100%;
 }
 

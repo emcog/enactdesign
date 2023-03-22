@@ -8,6 +8,7 @@
 </svelte:head>
 
 
+<div class="content-wrapper">
 <h1>Contact</h1>
 
 This starter was made by Josh Collinsworth. You can <a rel="external" href="https://joshcollinsworth.com/contact">get in touch with Josh here</a>.
@@ -53,3 +54,4 @@ If you're using this starter for your own site, feel free to delete this page, o
 
   <input type="submit" value="Do nothing!">
 </form>
+</div>
