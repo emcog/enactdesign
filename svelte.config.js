@@ -28,12 +28,12 @@ const config = {
 		}),
 	],
 
-	// kit: {
-	// 	prerender: {
-	// 		default: true
-	// 	},
-	// 	adapter: adapter(),
-	// }
+	kit: {
+		prerender: {
+			default: true
+		},
+		adapter: adapter(),
+	}
 };
 
 export default config;
