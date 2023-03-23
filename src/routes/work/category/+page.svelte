@@ -1,8 +1,3 @@
-<script context="module">
-	// pre render the data before page loads so it can exported and used in a component
-	export const prerender = true;
-</script>
-
 <script>
 	export let data
 	const { uniqueCategories } = data
