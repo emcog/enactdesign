@@ -29,4 +29,5 @@ So that we can focus on the things that matter
 		I am co-founder of Mindfulness Connected which delivers world leading Mindfulness Based Organisational Education and am
 		settled in Edinburgh with my partner and son.
 	</p>
+	<span></span>
 </article>
