@@ -102,7 +102,7 @@
       font-size: 0.8rem;
 
       a {
-        font-family: var(--headings);
+        font-family: var(--brand-sans);
         font-size: vars.$base;
         font-weight: 500;
         text-decoration: none;

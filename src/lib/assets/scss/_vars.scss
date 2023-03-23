@@ -50,34 +50,6 @@ $xl9: 11.642rem;
 
 
 
-:root {
-  // Colors
 
-  --soft-green: #E6F2EE;
-  --mid-green: #F2F2F2;
-  --mid-grey: #393d3b;
-  --bright-green: #00E596;
-
-  --mid-grey: #F2F2F2;
-  --brand-grey:#494D4B;
-  --brand-black: #0C0D0D;
-
-  // Fonts
-  /**
-   * These are broken out into two separate variables from a previous iteration. I left
-   * it in because it's nice to be able to split out the heading and body fonts.
-   */
-  --bodyFont: 'Inter', sans-serif;
-  --headings: 'Inter', sans-serif;
-  --codeFont: 'Fira Code', monospace;
-
-  //--bodyFont: 'Source Serif Pro', serif;
-
-
-  // Base styles
-  font-size: 1rem;
-  line-height: 1.6;
-
-}
 
 

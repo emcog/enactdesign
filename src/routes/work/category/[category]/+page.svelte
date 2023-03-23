@@ -45,7 +45,7 @@
   }
 
   h1.category-title {
-    font-family: var(--headings);
+    font-family: var(--brand-sans);
     font-size: vars.$base;
     background: none;
     width: auto;

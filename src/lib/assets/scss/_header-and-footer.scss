@@ -8,16 +8,14 @@ header {
 
 header,
 footer {
-  font-family: var(--headings);
+  font-family: var(--brand-sans);
   //padding: 2.5rem 2rem;
   
   a {
     text-decoration: none;
 
     &.active {
-      //font-weight: bold;
-      border-bottom: solid 2px var(--bright-green);
-      //background: var(--bright-green);
+      background: var(--bright-green);
     }
   }
 

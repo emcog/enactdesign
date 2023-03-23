@@ -31,6 +31,7 @@
     margin: vars.$base vars.$xs 0 vars.$xs;
     display: flex;
     grid-column: 1/-1;
+    //border-bottom: solid 1px var(--brand-mid-grey);
 
 
     @media(min-width: vars.$for-tablet-landscape-up ) { margin: vars.$base vars.$xl vars.$lg vars.$xl; }
@@ -40,7 +41,7 @@
 
 
     .site-title {
-      font-family: var(--headings);
+      font-family: var(--brand-sans);
       font-size: vars.$xl2;
       color: inherit;
       margin: 0;

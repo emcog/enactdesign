@@ -29,6 +29,9 @@
 <style lang="scss">
 
 
+  li {
+    margin: 0 0 0 var(--base)
+  }
 
   a {
     padding: var(--xs4) var(--xs2);
