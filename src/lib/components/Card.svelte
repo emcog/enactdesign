@@ -45,7 +45,7 @@
 		//margin: vars.$xs vars.$xs 0  vars.$xs;
 	 	border-top: 3px solid var(--bright-green);
 		max-width: 100%;
-		 color: var(--black);
+		 color: var(--brand-black);
 		 background: var(--mid-grey);
 
 
@@ -120,7 +120,7 @@
 
 	.nda {
 		grid-column: 7/-1;
-		background: var(--black);
+		background: var(--brand-black);
 		display: flex;
 		min-height: 200px;
 

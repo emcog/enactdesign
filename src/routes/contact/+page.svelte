@@ -10,48 +10,62 @@
 
 <div class="content-wrapper">
 <h1>Contact</h1>
+  <form name="contact" method="POST" data-netlify="true">
 
-This starter was made by Josh Collinsworth. You can <a rel="external" href="https://joshcollinsworth.com/contact">get in touch with Josh here</a>.
+      <label>Name
+        <input type="text" name="name" placeholder="Name" />
+      </label>
 
-If you're using this starter for your own site, feel free to delete this page, or replace it with a contact page of your own. (I'm a big fan of <a href="https://docs.netlify.com/forms/setup/">Netlify forms</a>, personally.)
 
-<Callout>This form does nothing! It's just here to show default styling.</Callout>
+      <label> Email
+        <input type="email" name="email" placeholder="Email" />
+      </label>
 
-<form on:submit|preventDefault>
-  <div class="form-section">
-    <label for="name">Name</label>
-    <input type="text" id="name" placeholder="First name" />
-  </div>
 
-  <div class="form-section">
-    <label for="email">Email</label>
-    <input type="email" id="email" placeholder="Email address" />
-  </div>
+      <label class="message">Message
+        <textarea name="message" placeholder="Message"></textarea>
+      </label>
 
-  <fieldset>
-    <legend>
-      Which option?
-    </legend>
 
-    <div>
-      <input type="radio" name="s" id="s1" value="s1">
-      <label for="s1">Option 1</label>
-    </div>
-    <div>
-      <input type="radio" name="s" id="s2" value="s2">
-      <label for="s2">Option 2</label>
-    </div>
-    <div>
-      <input type="radio" name="s" id="s3" value="s3">
-      <label for="s3">Option 3</label>
-    </div>
-  </fieldset>
+    <button type="submit" class="btn btn-primary">Send</button>
+  </form>
 
-  <div class="form-section">
-    <input type="checkbox" id="c1" >
-    <label for="c1">Sign me up for something!</label>
-  </div>
-
-  <input type="submit" value="Do nothing!">
-</form>
 </div>
+
+<style lang="scss">
+  .content-wrapper {
+    //display: flex;
+    //flex-direction: column;
+  }
+
+  .message {
+     textarea {
+       width: 100%;
+       height: var(--xl8);
+     }
+  }
+
+  label {
+    display: block;
+    margin: 0 0 var(--lg);
+  }
+
+  button {float: right;}
+
+  input, textarea {
+    font-family: var(--sans);
+    color: var(--brand-black);
+    //border: solid 2px var(--brand);
+    //placeholder
+    &::-webkit-input-placeholder {color: var(--brand-grey);}
+    &:-ms-input-placeholder {color: var(--brand-grey);}
+    &::placeholder {color: var(--brand-grey);}
+    //
+    &:focus{}
+  }
+
+
+
+
+
+</style>

@@ -3,6 +3,8 @@
 
   export let href
 
+  let isCurrentPage;
+
   $: isCurrentPage = $currentPage.startsWith(href)
 
   const maybeCloseMenu = () => {
@@ -25,14 +27,20 @@
 </li>
 
 <style lang="scss">
-  a {
-    margin: 0 calc(vars.$xs2 * -1) 0 0;
-    padding: vars.$xs4 vars.$xs2;
 
+
+
+  a {
+    padding: var(--xs4) var(--xs2);
 
     &:hover {
       background: #00E596;
       text-decoration: none;
     }
+
+    & .active {
+      border-top: solid 2px var(--bright-green);
+    }
+
   }
 </style>

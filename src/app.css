@@ -1,12 +1,12 @@
-/*todo make sure this is importing and move css variables from vars.scss
-   see lib/assets/scss/global.scss'
-   */
-
 :root {
     --soft-green: #E6F2EE;
     --bright-green: #00E596;
-    --grey:#6D7371;
-    --black: #0C0D0D;
+    --barnd-dark-green: #002E1E;
+    --brand-deep-purple: #24042E;
+    --brand-black: #0B0D0C;
+    --brand-light-grey:#BABABA;
+    --brand-mid-grey:#878787;
+    --brand-dark-grey:#404040;
 
     --xs9: 0.107rem;
     --xs8: 0.134rem;
@@ -42,4 +42,4 @@ a:hover {
     text-decoration: none;
 }
 
-a {color: var(--black)}
+a {color: var(--brand-black)}

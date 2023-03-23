@@ -52,7 +52,7 @@
     background: var(--bright-green);
     margin: vars.$xs6 0 vars.$sm 0;
     padding-left: 0;
-    color: var(--grey);
+    color: var(--brand-grey);
     background: none;
 
     @media(min-width: vars.$for-tablet-landscape-up) {
