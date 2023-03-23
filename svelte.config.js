@@ -29,10 +29,19 @@ const config = {
 	],
 
 	kit: {
-		prerender: {
-			default: true
-		},
 		adapter: adapter(),
+		prerender: {
+			entries: [
+				'*',
+				'/api/posts/page/*',
+				'/work/category/*/page/',
+				'/work/category/*/page/*',
+				'/work/category/page/',
+				'/work/category/page/*',
+				'/work/page/',
+				'/work/page/*',
+			]
+		}
 	}
 };
 
